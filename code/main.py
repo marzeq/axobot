@@ -5,7 +5,7 @@ import os
 with open("token.txt", "r") as f:
     TOKEN = f.read()
 
-PREFIX = "#!"
+PREFIX = "--"
 
 client = commands.Bot(command_prefix=PREFIX)
 
