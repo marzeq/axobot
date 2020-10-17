@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-with open("token.txt", "r") as f:
+with open("config/token.txt", "r") as f:
     TOKEN = f.read()
 
 PREFIX = "--"
