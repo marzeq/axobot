@@ -17,6 +17,19 @@ client.command_descriptions = \
                 "required": False
             }
         },
+        "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command",
+        "aliases": []
+    }
+}
+
+client.admin_command_descriptions = \
+{
+    "help": {
+        "args": {
+            "command": {
+                "required": False
+            }
+        },
         "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command"
     }
 }

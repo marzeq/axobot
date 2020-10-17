@@ -20,7 +20,9 @@ class HelpCommand(commands.Cog):
                         args_to_put += f" [{arg}]"
                     else:
                         args_to_put += f" ({arg})"
-                response_embed.add_field(name=f"`{command}{args_to_put}`", value=f"{self.dsc[command]['desc']}")
+                response_embed.add_field(name=f"`{command}{args_to_put}`", value=f"{self.dsc[command]['desc']}"
+                                                                                 f"\n\n"
+                                                                                 f"Aliases: {self.dsc[command]['aliases']}")
             response_embed.set_footer(text="[] are required command arguments, () are optional command arguments")
             await ctx.send(embed=response_embed)
 
