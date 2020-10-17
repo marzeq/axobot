@@ -58,8 +58,7 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
-        "aliases": ["adminhelp", "admhelp"],
-        "required_perms": "Bot Owner"
+        "aliases": ["adminhelp", "admhelp"]
     },
     "load": {
         "args": {
@@ -68,8 +67,7 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
-        "aliases": ["l"],
-        "required_perms": "Bot Owner"
+        "aliases": ["l"]
     },
     "unload": {
         "args": {
@@ -78,8 +76,7 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
-        "aliases": ["ul"],
-        "required_perms": "Bot Owner"
+        "aliases": ["ul"]
     },
     "reload": {
         "args": {
@@ -88,8 +85,7 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
-        "aliases": ["rl"],
-        "required_perms": "Bot Owner"
+        "aliases": ["rl"]
     }
 }
 

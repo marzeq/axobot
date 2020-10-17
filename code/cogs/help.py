@@ -70,7 +70,7 @@ class HelpCommand(commands.Cog):
             response_embed.add_field(name=f"**Usage:**", value=f"```{command}{args_to_put}```")
             response_embed.add_field(name=f"**Description:**", value=f"```{self.adm_dsc[command]['desc']}```")
             response_embed.add_field(name=f"**Required Permissions:**",
-                                     value=f"```{self.adm_dsc[command]['required_perms']}```")
+                                     value=f"```Bot Owner```")
             response_embed.add_field(name=f"**Aliases:**", value=f"```{self.adm_dsc[command]['aliases']}```")
             response_embed.set_footer(text="[] are required command arguments, () are optional command arguments")
             await ctx.send(embed=response_embed)
