@@ -1,1 +1,41 @@
-{}
+{
+    "command_descriptions":
+    {
+        "help": {
+            "args": {
+                "command": {
+                    "required": false
+                }
+            },
+            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
+            "aliases": [],
+            "required_perms": []
+        },
+        "ban": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+            "aliases": [],
+            "required_perms": "Ban Members or Administrator"
+        },
+        "kick": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "aliases": [],
+            "required_perms": "Kick Members or Administrator"
+        }
+    }
+}

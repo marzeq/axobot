@@ -9,6 +9,9 @@ PREFIX = "--"
 
 client = commands.Bot(command_prefix=PREFIX)
 
+# Command descriptions and etc.
+# Going to use language files when the translation system is done
+
 client.command_descriptions = \
 {
     "help": {
@@ -48,7 +51,6 @@ client.command_descriptions = \
         "required_perms": "Kick Members or Administrator"
     }
 }
-
 client.admin_command_descriptions = \
 {
     "admin_help": {

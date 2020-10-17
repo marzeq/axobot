@@ -1,1 +1,41 @@
-{}
+{
+    "command_descriptions":
+    {
+        "help": {
+            "args": {
+                "command": {
+                    "required": false
+                }
+            },
+            "desc": "Pokazuje wszystkie komendy i ich argumenty, aliasy oraz jej opis. Jeśli jest podana nazwa komendy, zostanie pokazana pomoc tycząca się danej komendy",
+            "aliases": [],
+            "required_perms": []
+        },
+        "ban": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Banuje podanego członka. Jeśli podany, wysyła powód bana do dziennika zdarzeń serwera.",
+            "aliases": [],
+            "required_perms": "Banowanie Członków albo Administrator"
+        },
+        "kick": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Wyrzuca podanego członka. Jeśli podany, wysyła powód wyrzucenia do dziennika zdarzeń serwera.",
+            "aliases": [],
+            "required_perms": "Wyrzucanie Członków or Administrator"
+        }
+    }
+}
