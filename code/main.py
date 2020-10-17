@@ -17,6 +17,8 @@ async def on_ready():
 
 @client.command()
 async def load(ctx, extension=None):
+    if ctx.author.id not in client.owner_ids:
+        return
     if extension:
         try:
             client.load_extension(f"cogs.{extension}")
@@ -35,6 +37,8 @@ async def load(ctx, extension=None):
 
 @client.command()
 async def unload(ctx, extension=None):
+    if ctx.author.id not in client.owner_ids:
+        return
     if extension:
         try:
             client.unload_extension(f"cogs.{extension}")
@@ -53,6 +57,8 @@ async def unload(ctx, extension=None):
 
 @client.command()
 async def reload(ctx, extension=None):
+    if ctx.author.id not in client.owner_ids:
+        return
     if extension:
         try:
             client.reload_extension(f"cogs.{extension}")
