@@ -17,20 +17,48 @@ client.command_descriptions = \
                 "required": False
             }
         },
-        "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command",
+        "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
         "aliases": []
     }
 }
 
 client.admin_command_descriptions = \
 {
-    "help": {
+    "admin_help": {
         "args": {
             "command": {
                 "required": False
             }
         },
-        "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command"
+        "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
+        "aliases": ["adminhelp", "admhelp"]
+    },
+    "load": {
+        "args": {
+            "extension": {
+                "required": False
+            }
+        },
+        "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
+        "aliases": ["l"]
+    },
+    "unload": {
+        "args": {
+            "extension": {
+                "required": False
+            }
+        },
+        "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
+        "aliases": ["ul"]
+    },
+    "reload": {
+        "args": {
+            "extension": {
+                "required": False
+            }
+        },
+        "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
+        "aliases": ["rl"]
     }
 }
 
