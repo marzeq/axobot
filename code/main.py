@@ -10,17 +10,16 @@ PREFIX = "--"
 client = commands.Bot(command_prefix=PREFIX)
 
 client.command_descriptions = \
-    {
-        "help": {
-                "args": {
-                    "command": {
-                        "required": True
-                    }
-                },
-
-                "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command"
-        }
+{
+    "help": {
+        "args": {
+            "command": {
+                "required": False
+            }
+        },
+        "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command"
     }
+}
 
 
 @client.event
