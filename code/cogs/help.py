@@ -43,6 +43,8 @@ class HelpCommand(commands.Cog):
 
     @commands.command(aliases=["adminhelp", "admhelp"])
     async def admin_help(self, ctx, command=None):
+        if not await self.client.is_owner(ctx.author):
+            return
         if not command:
             response_embed = discord.Embed(title=f"**Here's your help {ctx.author}!**", color=0x1ced23)
             command_list = ""
