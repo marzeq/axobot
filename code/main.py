@@ -9,6 +9,19 @@ PREFIX = "--"
 
 client = commands.Bot(command_prefix=PREFIX)
 
+client.command_descriptions = \
+    {
+        "help": {
+                "args": {
+                    "command": {
+                        "required": True
+                    }
+                },
+
+                "desc": "Shows all commands and their respectable arguments. If a command name is passed, it will show help about the command"
+        }
+    }
+
 
 @client.event
 async def on_ready():
@@ -17,7 +30,7 @@ async def on_ready():
 
 # Basic cog control commands
 
-@client.command()
+@client.command(aliases=["l"])
 async def load(ctx, extension=None):
     if not await client.is_owner(ctx.author):
         return
@@ -35,7 +48,7 @@ async def load(ctx, extension=None):
                 except commands.ExtensionNotLoaded:
                     pass
         await ctx.message.channel.send(f"Loaded all extensions!")
-@client.command()
+@client.command(aliases=["ul"])
 async def unload(ctx, extension=None):
     if not await client.is_owner(ctx.author):
         return
@@ -53,7 +66,7 @@ async def unload(ctx, extension=None):
                 except commands.ExtensionNotLoaded:
                     pass
         await ctx.message.channel.send("Unloaded all extensions!")
-@client.command()
+@client.command(aliases=["rl"])
 async def reload(ctx, extension=None):
     if not await client.is_owner(ctx.author):
         return
