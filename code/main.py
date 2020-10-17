@@ -33,6 +33,19 @@ client.command_descriptions = \
         "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
         "aliases": [],
         "required_perms": "Ban Members or Administrator"
+    },
+    "kick": {
+        "args": {
+            "member": {
+                "required": True
+            },
+            "reason": {
+                "required": False
+            }
+        },
+        "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+        "aliases": [],
+        "required_perms": "Kick Members or Administrator"
     }
 }
 
@@ -45,7 +58,8 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
-        "aliases": ["adminhelp", "admhelp"]
+        "aliases": ["adminhelp", "admhelp"],
+        "required_perms": "Bot Owner"
     },
     "load": {
         "args": {
@@ -54,7 +68,8 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
-        "aliases": ["l"]
+        "aliases": ["l"],
+        "required_perms": "Bot Owner"
     },
     "unload": {
         "args": {
@@ -63,7 +78,8 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
-        "aliases": ["ul"]
+        "aliases": ["ul"],
+        "required_perms": "Bot Owner"
     },
     "reload": {
         "args": {
@@ -72,7 +88,8 @@ client.admin_command_descriptions = \
             }
         },
         "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
-        "aliases": ["rl"]
+        "aliases": ["rl"],
+        "required_perms": "Bot Owner"
     }
 }
 
