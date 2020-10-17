@@ -10,7 +10,7 @@ class HelpCommand(commands.Cog):
 
     @commands.command()
     async def help(self, ctx):
-        ctx.send("AAAA")
+        await ctx.send("AAAA")
 
 
 def setup(client):

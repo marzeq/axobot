@@ -15,9 +15,11 @@ async def on_ready():
     print("The bot is ready.")
 
 
+# Basic cog control commands
+
 @client.command()
 async def load(ctx, extension=None):
-    if ctx.author.id not in client.owner_ids:
+    if not await client.is_owner(ctx.author):
         return
     if extension:
         try:
@@ -33,11 +35,9 @@ async def load(ctx, extension=None):
                 except commands.ExtensionNotLoaded:
                     pass
         await ctx.message.channel.send(f"Loaded all extensions!")
-
-
 @client.command()
 async def unload(ctx, extension=None):
-    if ctx.author.id not in client.owner_ids:
+    if not await client.is_owner(ctx.author):
         return
     if extension:
         try:
@@ -53,11 +53,9 @@ async def unload(ctx, extension=None):
                 except commands.ExtensionNotLoaded:
                     pass
         await ctx.message.channel.send("Unloaded all extensions!")
-
-
 @client.command()
 async def reload(ctx, extension=None):
-    if ctx.author.id not in client.owner_ids:
+    if not await client.is_owner(ctx.author):
         return
     if extension:
         try:
