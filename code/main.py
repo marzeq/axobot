@@ -18,7 +18,21 @@ client.command_descriptions = \
             }
         },
         "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
-        "aliases": []
+        "aliases": [],
+        "required_perms": None
+    },
+    "ban": {
+        "args": {
+            "member": {
+                "required": True
+            },
+            "reason": {
+                "required": False
+            }
+        },
+        "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+        "aliases": [],
+        "required_perms": "Ban Members or Administrator"
     }
 }
 
