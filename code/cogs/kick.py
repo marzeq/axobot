@@ -12,7 +12,9 @@ class Kick(commands.Cog):
         lang = self.client.get_server_lang(str(ctx.guild.id))
         useful = lang["translations"]["kick"]
         if ctx.author.guild_permissions.kick_members or ctx.author.guild_permissions.administrator:
-            await member.kick(reason=reason)
+            response_embed = discord.Embed(title=useful["kicked"].format(member, reason), color=0xdb2a2a)
+            await member.ban(reason=reason)
+            await ctx.send(embed=response_embed)
 
 
 def setup(client):

@@ -59,7 +59,9 @@
         }
     },
     "translations": {
-        "ban": {},
+        "ban": {
+            "banned": "**Banned {} for: {}**"
+        },
         "command_error": {
             "nonexistent_command": "**This command does not exist!**",
             "missing_argument": "**You didn't provide a argument that is required!**",
@@ -80,7 +82,9 @@
             "required_perms": "**Required Permissions:**",
             "aliases": "**Aliases:**"
         },
-        "kick": {},
+        "kick": {
+            "kicked": "**Kicked {} for: {}**"
+        },
         "lang": {
             "changed_lang": "**Changed the language to `{}`.**",
             "available_langs": "**Available languages:**"

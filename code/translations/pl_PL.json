@@ -59,7 +59,9 @@
         }
     },
     "translations": {
-        "ban": {},
+        "ban": {
+            "banned": "**Zbanowano {} za: {}**"
+        },
         "command_error": {
             "nonexistent_command": "**Ta komenda nie istnieje!**",
             "missing_argument": "**Nie podałeś/aś wymaganego argumentu!**",
@@ -80,7 +82,9 @@
             "required_perms": "**Wymagane Permisje:**",
             "aliases": "**Skróty:**"
         },
-        "kick": {},
+        "kick": {
+            "kicked": "**Wyrzucono {} za: {}**"
+        },
         "lang": {
             "changed_lang": "**Zmieniono język na `{}`.**",
             "available_langs": "**Dostępne języki:**"
