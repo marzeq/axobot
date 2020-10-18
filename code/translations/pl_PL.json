@@ -35,7 +35,27 @@
             },
             "desc": "Wyrzuca podanego członka. Jeśli podany, wysyła powód wyrzucenia do dziennika zdarzeń serwera.",
             "aliases": [],
-            "required_perms": "Wyrzucanie Członków or Administrator"
+            "required_perms": "Wyrzucanie Członków albo Administrator"
+        },
+        "prefix": {
+            "args": {
+                "new_prefix": {
+                    "required": true
+                }
+            },
+            "desc": "Zmienia prefix bota na serwerze.",
+            "aliases": [],
+            "required_perms": "Zarządzanie Serwerem albo Administrator"
+        },
+        "lang": {
+            "args": {
+                "lang": {
+                    "required": false
+                }
+            },
+            "desc": "Zmienia język bota na serwerze.",
+            "aliases": [],
+            "required_perms": "Zarządzanie Serwerem albo Administrator"
         }
     }
 }

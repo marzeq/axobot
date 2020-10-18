@@ -7,7 +7,7 @@ with open("config/token.txt", "r") as f:
     TOKEN = f.read()
 
 def get_prefix(client, message):  # noqa
-    with open('config/config.json', 'r') as f:
+    with open('config/config.json', 'r') as f: # noqa
         config = json.load(f)
 
     return config[str(message.guild.id)]["prefix"]
@@ -65,6 +65,16 @@ client.command_descriptions = \
         "desc": "Changes the prefix for the bot on the server.",
         "aliases": [],
         "required_perms": "Manage Server or Administrator"
+    },
+    "lang": {
+        "args": {
+            "lang": {
+                "required": False
+            }
+        },
+        "desc": "Changes the language for the bot on the server.",
+        "aliases": [],
+        "required_perms": "Manage Server or Administrator"
     }
 }
 client.admin_command_descriptions = \
@@ -107,13 +117,16 @@ client.admin_command_descriptions = \
     }
 }
 
+# All valid launguage codes
+client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
+
 
 @client.event
 async def on_ready():
     print("The bot is ready.")
 
 
-# Basic cog control commands
+# Basic cog control commands and auto cog loading
 
 @client.command(aliases=["l"])
 async def load(ctx, extension=None):
@@ -169,8 +182,6 @@ async def reload(ctx, extension=None):
                 except commands.errors.ExtensionNotFound:
                     pass
         await ctx.message.channel.send("Reloaded all extensions!")
-
-
 for filename in os.listdir(f"./cogs"):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")

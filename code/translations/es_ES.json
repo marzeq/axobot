@@ -36,6 +36,26 @@
             "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
             "aliases": [],
             "required_perms": "Kick Members or Administrator"
+        },
+        "prefix": {
+            "args": {
+                "new_prefix": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the prefix for the bot on the server.",
+            "aliases": [],
+            "required_perms": "Manage Server or Administrator"
+        },
+        "lang": {
+            "args": {
+                "lang": {
+                    "required": false
+                }
+            },
+            "desc": "Changes the language for the bot on the server.",
+            "aliases": [],
+            "required_perms": "Manage Server or Administrator"
         }
     }
 }
