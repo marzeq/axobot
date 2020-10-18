@@ -73,7 +73,12 @@
         "help": {
             "heres_your_help": "**Here's your help {}!**",
             "available_commands": "Avalible Commands:",
-            "required_notrequired_args": "[] are required command arguments, () are optional command arguments"
+            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
+            "the_cmd": "**The {} command:**",
+            "usage": "**Usage:**",
+            "desc": "**Description:**",
+            "required_perms": "**Required Permissions:**",
+            "aliases": "**Aliases:**"
         },
         "kick": {},
         "lang": {

@@ -8,12 +8,22 @@ with open("config/token.txt", "r") as f:
 
 def get_prefix(client, message):  # noqa
     with open('config/config.json', 'r') as f: # noqa
-        config = json.load(f)
+        config = json.load(f) # noqa
 
     return config[str(message.guild.id)]["prefix"]
 
+def get_server_lang(guild_id: int) -> dict:
+    with open("config/config.json", "r") as configf:
+        cfg = json.load(configf)
+        lang_code = cfg[guild_id]["lang"]
+        with open(f"translations/{lang_code}.json", "r") as langf:
+            lng = json.load(langf)
+    return lng
+
 
 client = commands.Bot(command_prefix=get_prefix)
+
+client.get_server_lang = get_server_lang
 
 # Command descriptions and etc.
 # Not going to be here when translating system is done

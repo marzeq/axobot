@@ -10,6 +10,8 @@ class Lang(commands.Cog):
 
     @commands.command(aliases=["lang"])
     async def language(self, ctx, lang: str = "none"):
+        lng = self.client.get_server_lang(str(ctx.guild.id))
+        useful = lng["translations"]["lang"]
         if lang in self.client.valid_langs:
             with open('config/config.json', 'r') as f:
                 config = json.load(f)
@@ -17,10 +19,10 @@ class Lang(commands.Cog):
             with open("config/config.json", "w") as f:
                 config[str(ctx.message.guild.id)]["lang"] = lang
                 json.dump(config, f, indent=4)
-            embed = discord.Embed(title="**Changed the language to `{}`.**".format(lang), color=0x00ff00)
+            embed = discord.Embed(title=useful["changed_lang"].format(lang), color=0x00ff00)
             await ctx.send(embed=embed)
         else:
-            response_embed = discord.Embed(title=f"**Available languages:**", color=0x1ced23)
+            response_embed = discord.Embed(title=useful["available_langs"], color=0x1ced23)
             response_embed.add_field(name=f"**🇺🇸 English (USA)**", value=f"Type `lang en_US` to set the bot to the English (USA) language")
             response_embed.add_field(name=f"**🇪🇸 Español (España) INCONCLUSO**", value=f"Escribe `lang es_ES` para modificar la lengua de bot de Español (España)")
             response_embed.add_field(name=f"**🇵🇱 Polski**", value=f"Wpisz komendę `lang pl_PL` aby zmienić język bota na polski")

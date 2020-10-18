@@ -20,8 +20,10 @@ class GuildJoin(commands.Cog):
 
         list1 = guild.text_channels
         channel = random.choice(list1)
-        embed = discord.Embed(title="**Welcome!**", color=0x00ff00)
-        embed.add_field(name="Thanks for inviting me!", value="My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!",)
+        lang = self.client.get_server_lang(str(guild.id))
+        useful = lang["translations"]["guild_join"]
+        embed = discord.Embed(title=useful["welcome"], color=0x00ff00)
+        embed.add_field(name=useful["thx_for_invite"], value=useful["prefix"],)
         await channel.send(embed=embed)
 
 
