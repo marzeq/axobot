@@ -56,6 +56,18 @@
             "desc": "Zmienia język bota na serwerze.",
             "aliases": [],
             "required_perms": "Zarządzanie Serwerem albo Administrator"
+        },
+        "meme": {
+            "args": {},
+            "desc": "Pokazuje ci jeden z 10 najnowszych postów na r/memes",
+            "aliases": [],
+            "required_perms": []
+        },
+        "dankmeme": {
+            "args": {},
+            "desc": "Pokazuje ci jeden z 10 najnowszych postów na r/dankmemes",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {
