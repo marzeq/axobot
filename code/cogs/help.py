@@ -6,7 +6,6 @@ class HelpCommand(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.dsc = client.command_descriptions
         self.adm_dsc = client.admin_command_descriptions
         client.remove_command("help")
 

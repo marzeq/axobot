@@ -25,15 +25,7 @@ client = commands.Bot(command_prefix=get_prefix)
 
 client.get_server_lang = get_server_lang
 
-# Command descriptions and etc.
-# Not going to be here when translating system is done
-
-with open("translations/en_US.json", "r") as f:
-    config = json.load(f)
-
-client.command_descriptions = config["command_descriptions"]
-
-# Always here
+# Admin command descriptions because it shouldn't be translated
 
 client.admin_command_descriptions = \
 {
