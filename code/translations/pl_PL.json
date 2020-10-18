@@ -61,27 +61,27 @@
     "translations": {
         "ban": {},
         "command_error": {
-            "nonexistent_command": "Ta komenda nie istnieje!",
-            "missing_argument": "Nie podałeś/aś wymaganego argumentu!",
-            "bot_missing_permissions": "Nie mam wymaganych permisjii do wykonania tej komendy!"
+            "nonexistent_command": "**Ta komenda nie istnieje!**",
+            "missing_argument": "**Nie podałeś/aś wymaganego argumentu!**",
+            "bot_missing_permissions": "**Nie mam wymaganych permisjii do wykonania tej komendy!**"
         },
         "guild_join": {
-            "welcome": "Witaj!",
+            "welcome": "**Witaj!**",
             "thx_for_invite": "Dzięki że mnie zaprosiłeś!",
             "prefix": "Moim domyślnym prefixem jest `--`. Jeśli chcesz go zmenić, napisz `--prefix [new_prefix]`!"
         },
         "help": {
-            "heres_your_help": "Tutaj jest twoja pomoc {}!",
+            "heres_your_help": "**Tutaj jest twoja pomoc {}!**",
             "available_commands": "Dostępne komendy:",
             "required_notrequired_args": "[] to wymagane argumenty, () to opcjonalne argumeny"
         },
         "kick": {},
         "lang": {
-            "changed_lang": "Zmieniono język na `{}`.",
-            "available_langs": "Dostępne języki:"
+            "changed_lang": "**Zmieniono język na `{}`.**",
+            "available_langs": "**Dostępne języki:**"
         },
         "prefix": {
-            "changed_prefix": "Zmieniono prefix na `{}`."
+            "changed_prefix": "**Zmieniono prefix na `{}`.**"
         }
     }
 }
