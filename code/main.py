@@ -16,67 +16,15 @@ def get_prefix(client, message):  # noqa
 client = commands.Bot(command_prefix=get_prefix)
 
 # Command descriptions and etc.
-# Going to use language files when the translation system is done
+# Not going to be here when translating system is done
 
-client.command_descriptions = \
-{
-    "help": {
-        "args": {
-            "command": {
-                "required": False
-            }
-        },
-        "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
-        "aliases": [],
-        "required_perms": None
-    },
-    "ban": {
-        "args": {
-            "member": {
-                "required": True
-            },
-            "reason": {
-                "required": False
-            }
-        },
-        "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
-        "aliases": [],
-        "required_perms": "Ban Members or Administrator"
-    },
-    "kick": {
-        "args": {
-            "member": {
-                "required": True
-            },
-            "reason": {
-                "required": False
-            }
-        },
-        "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
-        "aliases": [],
-        "required_perms": "Kick Members or Administrator"
-    },
-    "prefix": {
-        "args": {
-            "new_prefix": {
-                "required": True
-            }
-        },
-        "desc": "Changes the prefix for the bot on the server.",
-        "aliases": [],
-        "required_perms": "Manage Server or Administrator"
-    },
-    "lang": {
-        "args": {
-            "lang": {
-                "required": False
-            }
-        },
-        "desc": "Changes the language for the bot on the server.",
-        "aliases": [],
-        "required_perms": "Manage Server or Administrator"
-    }
-}
+with open("translations/en_US.json", "r") as f:
+    config = json.load(f)
+
+client.command_descriptions = config["command_descriptions"]
+
+# Always here
+
 client.admin_command_descriptions = \
 {
     "admin_help": {
