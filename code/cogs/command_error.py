@@ -21,7 +21,7 @@ class CommandError(commands.Cog):
             await ctx.send(embed=response_embed)
         elif error == discord.ext.commands.errors.BotMissingPermissions:
             await ctx.message.add_reaction(emoji)
-            response_embed = discord.Embed(title=f"**I'm missing the required permissions for this comamnd!**",
+            response_embed = discord.Embed(title=f"**I'm missing the required permissions for this command!**",
                                            color=0xdb2a2a)
             await ctx.send(embed=response_embed)
         else:

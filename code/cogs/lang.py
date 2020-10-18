@@ -17,7 +17,7 @@ class Lang(commands.Cog):
             with open("config/config.json", "w") as f:
                 config[str(ctx.message.guild.id)]["lang"] = lang
                 json.dump(config, f, indent=4)
-            embed = discord.Embed(title=f"**Changed the language to `{lang}`.**", color=0x00ff00)
+            embed = discord.Embed(title="**Changed the language to `{}`.**".format(lang), color=0x00ff00)
             await ctx.send(embed=embed)
         else:
             response_embed = discord.Embed(title=f"**Available languages:**", color=0x1ced23)

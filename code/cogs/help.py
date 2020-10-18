@@ -13,7 +13,7 @@ class HelpCommand(commands.Cog):
     @commands.command()
     async def help(self, ctx, command=None):
         if not command:
-            response_embed = discord.Embed(title=f"**Here's your help {ctx.author}!**", color=0x1ced23)
+            response_embed = discord.Embed(title="**Here's your help {}!**".format(ctx.author), color=0x1ced23)
             command_list = ""
             for command in self.dsc:
                 args_to_put = ""
