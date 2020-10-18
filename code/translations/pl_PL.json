@@ -68,6 +68,16 @@
             "desc": "Pokazuje ci jeden z 10 najnowszych postów na r/dankmemes",
             "aliases": [],
             "required_perms": []
+        },
+        "reddit": {
+            "args": {
+                "subreddit": {
+                    "required": true
+                }
+            },
+            "desc": "Pokazuje ci jeden z 10 najostrzejszych postów na wybranym subreddicie",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {

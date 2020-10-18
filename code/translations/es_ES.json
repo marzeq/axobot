@@ -68,6 +68,16 @@
             "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
             "aliases": [],
             "required_perms": []
+        },
+        "reddit": {
+            "args": {
+                "subreddit": {
+                    "required": true
+                }
+            },
+            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {

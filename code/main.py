@@ -2,15 +2,18 @@ import discord
 from discord.ext import commands
 import os
 import json
+import praw
 
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
 
+
 def get_prefix(client, message):  # noqa
-    with open('config/config.json', 'r') as f: # noqa
-        config = json.load(f) # noqa
+    with open('config/config.json', 'r') as f:  # noqa
+        config = json.load(f)  # noqa
 
     return config[str(message.guild.id)]["prefix"]
+
 
 def get_server_lang(guild_id: int) -> dict:
     with open("config/config.json", "r") as configf:
@@ -23,49 +26,53 @@ def get_server_lang(guild_id: int) -> dict:
 
 client = commands.Bot(command_prefix=get_prefix)
 
+client.reddit = praw.Reddit(client_id='2EgK_dgbl9u5Kg',
+                            client_secret='yv0eRVKGY_JTrEGOtKcegblUqYQ',
+                            user_agent='RoboMarzeq by u/Marzeq_')
+
 client.get_server_lang = get_server_lang
 
 # Admin command descriptions because it shouldn't be translated
 
 client.admin_command_descriptions = \
 {
-    "admin_help": {
-        "args": {
-            "command": {
-                "required": False
-            }
+        "admin_help": {
+            "args": {
+                "command": {
+                    "required": False
+                }
+            },
+            "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
+            "aliases": ["adminhelp", "admhelp"]
         },
-        "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
-        "aliases": ["adminhelp", "admhelp"]
-    },
-    "load": {
-        "args": {
-            "extension": {
-                "required": False
-            }
+        "load": {
+            "args": {
+                "extension": {
+                    "required": False
+                }
+            },
+            "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
+            "aliases": ["l"]
         },
-        "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
-        "aliases": ["l"]
-    },
-    "unload": {
-        "args": {
-            "extension": {
-                "required": False
-            }
+        "unload": {
+            "args": {
+                "extension": {
+                    "required": False
+                }
+            },
+            "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
+            "aliases": ["ul"]
         },
-        "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
-        "aliases": ["ul"]
-    },
-    "reload": {
-        "args": {
-            "extension": {
-                "required": False
-            }
-        },
-        "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
-        "aliases": ["rl"]
+        "reload": {
+            "args": {
+                "extension": {
+                    "required": False
+                }
+            },
+            "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
+            "aliases": ["rl"]
+        }
     }
-}
 
 # All valid launguage codes
 client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
