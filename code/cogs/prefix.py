@@ -18,7 +18,7 @@ class Prefix(commands.Cog):
         with open("config/config.json", "w") as f:
             config[str(ctx.message.guild.id)]["prefix"] = prefix
             json.dump(config, f, indent=4)
-        embed = discord.Embed(title=useful["changed_prefixsz "].format(prefix), color=0x00ff00)
+        embed = discord.Embed(title=useful["changed_prefix"].format(prefix), color=0x00ff00)
         await ctx.send(embed=embed)
 
 
