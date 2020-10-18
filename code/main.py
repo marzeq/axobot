@@ -1,13 +1,19 @@
 import discord
 from discord.ext import commands
 import os
+import json
 
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
 
-PREFIX = "--"
+def get_prefix(client, message):  # noqa
+    with open('config/config.json', 'r') as f:
+        config = json.load(f)
 
-client = commands.Bot(command_prefix=PREFIX)
+    return config[str(message.guild.id)]["prefix"]
+
+
+client = commands.Bot(command_prefix=get_prefix)
 
 # Command descriptions and etc.
 # Going to use language files when the translation system is done
@@ -49,6 +55,16 @@ client.command_descriptions = \
         "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
         "aliases": [],
         "required_perms": "Kick Members or Administrator"
+    },
+    "prefix": {
+        "args": {
+            "new_prefix": {
+                "required": True
+            }
+        },
+        "desc": "Changes the prefix for the bot on the server.",
+        "aliases": [],
+        "required_perms": "Manage Server or Administrator"
     }
 }
 client.admin_command_descriptions = \
