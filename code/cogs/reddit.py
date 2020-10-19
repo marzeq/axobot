@@ -10,6 +10,7 @@ class Reddit(commands.Cog):
 
     @commands.command()
     async def reddit(self, ctx, subreddit: str):
+        subreddit = subreddit[2:] if subreddit.startswith("r/") else subreddit
         lang = self.client.get_server_lang(str(ctx.guild.id))
         useful = lang["translations"]["reddit"]
         memes_submissions = self.client.reddit.subreddit(subreddit).hot()
