@@ -78,6 +78,16 @@
             "desc": "Pokazuje ci jeden z 10 najostrzejszych postów na wybranym subreddicie",
             "aliases": [],
             "required_perms": []
+        },
+        "google": {
+            "args": {
+                "search_term": {
+                    "required": true
+                }
+            },
+            "desc": "Returns you a ready link for a Google search",
+            "aliases": ["ggl"],
+            "required_perms": []
         }
     },
     "translations": {
@@ -119,6 +129,9 @@
             "title": "**Tytuł**: {}, Autor: u/{}",
             "content": "**Zawartość posta:**",
             "footer": "Stosunek upvote'ów i downvote'ów: {}, Link: {}"
+        },
+        "google": {
+            "ur_link": "**Twój gotowy link: {}**"
         }
     }
 }

@@ -78,6 +78,16 @@
             "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
             "aliases": [],
             "required_perms": []
+        },
+        "google": {
+            "args": {
+                "search_term": {
+                    "required": true
+                }
+            },
+            "desc": "Returns you a ready link for a Google search",
+            "aliases": ["ggl"],
+            "required_perms": []
         }
     },
     "translations": {
@@ -119,6 +129,9 @@
             "title": "**Title**: {}, By: u/{}",
             "content": "**Content:**",
             "footer": "Upvote Ratio: {}, Link: {}"
+        },
+        "google": {
+            "ur_link": "**Here's your link: {}**"
         }
     }
 }
