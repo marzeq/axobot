@@ -11,7 +11,6 @@ class CommandError(commands.Cog):
     async def on_command_error(self, ctx, error):  # noqa
         lang = self.client.get_server_lang(str(ctx.guild.id))
         useful = lang["translations"]["command_error"]
-        print(error)
         emoji = '🚫'
         if type(error) == discord.ext.commands.CommandNotFound:
             await ctx.message.add_reaction(emoji)
