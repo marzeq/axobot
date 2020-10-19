@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import json
 
 
 class CommandError(commands.Cog):
@@ -24,8 +23,7 @@ class CommandError(commands.Cog):
             await ctx.send(embed=response_embed)
         elif error == discord.ext.commands.errors.BotMissingPermissions:
             await ctx.message.add_reaction(emoji)
-            response_embed = discord.Embed(title=useful["bot_missing_permissions"],
-                                           color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["bot_missing_permissions"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
         else:
             raise error
