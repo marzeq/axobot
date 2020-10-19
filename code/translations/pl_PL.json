@@ -116,9 +116,9 @@
         },
         "reddit": {
             "submission_nsfw": "Ten post jest zaznaczony jako NSFW. Proszę włącz tryb NSFW na tym kanale, aby zobaczyć ten post.",
-            "title": "**Title**: {}, By: u/{}",
-            "content": "**Content:**",
-            "footer": "Upvote Ratio: {}, Link: {}"
+            "title": "**Tytuł**: {}, Autor: u/{}",
+            "content": "**Zawartość posta:**",
+            "footer": "Stosunek upvote'ów i downvote'ów: {}, Link: {}"
         }
     }
 }
