@@ -26,8 +26,11 @@ def get_server_lang(guild_id: int) -> dict:
 
 client = commands.Bot(command_prefix=get_prefix)
 
-client.reddit = praw.Reddit(client_id='2EgK_dgbl9u5Kg',
-                            client_secret='yv0eRVKGY_JTrEGOtKcegblUqYQ',
+with open("config/reddit.json", "r") as f:
+    reddit = json.load(f)
+
+client.reddit = praw.Reddit(client_id=reddit["id"],
+                            client_secret=reddit["secret"],
                             user_agent='RoboMarzeq by u/Marzeq_')
 
 client.get_server_lang = get_server_lang
