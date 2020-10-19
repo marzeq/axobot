@@ -1,6 +1,6 @@
-# robomarzeq (the name's going to change)
+# MarzeqsUtilities
 
-### This is a multipurpose Discord bot, but mostly containing fun commands
+### This is a multipurpose Discord bot, but mostly containing fun and utility commands
 
 ---
 
