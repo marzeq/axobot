@@ -10,23 +10,34 @@ class Lang(commands.Cog):
 
     @commands.command(aliases=["lang"])
     async def language(self, ctx, lang: str = "none"):
+        # Getting all translations
         lng = self.client.get_server_lang(str(ctx.guild.id))
+
+        # Allows us to type for example eN-us instead of only en_US
         useful = lng["translations"]["lang"]
         lang = lang.replace("-", "_")
         lang = lang.split("_")
         lang[0] = lang[0].lower()
         lang[1] = lang[1].upper()
         lang = "_".join(lang)
+
+        # If provided lang is valid
         if lang in self.client.valid_langs:
+
+            # Change the language of the server in the config
             with open('config/config.json', 'r') as f:
                 config = json.load(f)
 
             with open("config/config.json", "w") as f:
                 config[str(ctx.message.guild.id)]["lang"] = lang
                 json.dump(config, f, indent=4)
+
+            # Creates and sends the response embed
             embed = discord.Embed(title=useful["changed_lang"].format(lang), color=0x00ff00)
             await ctx.send(embed=embed)
         else:
+
+            # Send all available langs
             response_embed = discord.Embed(title=useful["available_langs"], color=0x1ced23)
             response_embed.add_field(name=f"**🇺🇸 English (USA)**", value=f"Type `lang en_US` to set the bot to the English (USA) language")
             response_embed.add_field(name=f"**🇪🇸 Español (España) INCONCLUSO**", value=f"Escribe `lang es_ES` para modificar la lengua de bot de Español (España)")

@@ -7,7 +7,7 @@ import praw
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
 
-
+# Returns the custom prefix for a specified guild
 def get_prefix(client, message):  # noqa
     with open('config/config.json', 'r') as f:  # noqa
         config = json.load(f)  # noqa
@@ -15,6 +15,7 @@ def get_prefix(client, message):  # noqa
     return config[str(message.guild.id)]["prefix"]
 
 
+# Returns the provided servers launguage file
 def get_server_lang(guild_id: int) -> dict:
     with open("config/config.json", "r") as configf:
         cfg = json.load(configf)
@@ -24,8 +25,11 @@ def get_server_lang(guild_id: int) -> dict:
     return lng
 
 
+# Creates the client instance
 client = commands.Bot(command_prefix=get_prefix)
 
+
+# Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:
     reddit = json.load(f)
 
@@ -33,10 +37,12 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
                             user_agent='RoboMarzeq by u/Marzeq_')
 
+
+# So you can access get_server_lang from cogs
 client.get_server_lang = get_server_lang
 
-# Admin command descriptions because it shouldn't be translated
 
+# Admin command descriptions because it shouldn't be translated
 client.admin_command_descriptions = \
 {
         "admin_help": {
@@ -81,13 +87,14 @@ client.admin_command_descriptions = \
 client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
 
 
+# Shows that the bot is working
 @client.event
 async def on_ready():
     print("The bot is ready.")
 
 
 # Basic cog control commands and auto cog loading
-
+# I basically stole this from youtube but it's fine
 @client.command(aliases=["l"])
 async def load(ctx, extension=None):
     if not await client.is_owner(ctx.author):
@@ -146,4 +153,6 @@ for filename in os.listdir(f"./cogs"):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")
 
+
+# Run the bot
 client.run(TOKEN)

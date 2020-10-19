@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 
+# Fuck it I'm not translating this now
 
 class HelpCommand(commands.Cog):
 
