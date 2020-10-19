@@ -113,6 +113,12 @@
         },
         "prefix": {
             "changed_prefix": "**Zmieniono prefix na `{}`.**"
+        },
+        "reddit": {
+            "submission_nsfw": "Ten post jest zaznaczony jako NSFW. Proszę włącz tryb NSFW na tym kanale, aby zobaczyć ten post.",
+            "title": "**Title**: {}, By: u/{}",
+            "content": "**Content:**",
+            "footer": "Upvote Ratio: {}, Link: {}"
         }
     }
 }

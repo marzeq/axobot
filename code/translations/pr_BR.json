@@ -56,6 +56,28 @@
             "desc": "Changes the language for the bot on the server.",
             "aliases": [],
             "required_perms": "Manage Server or Administrator"
+        },
+        "meme": {
+            "args": {},
+            "desc": "Shows you one of the 10 most recent submissions on r/memes",
+            "aliases": [],
+            "required_perms": []
+        },
+        "dankmeme": {
+            "args": {},
+            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
+            "aliases": [],
+            "required_perms": []
+        },
+        "reddit": {
+            "args": {
+                "subreddit": {
+                    "required": true
+                }
+            },
+            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {
@@ -92,27 +114,11 @@
         "prefix": {
             "changed_prefix": "**Changed the custom prefix to `{}`.**"
         },
-        "meme": {
-            "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/memes",
-            "aliases": [],
-            "required_perms": []
-        },
-        "dankmeme": {
-            "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
-            "aliases": [],
-            "required_perms": []
-        },
         "reddit": {
-            "args": {
-                "subreddit": {
-                    "required": true
-                }
-            },
-            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
-            "aliases": [],
-            "required_perms": []
+            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
+            "title": "**Title**: {}, By: u/{}",
+            "content": "**Content:**",
+            "footer": "Upvote Ratio: {}, Link: {}"
         }
     }
 }
