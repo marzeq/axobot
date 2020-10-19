@@ -16,7 +16,7 @@ class Google(commands.Cog):
         useful = lang["translations"]["google"]
 
         # Search term ready to combine with the google prefix
-        search_term = f"search?q={search_term}"
+        search_term = f"search?q={search_term}"u
 
         # Combine the search term and make it a valid url
         link = self.ggl + valid_url(search_term, safe='=?')
