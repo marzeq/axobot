@@ -21,10 +21,10 @@ class Reddit(commands.Cog):
             await ctx.send(embed=response_embed)
             return
         response_embed = discord.Embed(title=useful["title"].format(submission.title, submission.author.name), color=random.randint(0, 0xFFFFFF)) # noqa
+        response_embed.set_footer(text=useful["footer"].format(submission.upvote_ratio, submission.shortlink))
         if submission.selftext != "":
             submission.selftext = submission.selftext[:1018] + " [...]"
             response_embed.add_field(name=useful["content"], value=submission.selftext)
-            response_embed.set_footer(text=useful["footer"].format(submission.upvote_ratio, submission.shortlink))
             await ctx.send(embed=response_embed)  # noqa
         else:
             await ctx.send(embed=response_embed)
