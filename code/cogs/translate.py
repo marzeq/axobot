@@ -7,17 +7,17 @@ class Translate(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-		self.supported_free_langs = \
+	self.supported_free_langs = \
 {
 	"en": "english",
 	"pl": "polish",
 	'es': 'spanish',
-    'pt': 'portuguese',
+    	'pt': 'portuguese',
 	'zh-tw': 'chinese (traditional)'
 }
-		self.supported_premium_langs = \
+	self.supported_premium_langs = \
 {
-	'af': 'afrikaans',
+    'af': 'afrikaans',
     'sq': 'albanian',
     'am': 'amharic',
     'ar': 'arabic',
