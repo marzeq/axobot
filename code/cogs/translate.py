@@ -136,6 +136,7 @@ class Translate(commands.Cog):
         if dest_lang not in self.supported_premium_langs and dest_lang not in self.supported_free_langs:
             response_embed = discord.Embed(title="This language isn't supported by the translator, or you don't have the premium version of the bot!", color=0xdb2a2a)
             await ctx.send(embed=response_embed)
+            return
 
         # Going to check if guild is premium later on
         if (src_lang not in self.supported_free_langs and src_lang not in self.supported_premium_langs) and not (src_lang == "auto" or src_lang == "none"):
@@ -143,6 +144,7 @@ class Translate(commands.Cog):
                 title="This language isn't supported by the translator, or you don't have the premium version of the bot!",
                 color=0xdb2a2a)
             await ctx.send(embed=response_embed)
+            return
 
         if src_lang == "auto" or src_lang == "none":
             translated = self.translator.translate(text=to_translate, dest=dest_lang)
