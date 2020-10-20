@@ -92,6 +92,11 @@ client.admin_command_descriptions = \
         "args": {},
         "desc": "Updates the internal files from the git repo and reruns the program",
         "aliases": ["up"]
+    },
+    "hardreload": {
+        "args": {},
+        "desc": "Reruns the program",
+        "aliases": ["hr"]
     }
 }
 
