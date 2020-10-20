@@ -174,6 +174,8 @@ for filename in os.listdir(f"./cogs"):
 # Update the internal files from the git repo and rerun the program
 @client.command(aliases=["up"])
 async def update(ctx):
+    if not await client.is_owner(ctx.author):
+        return
     if client.os == "win":
         await ctx.send("Ok. [using windows]")
         cmd("reload.bat")
@@ -185,6 +187,8 @@ async def update(ctx):
         return
 @client.command(aliases=["hr"])
 async def hardreload(ctx):
+    if not await client.is_owner(ctx.author):
+        return
     if client.os == "win":
         await ctx.send("Ok. [using windows]")
         cmd("python main.py")
