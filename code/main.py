@@ -1,8 +1,10 @@
 import discord
 from discord.ext import commands
 import os
+from os import system as cmd
 import json
 import praw
+from sys import executable
 
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
@@ -28,6 +30,11 @@ def get_server_lang(guild_id: int) -> dict:
 # Creates the client instance
 client = commands.Bot(command_prefix=get_prefix)
 
+if executable.endswith(".exe"):
+    client.os = "win"
+else:
+    client.os = "linux/macos"
+
 
 # Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:
@@ -45,43 +52,48 @@ client.get_server_lang = get_server_lang
 # Admin command descriptions because it shouldn't be translated
 client.admin_command_descriptions = \
 {
-        "admin_help": {
-            "args": {
-                "command": {
-                    "required": False
-                }
-            },
-            "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
-            "aliases": ["adminhelp", "admhelp"]
+    "admin_help": {
+        "args": {
+            "command": {
+                "required": False
+            }
         },
-        "load": {
-            "args": {
-                "extension": {
-                    "required": False
-                }
-            },
-            "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
-            "aliases": ["l"]
+        "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
+        "aliases": ["adminhelp", "admhelp"]
+    },
+    "load": {
+        "args": {
+            "extension": {
+                "required": False
+            }
         },
-        "unload": {
-            "args": {
-                "extension": {
-                    "required": False
-                }
-            },
-            "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
-            "aliases": ["ul"]
+        "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
+        "aliases": ["l"]
+    },
+    "unload": {
+        "args": {
+            "extension": {
+                "required": False
+            }
         },
-        "reload": {
-            "args": {
-                "extension": {
-                    "required": False
-                }
-            },
-            "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
-            "aliases": ["rl"]
-        }
+        "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
+        "aliases": ["ul"]
+    },
+    "reload": {
+        "args": {
+            "extension": {
+                "required": False
+            }
+        },
+        "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
+        "aliases": ["rl"]
+    },
+    "update": {
+        "args": {},
+        "desc": "Updates the internal files from the git repo and reruns the program",
+        "aliases": ["up"]
     }
+}
 
 # All valid launguage codes
 client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
@@ -152,6 +164,31 @@ async def reload(ctx, extension=None):
 for filename in os.listdir(f"./cogs"):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")
+
+
+# Update the internal files from the git repo and rerun the program
+@client.command(aliases=["up"])
+async def update(ctx):
+    if client.os == "win":
+        await ctx.send("Ok. [using windows]")
+        cmd("reload.bat")
+    elif client.os == "linux/macos":
+        await ctx.send("Ok. [using linux/macos]")
+        cmd("./reload.sh")
+    else:
+        await ctx.send("Couldn't determine the machine os... Returning...")
+        return
+@client.command(aliases=["hr"])
+async def hardreload(ctx):
+    if client.os == "win":
+        await ctx.send("Ok. [using windows]")
+        cmd("python main.py")
+    elif client.os == "linux/macos":
+        await ctx.send("Ok. [using linux/macos]")
+        cmd("python3 main.py")
+    else:
+        await ctx.send("Couldn't determine the machine os... Returning...")
+        return
 
 
 # Run the bot

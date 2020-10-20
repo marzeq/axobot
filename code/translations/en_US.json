@@ -1,6 +1,5 @@
 {
-    "command_descriptions":
-    {
+    "command_descriptions": {
         "help": {
             "args": {
                 "command": {
@@ -86,7 +85,9 @@
                 }
             },
             "desc": "Returns you a ready link for a Google search",
-            "aliases": ["ggl"],
+            "aliases": [
+                "ggl"
+            ],
             "required_perms": []
         }
     },
@@ -106,7 +107,7 @@
         },
         "help": {
             "heres_your_help": "**Here's your help {}!**",
-            "available_commands": "Avalible Commands:",
+            "available_commands": "Available Commands:",
             "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
             "the_cmd": "**The {} command:**",
             "usage": "**Usage:**",
