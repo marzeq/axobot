@@ -88,6 +88,22 @@
             "desc": "Returns you a ready link for a Google search",
             "aliases": ["ggl"],
             "required_perms": []
+        },
+        "translate": {
+            "args": {
+                "src_lang": {
+                    "required": true
+                },
+                "dest_lang": {
+                    "required": true
+                },
+                "to_translate": {
+                    "required": true
+                }
+            },
+            "desc": "Tłumaczy daną frazę w Google Tłumaczu. Jeślik src_lang równa się \"auto\" lub \"none\", język tekstu źródłowego będzie wybrany automatycznie.",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {
@@ -132,6 +148,10 @@
         },
         "google": {
             "ur_link": "**Twój gotowy link: {}**"
+        },
+        "translate": {
+            "lang_not_supported": "Ten język nie jest wspierany przez tłumacza!",
+            "heres_translated": "Oto twoje tłumaczenie: `{}`"
         }
     }
 }
