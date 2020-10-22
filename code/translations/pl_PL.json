@@ -101,7 +101,7 @@
                     "required": true
                 }
             },
-            "desc": "Tłumaczy daną frazę w Google Tłumaczu. Jeślik src_lang równa się \"auto\" lub \"none\", język tekstu źródłowego będzie wybrany automatycznie.",
+            "desc": "Tłumaczy daną frazę w Google Tłumaczu. Jeśli src_lang równa się \"auto\" lub \"none\", język tekstu źródłowego będzie wybrany automatycznie.",
             "aliases": [],
             "required_perms": []
         }
