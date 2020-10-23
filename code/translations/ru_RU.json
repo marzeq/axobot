@@ -104,6 +104,26 @@
             "desc": "Uses Google Translate directly from Discord. If src_lang is set to \"auto\" or \"none\" it will detect the source language.",
             "aliases": [],
             "required_perms": []
+        },
+        "log": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the channel for message logging provided by the bot.",
+            "aliases": [],
+            "required_perms": ["Manage Server or Administrator"]
+        },
+        "blacklist": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Blacklists/unblackists the channel from message logging!",
+            "aliases": ["bl"],
+            "required_perms": ["Manage Channels or Administrator"]
         }
     },
     "translations": {
@@ -152,6 +172,30 @@
         "translate": {
             "lang_not_supported": "This language isn't supported by the translator!",
             "heres_translated": "Here's your translated phrase: `{}`"
+        },
+        "logging": {
+            "success": "Successfully updated this setting!",
+            "msg_deleted": "**A message was deleted!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS",
+            "pinned": "Pinned",
+            "everyone-here": "Mentioned Everyone or Here"
+        },
+        "logging_edit": {
+            "msg_edited": "**A message was edited!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS After",
+            "pinned": "Pinned After",
+            "everyone-here": "Mentioned Everyone or Here",
+            "content_value": "**Before**: {}\n**After**: {}",
+            "time_value": "**Created At**: {} GMT\n**Edited At**: {} GMT",
+            "everyone-here_value": "**Before**: {}\n**After**: {}"
         }
     }
 }

@@ -17,7 +17,7 @@ def get_prefix(client, message):  # noqa
     return config[str(message.guild.id)]["prefix"]
 
 
-# Returns the provided servers launguage file
+# Returns the provided servers language file
 def get_server_lang(guild_id: int) -> dict:
     with open("config/config.json", "r") as configf:
         cfg = json.load(configf)
@@ -45,7 +45,7 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             user_agent='RoboMarzeq by u/Marzeq_')
 
 
-# So you can access get_server_lang from cogs
+# So you can access the functions from cogs
 client.get_server_lang = get_server_lang
 
 
@@ -100,7 +100,7 @@ client.admin_command_descriptions = \
     }
 }
 
-# All valid launguage codes
+# All valid language codes
 client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
 
 

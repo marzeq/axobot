@@ -104,6 +104,26 @@
             "desc": "Tłumaczy daną frazę w Google Tłumaczu. Jeśli src_lang równa się \"auto\" lub \"none\", język tekstu źródłowego będzie wybrany automatycznie.",
             "aliases": [],
             "required_perms": []
+        },
+        "log": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Zmienia kanał do zapisywania zmienionych wiadomości na serwerze.",
+            "aliases": [],
+            "required_perms": ["Manage Server or Administrator"]
+        },
+        "blacklist": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Wyłącza/włącza dany kanał z zapisywania zmienionych wiadomości.",
+            "aliases": ["bl"],
+            "required_perms": ["Manage Channels or Administrator"]
         }
     },
     "translations": {
@@ -152,6 +172,30 @@
         "translate": {
             "lang_not_supported": "Ten język nie jest wspierany przez tłumacza!",
             "heres_translated": "Oto twoje tłumaczenie: `{}`"
+        },
+        "logging": {
+            "success": "Pomyślnie zaktualizowano to ustawienie!",
+            "msg_deleted": "**Wiadomość została usunięta!**",
+            "channel": "Kanał",
+            "content": "Zawartość",
+            "author": "Autor",
+            "time": "Czas",
+            "tts": "Tekst na Mowę",
+            "pinned": "Przypięta",
+            "everyone-here": "@Everyone albo @Here"
+        },
+        "logging_edit": {
+            "msg_edited": "**Wiadomość została zedytowana!**",
+            "channel": "Kanał",
+            "content": "Zawartość",
+            "author": "Autor",
+            "time": "Czas",
+            "tts": "Tekst na Mowę po edycji",
+            "pinned": "Przypięta po edyscji",
+            "everyone-here": "@Everyone albo @Here",
+            "content_value": "**Przed**: {}\n**Po**: {}",
+            "time_value": "**Utworzona**: {} GMT\n**Zedytowana**: {} GMT",
+            "everyone-here_value": "**Przed**: {}\n**Po**: {}"
         }
     }
 }

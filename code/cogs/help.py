@@ -11,7 +11,7 @@ class HelpCommand(commands.Cog):
         client.remove_command("help")
 
     @commands.command()
-    async def help(self, ctx, command=None):
+    async def help(self, ctx, *, command=None):
         lang = self.client.get_server_lang(str(ctx.guild.id))
         useful = lang["translations"]["help"]
         cmds = lang["command_descriptions"]
@@ -49,7 +49,7 @@ class HelpCommand(commands.Cog):
                 await ctx.send(embed=response_embed)
 
     @commands.command(aliases=["adminhelp", "admhelp"])
-    async def admin_help(self, ctx, command=None):
+    async def admin_help(self, ctx, *, command=None):
         if not await self.client.is_owner(ctx.author):
             return
         if not command:

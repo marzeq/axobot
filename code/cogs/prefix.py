@@ -10,16 +10,17 @@ class Prefix(commands.Cog):
 
     @commands.command()
     async def prefix(self, ctx, *, prefix: str):
-        lang = self.client.get_server_lang(str(ctx.guild.id))
-        useful = lang["translations"]["prefix"]
-        with open('config/config.json', 'r') as f:
-            config = json.load(f)
+        if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
+            lang = self.client.get_server_lang(str(ctx.guild.id))
+            useful = lang["translations"]["prefix"]
+            with open('config/config.json', 'r') as f:
+                config = json.load(f)
 
-        with open("config/config.json", "w") as f:
-            config[str(ctx.message.guild.id)]["prefix"] = prefix
-            json.dump(config, f, indent=4)
-        embed = discord.Embed(title=useful["changed_prefix"].format(prefix), color=0x00ff00)
-        await ctx.send(embed=embed)
+            with open("config/config.json", "w") as f:
+                config[str(ctx.message.guild.id)]["prefix"] = prefix
+                json.dump(config, f, indent=4)
+            embed = discord.Embed(title=useful["changed_prefix"].format(prefix), color=0x00ff00)
+            await ctx.send(embed=embed)
 
 
 def setup(client):
