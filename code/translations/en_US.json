@@ -144,7 +144,8 @@
         "command_error": {
             "nonexistent_command": "**This command does not exist!**",
             "missing_argument": "**You didn't provide a argument that is required!**",
-            "bot_missing_permissions": "**I'm missing the required permissions for this command!**"
+            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
+            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`"
         },
         "guild_join": {
             "welcome": "**Welcome!**",

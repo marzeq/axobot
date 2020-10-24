@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from time import time
 
 
 class CommandError(commands.Cog):
@@ -15,6 +16,7 @@ class CommandError(commands.Cog):
 
         # Setting the emoji so I dont need to type it all the time
         emoji = '🚫'
+        errorid = round(time())
 
         # If command does not exist
         if type(error) == discord.ext.commands.CommandNotFound:
@@ -39,6 +41,13 @@ class CommandError(commands.Cog):
 
         # Raise the error so I can see it
         else:
+            embed = discord.Embed(title=f"Error id: `{errorid}`")
+            embed.add_field(name="Error message:", value=f"```{error}```")
+            embed.add_field(name="Associated cog:", value=f"```{ctx.cog}```")
+            explain_embed = discord.Embed(title=useful["explain"].format(errorid))
+            await self.client.get_user(500669086947344384).send(embed=embed)
+            await ctx.send(embed=explain_embed)
+            print(f"Error id: {errorid}")
             raise error
 
 def setup(client):

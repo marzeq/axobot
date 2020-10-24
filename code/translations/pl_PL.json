@@ -143,7 +143,8 @@
         "command_error": {
             "nonexistent_command": "**Ta komenda nie istnieje!**",
             "missing_argument": "**Nie podałeś/aś wymaganego argumentu!**",
-            "bot_missing_permissions": "**Nie mam wymaganych permisjii do wykonania tej komendy!**"
+            "bot_missing_permissions": "**Nie mam wymaganych permisjii do wykonania tej komendy!**",
+            "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `{}`"
         },
         "guild_join": {
             "welcome": "**Witaj!**",
