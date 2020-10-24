@@ -15,15 +15,15 @@ class Lang(commands.Cog):
             lng = self.client.get_server_lang(str(ctx.guild.id))
             useful = lng["translations"]["lang"]
 
-            # If provided lang is valid
-            if lang in self.client.valid_langs:
-
-                # Allows us to type for example eN-us instead of only en_US
+            if lang != "none":
                 lang = lang.replace("-", "_")
                 lang = lang.split("_")
                 lang[0] = lang[0].lower()
                 lang[1] = lang[1].upper()
                 lang = "_".join(lang)
+
+            # If provided lang is valid
+            if lang in self.client.valid_langs:
 
                 # Change the language of the server in the config
                 with open('config/config.json', 'r') as f:

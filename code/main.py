@@ -26,6 +26,12 @@ def get_server_lang(guild_id: int) -> dict:
             lng = json.load(langf)
     return lng
 
+def get_server_lang_code(guild_id: int) -> str:
+    with open("config/config.json", "r") as configf:
+        cfg = json.load(configf)
+        lang_code = cfg[str(guild_id)]["lang"]
+    return lang_code
+
 
 # Creates the client instance
 client = commands.Bot(command_prefix=get_prefix)
@@ -47,6 +53,7 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
 
 # So you can access the functions from cogs
 client.get_server_lang = get_server_lang
+client.get_server_lang_code = get_server_lang_code
 
 
 # Admin command descriptions because it shouldn't be translated

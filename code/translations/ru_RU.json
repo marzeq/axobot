@@ -89,6 +89,16 @@
             "aliases": ["ggl"],
             "required_perms": []
         },
+        "wiki": {
+            "args": {
+                "search": {
+                    "required": true
+                }
+            },
+            "desc": "Gives you an ready link to an wikipedia article.",
+            "aliases": ["wikipedia"],
+            "required_perms": []
+        },
         "translate": {
             "args": {
                 "src_lang": {

@@ -89,6 +89,16 @@
             "aliases": ["ggl"],
             "required_perms": []
         },
+        "wiki": {
+            "args": {
+                "search": {
+                    "required": true
+                }
+            },
+            "desc": "Daje ci gotowy link do artykułu na wikipedii",
+            "aliases": ["wikipedia"],
+            "required_perms": []
+        },
         "translate": {
             "args": {
                 "src_lang": {
