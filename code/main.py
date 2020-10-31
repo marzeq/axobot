@@ -26,6 +26,7 @@ def get_server_lang(guild_id: int) -> dict:
             lng = json.load(langf)
     return lng
 
+
 def get_server_lang_code(guild_id: int) -> str:
     with open("config/config.json", "r") as configf:
         cfg = json.load(configf)

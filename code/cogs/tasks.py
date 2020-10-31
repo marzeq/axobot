@@ -1,0 +1,40 @@
+import discord
+import time
+import json
+from discord.ext import commands, tasks
+
+
+class Tasks(commands.Cog):
+
+    def __init__(self, client):
+        self.client = client
+        self.do_tasks.start()
+
+    @tasks.loop(seconds=1)
+    async def do_tasks(self):
+        with open("config/tasks.json", "r+") as f:
+            tasksjson: dict = json.load(f)
+        action = False
+        if round(time.time()) not in (list(round(float(n)) for n in list(tasksjson.keys()))):
+            pass
+        else:
+            for pos in range(len(tasksjson)):
+                if list(round(float(n)) for n in list(tasksjson.keys()))[pos] == round(time.time()):
+                    key = list(str(n) for n in list(tasksjson.keys()))[pos]
+                    dct = tasksjson[key]
+                    instruction = list(str(n) for n in list(dct.keys()))[0]
+                    if instruction == "print":
+                        print(dct[instruction])
+                    tasksjson.pop(key)
+                    action = True
+                    break
+                else:
+                    print("finding correct")
+                    pass
+        if action:
+            with open("config/tasks.json", "w") as f:
+                json.dump(tasksjson, f, indent=4)
+
+
+def setup(client):
+    client.add_cog(Tasks(client))
