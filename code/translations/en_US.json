@@ -135,6 +135,19 @@
             "desc": "Blacklists/unblackists the channel from message logging!",
             "aliases": ["bl"],
             "required_perms": ["Manage Channels or Administrator"]
+        },
+        "remind": {
+            "args": {
+                "months,days,hours,minutes,seconds": {
+                    "required": true
+                },
+                "reminder": {
+                    "required": true
+                }
+            },
+            "desc": "Reminds you after a set amount of time.",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {

@@ -5,6 +5,7 @@ from os import system as cmd
 import json
 import praw
 from sys import executable
+import time
 
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
@@ -116,6 +117,7 @@ client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
 @client.event
 async def on_ready():
     print("The bot is ready.")
+    await do_tasks()
 
 
 # Basic cog control commands and auto cog loading
@@ -206,6 +208,27 @@ async def hardreload(ctx):
     else:
         await ctx.send("Couldn't determine the machine os... Returning...")
         return
+
+
+async def do_tasks():
+    with open("config/tasks.json", "r+") as f:
+        tasksjson: dict = json.load(f)
+    action = False
+    for pos in range(len(tasksjson)):
+        if list(int(n) for n in list(tasksjson.keys()))[pos] <= round(time.time()):
+            key = list(str(n) for n in list(tasksjson.keys()))[pos]
+            dct = tasksjson[key]
+            instruction = list(str(n) for n in list(dct.keys()))[0]
+            if instruction == "print":
+                print(dct[instruction])
+            tasksjson.pop(key)
+            action = True
+            break
+        else:
+            pass
+    if action:
+        with open("config/tasks.json", "w") as f:
+            json.dump(tasksjson, f, indent=4)
 
 
 # Run the bot
