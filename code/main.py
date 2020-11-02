@@ -221,6 +221,13 @@ async def do_tasks():
             instruction = list(str(n) for n in list(dct.keys()))[0]
             if instruction == "print":
                 print(dct[instruction])
+            elif instruction == "remind":
+                user = await client.fetch_user(dct[instruction]["who"])
+                embed = discord.Embed(title=dct[instruction]["value"])
+                await user.send(embed=embed)
+            elif instruction == "unban":
+                guild: discord.Guild = await client.fetch_guild(dct[instruction]["guild"])
+                await guild.unban(user=dct[instruction]["who"])
             tasksjson.pop(key)
             action = True
             break

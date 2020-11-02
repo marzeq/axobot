@@ -24,6 +24,22 @@
             "aliases": [],
             "required_perms": "Banowanie Członków albo Administrator"
         },
+        "tempban": {
+            "args": {
+                "months,days,hours,minutes,seconds": {
+                    "required": true
+                },
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Banuje tymczasowo podanego członka. Jeśli podany, wysyła powód bana do dziennika zdarzeń serwera.",
+            "aliases": [],
+            "required_perms": "Banowanie Członków albo Administrator"
+        },
         "kick": {
             "args": {
                 "member": {
