@@ -11,8 +11,10 @@ class Reminders(commands.Cog):
 
     @commands.command()
     async def remind(self, ctx: commands.Context, when: str, *, reminder: str):
+        lang = self.client.get_server_lang(str(ctx.guild.id))
+        useful = lang["translations"]["reminders"]
         if ''.join([i for i in when if not i.isdigit()]) != "[,,,,]":
-            await ctx.send(embed=discord.Embed(title="The time for the reminder should be in this format: [months,days,hours,minutes,seconds]", color=0xff0000))
+            await ctx.send(embed=discord.Embed(title=useful["invalid_format"], color=0xff0000))
             pass
         else:
             whenl = when.strip('][').split(',')
@@ -28,7 +30,7 @@ class Reminders(commands.Cog):
             with open("config/tasks.json", "w") as f:
                 reminders[str(round(endtime))] = {"remind": {"value": reminder, "who": ctx.author.id}}
                 json.dump(reminders, f, indent=4)
-            await ctx.send(embed=discord.Embed(title="Ok, you'll be reminded!", color=0x00ff00))
+            await ctx.send(embed=discord.Embed(title=useful["result"], color=0x00ff00))
 
 
 def setup(client):

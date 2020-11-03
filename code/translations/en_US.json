@@ -237,6 +237,10 @@
             "content_value": "**Before**: {}\n**After**: {}",
             "time_value": "**Created At**: {} GMT\n**Edited At**: {} GMT",
             "everyone-here_value": "**Before**: {}\n**After**: {}"
+        },
+        "reminders": {
+            "invalid_format": "The time for the reminder should be in this format: [months,days,hours,minutes,seconds]",
+            "result": "Ok, you'll be reminded!"
         }
     }
 }

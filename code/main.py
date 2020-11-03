@@ -117,7 +117,7 @@ client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
 @client.event
 async def on_ready():
     print("The bot is ready.")
-    await do_tasks()
+    await do_undone_tasks()
 
 
 # Basic cog control commands and auto cog loading
@@ -210,7 +210,7 @@ async def hardreload(ctx):
         return
 
 
-async def do_tasks():
+async def do_undone_tasks():
     with open("config/tasks.json", "r+") as f:
         tasksjson: dict = json.load(f)
     action = False

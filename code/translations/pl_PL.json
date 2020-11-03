@@ -236,6 +236,10 @@
             "content_value": "**Przed**: {}\n**Po**: {}",
             "time_value": "**Utworzona**: {} GMT\n**Zedytowana**: {} GMT",
             "everyone-here_value": "**Przed**: {}\n**Po**: {}"
+        },
+        "reminders": {
+            "invalid_format": "Czas dla przypomnienia powinien być w formacie: [miesiące,dni,godziny,minuty,sekundy]",
+            "result": "Ok, dostaniesz przypomnienie!"
         }
     }
 }
