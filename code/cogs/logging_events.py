@@ -13,7 +13,7 @@ class LoggingEvents(commands.Cog):
         with open('config/config.json', 'r') as file1:
             config = json.load(file1)
             config = config[str(message.guild.id)]["logging"]
-        if config["channel"] == 0:
+        if config["channel"] == 0 or message.author.bot:
             return
         # Getting all translations
         lang = self.client.get_server_lang(str(message.guild.id))
@@ -47,7 +47,7 @@ class LoggingEvents(commands.Cog):
             logging_channel = self.client.get_channel(config["channel"])
             if message.content == "":
                 message.content = "\"\""
-            if message.channel.id == config["channel"] or message.channel.id in config["blacklist-channels"]:
+            if message.channel.id == config["channel"] or message.channel.id in config["blacklist-channels"] or message.author.bot:
                 return
             embed = discord.Embed(title=useful["msg_deleted"], color=0xff0000)
             embed.add_field(name=useful["channel"], value=f"<#{message.channel.id}>", inline=False)
@@ -60,8 +60,8 @@ class LoggingEvents(commands.Cog):
             await logging_channel.send(embed=embed)
 
     @commands.Cog.listener()
-    async def on_message_edit(self, before, after):
-        if after.edited_at is None:
+    async def on_message_edit(self, before, after: discord.Message):
+        if after.edited_at is None or after.author.bot:
             return
         with open('config/config.json', 'r') as file1:
             config = json.load(file1)
