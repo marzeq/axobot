@@ -25,7 +25,7 @@ class SkyBazar(commands.Cog):
         # TODO: Translate this
         result = self.sbazaritem(item)["product_info"]
         embed = discord.Embed(title=f"Bazaar info for {result['product_id']}").set_thumbnail(url="https://static.wikia.nocookie.net/hypixel-skyblock/images/f/f0/Coins.png/revision/latest?cb=20191128043854")
-        embed.add_field(name="**Highest buy order:**",
+        embed.add_field(name="*Highest buy order:*",
                         value=f"""```    Amound ordered: {result['buy_summary'][0]["amount"]}
     Price per unit: {result['buy_summary'][0]["pricePerUnit"]}
     In {result['buy_summary'][0]["orders"]} orders```""", inline=False)
