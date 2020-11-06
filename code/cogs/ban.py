@@ -27,6 +27,7 @@ class Ban(commands.Cog):
 
     @commands.command()
     async def tempban(self, ctx: commands.Context, when: str, user: discord.User, *, reason: str = "No reason provided."):
+        # TODO: Translate this
         # If user has perms to ban
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
             if ''.join([i for i in when if not i.isdigit()]) != "[,,,,]":

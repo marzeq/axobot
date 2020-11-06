@@ -6,9 +6,13 @@ import json
 import praw
 from sys import executable
 import time
+import traceback
+import sys
+from logging import Logger
 
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
+
 
 # Returns the custom prefix for a specified guild
 def get_prefix(client, message):  # noqa
@@ -43,7 +47,6 @@ if executable.endswith(".exe"):
 else:
     client.os = "linux/macos"
 
-
 # Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:
     reddit = json.load(f)
@@ -52,62 +55,60 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
                             user_agent='RoboMarzeq by u/Marzeq_')
 
-
 # So you can access the functions from cogs
 client.get_server_lang = get_server_lang
 client.get_server_lang_code = get_server_lang_code
 
-
 # Admin command descriptions because it shouldn't be translated
 client.admin_command_descriptions = \
-{
-    "admin_help": {
-        "args": {
-            "command": {
-                "required": False
-            }
+    {
+        "admin_help": {
+            "args": {
+                "command": {
+                    "required": False
+                }
+            },
+            "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
+            "aliases": ["adminhelp", "admhelp"]
         },
-        "desc": "Shows all admin commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified admin command",
-        "aliases": ["adminhelp", "admhelp"]
-    },
-    "load": {
-        "args": {
-            "extension": {
-                "required": False
-            }
+        "load": {
+            "args": {
+                "extension": {
+                    "required": False
+                }
+            },
+            "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
+            "aliases": ["l"]
         },
-        "desc": "Loads all cogs avalible. If an extension (cog) is provided, it will load only the specified cog.",
-        "aliases": ["l"]
-    },
-    "unload": {
-        "args": {
-            "extension": {
-                "required": False
-            }
+        "unload": {
+            "args": {
+                "extension": {
+                    "required": False
+                }
+            },
+            "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
+            "aliases": ["ul"]
         },
-        "desc": "Unoads all cogs avalible. If an extension (cog) is provided, it will unload only the specified cog.",
-        "aliases": ["ul"]
-    },
-    "reload": {
-        "args": {
-            "extension": {
-                "required": False
-            }
+        "reload": {
+            "args": {
+                "extension": {
+                    "required": False
+                }
+            },
+            "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
+            "aliases": ["rl"]
         },
-        "desc": "Reoads all cogs avalible. If an extension (cog) is provided, it will reload only the specified cog.",
-        "aliases": ["rl"]
-    },
-    "update": {
-        "args": {},
-        "desc": "Updates the internal files from the git repo and reruns the program",
-        "aliases": ["up"]
-    },
-    "hardreload": {
-        "args": {},
-        "desc": "Reruns the program",
-        "aliases": ["hr"]
+        "update": {
+            "args": {},
+            "desc": "Updates the internal files from the git repo and reruns the program",
+            "aliases": ["up"]
+        },
+        "hardreload": {
+            "args": {},
+            "desc": "Reruns the program",
+            "aliases": ["hr"]
+        }
     }
-}
 
 # All valid language codes
 client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
@@ -140,6 +141,8 @@ async def load(ctx, extension=None):
                 except commands.errors.ExtensionAlreadyLoaded or commands.errors.ExtensionNotFound:
                     pass
         await ctx.message.channel.send(f"Loaded all extensions!")
+
+
 @client.command(aliases=["ul"])
 async def unload(ctx, extension=None):
     if not await client.is_owner(ctx.author):
@@ -158,6 +161,8 @@ async def unload(ctx, extension=None):
                 except commands.ExtensionNotLoaded or commands.errors.ExtensionNotFound:
                     pass
         await ctx.message.channel.send("Unloaded all extensions!")
+
+
 @client.command(aliases=["rl"])
 async def reload(ctx, extension=None):
     if not await client.is_owner(ctx.author):
@@ -176,6 +181,8 @@ async def reload(ctx, extension=None):
                 except commands.errors.ExtensionNotFound:
                     pass
         await ctx.message.channel.send("Reloaded all extensions!")
+
+
 for filename in os.listdir(f"./cogs"):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")
@@ -195,6 +202,8 @@ async def update(ctx):
     else:
         await ctx.send("Couldn't determine the machine os... Returning...")
         return
+
+
 @client.command(aliases=["hr"])
 async def hardreload(ctx):
     if not await client.is_owner(ctx.author):
@@ -211,8 +220,8 @@ async def hardreload(ctx):
 
 
 async def do_undone_tasks():
-    with open("config/tasks.json", "r+") as f:
-        tasksjson: dict = json.load(f)
+    with open("config/tasks.json", "r+") as file:
+        tasksjson: dict = json.load(file)
     action = False
     for pos in range(len(tasksjson)):
         if list(int(n) for n in list(tasksjson.keys()))[pos] <= round(time.time()):
@@ -234,9 +243,39 @@ async def do_undone_tasks():
         else:
             pass
     if action:
-        with open("config/tasks.json", "w") as f:
-            json.dump(tasksjson, f, indent=4)
+        with open("config/tasks.json", "w") as file:
+            json.dump(tasksjson, file, indent=4)
 
+
+client.logger = Logger("log")
+
+
+@client.event
+async def on_error(name, *args, **_):
+    errorid = round(time.time())
+    etype, value, tb = sys.exc_info()
+    tb = traceback.TracebackException(type(value), value, tb)
+    ready = ["" for _ in range(1000)]
+    n = 0
+    for line in tb.format():
+        if len(ready[n] + line + "\n") > 1024:
+            n += 1
+        ready[n] += line + "\n"
+    ready = [x for x in ready if x != ""]
+    embed = discord.Embed(title=f"Error id: `{errorid}`")
+    lnenum = 0
+    for lne in ready:
+        lnenum += 1
+        embed.add_field(name=f"Traceback part {lnenum}:", value=f"```{lne}```", inline=False)
+    await client.get_user(500669086947344384).send(embed=embed)
+    client.logger.critical("".join(ready) + "Error id: " + str(errorid))
+
+
+class NoItemFound(Exception):
+    pass
+
+
+client.NoItemFound = NoItemFound
 
 # Run the bot
 client.run(TOKEN)

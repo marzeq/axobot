@@ -163,6 +163,16 @@
             "desc": "Reminds you after a set amount of time.",
             "aliases": [],
             "required_perms": []
+        },
+        "skybazar": {
+            "args": {
+                "item": {
+                    "required": true
+                }
+            },
+            "desc": "Pokazuje ci informacje na temat przedmiotu na bazarze w Hypixel Skyblock",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {
