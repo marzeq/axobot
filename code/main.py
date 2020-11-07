@@ -8,6 +8,7 @@ import discord
 import praw
 from discord.ext import commands
 
+# Determining if we need to send a restart alert after everything is finished
 if len(sys.argv) >= 2:
     channel_to_send = sys.argv[1]
 else:
@@ -45,6 +46,10 @@ def get_server_lang_code(guild_id: int) -> str:
 # Creates the client instance
 client = commands.Bot(command_prefix=get_prefix)
 
+# So you can access the functions from cogs
+client.get_server_lang = get_server_lang
+client.get_server_lang_code = get_server_lang_code
+
 # Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:
     reddit = json.load(f)
@@ -53,11 +58,7 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
                             user_agent='RoboMarzeq by u/Marzeq_')
 
-# So you can access the functions from cogs
-client.get_server_lang = get_server_lang
-client.get_server_lang_code = get_server_lang_code
-
-# Admin command descriptions because it shouldn't be translated
+# Admin command descriptions. It's here because it shouldn't be translated
 client.admin_command_descriptions = \
     {
         "admin_help": {
@@ -239,6 +240,7 @@ async def do_undone_tasks():
 client.logger = Logger("log")
 
 
+# Thanks to mini_bomba for helping me with this part of code
 @client.event
 async def on_error(name, *args, **_):
     errorid = round(time.time())
