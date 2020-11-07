@@ -1,14 +1,17 @@
-import discord
-from discord.ext import commands
-import os
-from os import system as cmd
 import json
-import praw
-from sys import executable
+import os
+import sys
 import time
 import traceback
-import sys
 from logging import Logger
+import discord
+import praw
+from discord.ext import commands
+
+if len(sys.argv) >= 2:
+    channel_to_send = sys.argv[1]
+else:
+    channel_to_send = 0
 
 with open("config/token.txt", "r") as f:
     TOKEN = f.read()
@@ -41,11 +44,6 @@ def get_server_lang_code(guild_id: int) -> str:
 
 # Creates the client instance
 client = commands.Bot(command_prefix=get_prefix)
-
-if executable.endswith(".exe"):
-    client.os = "win"
-else:
-    client.os = "linux/macos"
 
 # Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:
@@ -119,6 +117,9 @@ client.valid_langs = ["en_US", "es_ES", "pl_PL", "pr_BR", "ru_RU"]
 async def on_ready():
     print("The bot is ready.")
     await do_undone_tasks()
+    if channel_to_send != 0:
+        channel = await client.fetch_channel(channel_to_send)
+        await channel.send(embed=discord.Embed(title="✅  Restarted the bot", color=0x2be040))
 
 
 # Basic cog control commands and auto cog loading
@@ -193,30 +194,18 @@ for filename in os.listdir(f"./cogs"):
 async def update(ctx):
     if not await client.is_owner(ctx.author):
         return
-    if client.os == "win":
-        await ctx.send("Ok. [using windows]")
-        cmd("reload.bat")
-    elif client.os == "linux/macos":
-        await ctx.send("Ok. [using linux/macos]")
-        cmd("./reload.sh")
-    else:
-        await ctx.send("Couldn't determine the machine os... Returning...")
-        return
+    await ctx.send(embed=discord.Embed(title="🟡  Pulling from the GitHub repo..", color=0xdaed2d))
+    os.system(f"git pull")
+    await ctx.send(embed=discord.Embed(title="🟡  Restarting..", color=0xdaed2d))
+    os.system(f"{sys.executable} {os.path.dirname(os.path.realpath(__file__))}/main.py {ctx.channel.id}")
 
 
 @client.command(aliases=["hr"])
 async def hardreload(ctx):
     if not await client.is_owner(ctx.author):
         return
-    if client.os == "win":
-        await ctx.send("Ok. [using windows]")
-        cmd("python main.py")
-    elif client.os == "linux/macos":
-        await ctx.send("Ok. [using linux/macos]")
-        cmd("python3 main.py")
-    else:
-        await ctx.send("Couldn't determine the machine os... Returning...")
-        return
+    await ctx.send(embed=discord.Embed(title="🟡  Restarting..", color=0xdaed2d))
+    os.system(f"{sys.executable} {os.path.dirname(os.path.realpath(__file__))}/main.py {ctx.channel.id}")
 
 
 async def do_undone_tasks():
@@ -267,7 +256,8 @@ async def on_error(name, *args, **_):
     for lne in ready:
         lnenum += 1
         embed.add_field(name=f"Traceback part {lnenum}:", value=f"```{lne}```", inline=False)
-    await client.get_user(500669086947344384).send(embed=embed)
+    user = await client.fetch_user(500669086947344384)
+    await user.send(embed=embed)
     client.logger.critical("".join(ready) + "Error id: " + str(errorid))
 
 
