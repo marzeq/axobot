@@ -1,0 +1,1 @@
+# If you plan on using this, rename the directory to `config`

@@ -1,0 +1,10 @@
+{
+    "guild id": {
+        "prefix": "",
+        "lang": "",
+        "logging": {
+            "channel": 0,
+            "blacklist-channels": []
+        }
+    }
+}
