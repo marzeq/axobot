@@ -26,32 +26,49 @@ class Ban(commands.Cog):
             await ctx.send(embed=response_embed)
 
     @commands.command()
-    async def tempban(self, ctx: commands.Context, when: str, user: discord.User, *, reason: str = "No reason provided."):
+    async def tempban(self, ctx: commands.Context, user: discord.User, *, args):
         # Getting all translations
         lang = self.client.get_server_lang(str(ctx.guild.id))
         useful = lang["translations"]["ban"]
 
         # If user has perms to ban
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
-            if ''.join([i for i in when if not i.isdigit()]) != "[,,,,]":
-                await ctx.send(embed=discord.Embed(title=useful["invalid_time"], color=0xff0000))
-                pass
+            args = args.split(" ")
+            topop = 0
+            endtime = time.time()
+            for arg in args:
+                if [arg.endswith(char) for char in "smhdMy"]:
+                    topop += 1
+                    if arg.endswith("s"):
+                        endtime += int(arg.replace("s", ""))
+                    elif arg.endswith("m"):
+                        endtime += int(arg.replace("m", "")) * 60
+                    elif arg.endswith("h"):
+                        endtime += int(arg.replace("h", "")) * 3600
+                    elif arg.endswith("d"):
+                        endtime += int(arg.replace("d", "")) * 86400
+                    elif arg.endswith("M"):
+                        endtime += int(arg.replace("M", "")) * 2629800
+                    elif arg.endswith("y"):
+                        endtime += int(arg.replace("y", "")) * 31556952
+            if topop == 0:
+                await ctx.send(embed=discord.Embed(title=useful["invalid_format"], color=0xff0000))
+                return
+
+            args = args[topop - 1:]
+            args = " ".join(args)
+            if args == "":
+                reason = "No reason provided"
             else:
-                whenl = when.strip('][').split(',')
-                months = int(whenl[0]) * 2629800
-                days = int(whenl[1]) * 86400
-                hours = int(whenl[2]) * 3600
-                minutes = int(whenl[3]) * 60
-                seconds = int(whenl[4])
-                endtime = time.time() + months + days + hours + minutes + seconds
-                with open("config/tasks.json", "r") as f:
-                    reminders = json.load(f)
-                member: discord.Member = ctx.guild.get_membed(user.id)
-                await member.ban(reason=reason)
-                with open("config/tasks.json", "w") as f:
-                    reminders[str(round(endtime))] = {"unban": {"user": f"{user.name}#{user.discriminator}", "guild": ctx.guild.id}}
-                    json.dump(reminders, f, indent=4)
-                await ctx.send(embed=discord.Embed(title=useful["tempbanned"].format(member, reason), color=0x00ff00))
+                reason = args
+            with open("config/tasks.json", "r") as f:
+                reminders = json.load(f)
+            member: discord.Member = ctx.guild.get_membed(user.id)
+            await member.ban(reason=reason)
+            with open("config/tasks.json", "w") as f:
+                reminders[str(round(endtime))] = {"unban": {"user": f"{user.name}#{user.discriminator}", "guild": ctx.guild.id}}
+                json.dump(reminders, f, indent=4)
+            await ctx.send(embed=discord.Embed(title=useful["tempbanned"].format(member, reason), color=0x00ff00))
 
 
 def setup(client):

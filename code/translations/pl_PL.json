@@ -26,10 +26,10 @@
         },
         "tempban": {
             "args": {
-                "months,days,hours,minutes,seconds": {
+                "member": {
                     "required": true
                 },
-                "member": {
+                "time": {
                     "required": true
                 },
                 "reason": {
@@ -153,7 +153,7 @@
         },
         "remind": {
             "args": {
-                "months,days,hours,minutes,seconds": {
+                "time": {
                     "required": true
                 },
                 "reminder": {
@@ -179,7 +179,7 @@
         "ban": {
             "banned": "**Zbanowano {} za: {}**",
             "tempbanned": "**Tymczasowo zbanowano {} za: {}**",
-            "invalid_time": "Czas dla tempbana powinien być w formacie: [miesiące,dni,godziny,minuty,sekundy]"
+            "invalid_time": "Brak podanego czasu!"
         },
         "command_error": {
             "nonexistent_command": "**Ta komenda nie istnieje!**",
@@ -252,7 +252,7 @@
             "everyone-here_value": "**Przed**: {}\n**Po**: {}"
         },
         "reminders": {
-            "invalid_format": "Czas dla przypomnienia powinien być w formacie: [miesiące,dni,godziny,minuty,sekundy]",
+            "invalid_format": "Brak podanego czasu!",
             "result": "Ok, dostaniesz przypomnienie!"
         },
         "bazaar": {

@@ -25,10 +25,10 @@
         },
         "tempban": {
             "args": {
-                "months,days,hours,minutes,seconds": {
+                "member": {
                     "required": true
                 },
-                "member": {
+                "time": {
                     "required": true
                 },
                 "reason": {
@@ -154,7 +154,7 @@
         },
         "remind": {
             "args": {
-                "months,days,hours,minutes,seconds": {
+                "time": {
                     "required": true
                 },
                 "reminder": {
@@ -180,7 +180,7 @@
         "ban": {
             "banned": "**Banned {} for: {}**",
             "tempbanned": "**Tempbanned {} for: {}**",
-            "invalid_time": "The time for the tempban should be in this format: [months,days,hours,minutes,seconds]"
+            "invalid_time": "No time specified!"
         },
         "command_error": {
             "nonexistent_command": "**This command does not exist!**",
@@ -253,7 +253,7 @@
             "everyone-here_value": "**Before**: {}\n**After**: {}"
         },
         "reminders": {
-            "invalid_format": "The time for the reminder should be in this format: [months,days,hours,minutes,seconds]",
+            "invalid_format": "No time specified!",
             "result": "Ok, you'll be reminded!"
         },
         "bazaar": {
