@@ -21,7 +21,8 @@ with open("config/token.txt", "r") as f:
 # Returns the custom prefix for a specified guild
 def get_prefix(client, message):  # noqa
     with open('config/config.json', 'r') as f:  # noqa
-        config = json.load(f)  # noqa
+        config = json.load(f)
+        print(message)
 
     return config[str(message.guild.id)]["prefix"]
 
