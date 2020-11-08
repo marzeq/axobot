@@ -177,7 +177,9 @@
     },
     "translations": {
         "ban": {
-            "banned": "**Zbanowano {} za: {}**"
+            "banned": "**Zbanowano {} za: {}**",
+            "tempbanned": "**Tymczasowo zbanowano {} za: {}**",
+            "invalid_time": "Czas dla tempbana powinien być w formacie: [miesiące,dni,godziny,minuty,sekundy]"
         },
         "command_error": {
             "nonexistent_command": "**Ta komenda nie istnieje!**",

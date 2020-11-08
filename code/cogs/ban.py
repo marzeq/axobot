@@ -27,13 +27,14 @@ class Ban(commands.Cog):
 
     @commands.command()
     async def tempban(self, ctx: commands.Context, when: str, user: discord.User, *, reason: str = "No reason provided."):
-        # TODO: Translate this
+        # Getting all translations
+        lang = self.client.get_server_lang(str(ctx.guild.id))
+        useful = lang["translations"]["ban"]
+
         # If user has perms to ban
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
             if ''.join([i for i in when if not i.isdigit()]) != "[,,,,]":
-                await ctx.send(embed=discord.Embed(
-                    title="The time for the tempban should be in this format: [months,days,hours,minutes,seconds]",
-                    color=0xff0000))
+                await ctx.send(embed=discord.Embed(title=useful["invalid_time"], color=0xff0000))
                 pass
             else:
                 whenl = when.strip('][').split(',')
@@ -50,7 +51,7 @@ class Ban(commands.Cog):
                 with open("config/tasks.json", "w") as f:
                     reminders[str(round(endtime))] = {"unban": {"user": f"{user.name}#{user.discriminator}", "guild": ctx.guild.id}}
                     json.dump(reminders, f, indent=4)
-                await ctx.send(embed=discord.Embed(title="This member is now temp-banned.", color=0x00ff00))
+                await ctx.send(embed=discord.Embed(title=useful["tempbanned"].format(member, reason), color=0x00ff00))
 
 
 def setup(client):

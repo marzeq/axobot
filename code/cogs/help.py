@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-# Fuck it I'm not translating this now
+# Fuck it I'm not commenting this now
 
 class HelpCommand(commands.Cog):
 
@@ -15,6 +15,7 @@ class HelpCommand(commands.Cog):
         lang = self.client.get_server_lang(str(ctx.guild.id))
         useful = lang["translations"]["help"]
         cmds = lang["command_descriptions"]
+        # TODO: Make command categories otherwise this command will become very messy later
         if not command:
             response_embed = discord.Embed(title=useful["heres_your_help"].format(ctx.author), color=0x1ced23)
             command_list = ""
