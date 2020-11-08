@@ -187,7 +187,8 @@
             "missing_argument": "**You didn't provide a argument that is required!**",
             "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`",
-            "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently."
+            "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently.",
+            "bad_format": "This argument is in a bad format"
         },
         "guild_join": {
             "welcome": "**Welcome!**",

@@ -186,7 +186,8 @@
             "missing_argument": "**Nie podałeś/aś wymaganego argumentu!**",
             "bot_missing_permissions": "**Nie mam wymaganych permisjii do wykonania tej komendy!**",
             "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `{}`",
-            "item_doesnt_exist": "Ten przedmiot nie istnieje. Spróbuj sformułować go trochę inaczej."
+            "item_doesnt_exist": "Ten przedmiot nie istnieje. Spróbuj sformułować go trochę inaczej.",
+            "bad_format": "Ten argument jest w złym formacie"
         },
         "guild_join": {
             "welcome": "**Witaj!**",

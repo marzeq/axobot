@@ -17,10 +17,14 @@ class Lang(commands.Cog):
 
             if lang != "none":
                 lang = lang.replace("-", "_")
+                lang = lang.replace(" ", "_")
                 lang = lang.split("_")
-                lang[0] = lang[0].lower()
-                lang[1] = lang[1].upper()
-                lang = "_".join(lang)
+                try:
+                    lang[0] = lang[0].lower()
+                    lang[1] = lang[1].upper()
+                    lang = "_".join(lang)
+                except IndexError:
+                    pass
 
             # If provided lang is valid
             if lang in self.client.valid_langs:

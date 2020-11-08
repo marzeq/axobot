@@ -42,6 +42,11 @@ class CommandError(commands.Cog):
             response_embed = discord.Embed(title=useful["bot_missing_permissions"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
+        elif type(error) == discord.ext.commands.errors.BadArgument:
+            await ctx.message.add_reaction(emoji)
+            response_embed = discord.Embed(title=useful["bad_format"], color=0xdb2a2a)
+            await ctx.send(embed=response_embed)
+
         elif type(error.original) == self.client.NoItemFound:
             await ctx.message.add_reaction(emoji)
             response_embed = discord.Embed(title=useful["item_doesnt_exist"], color=0xdb2a2a)
