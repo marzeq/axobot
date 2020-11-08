@@ -38,6 +38,8 @@ class Ban(commands.Cog):
             endtime = time.time()
             for arg in args:
                 if [arg.endswith(char) for char in "smhdMy"]:
+                    if not arg[:-1].isdigit():
+                        break
                     topop += 1
                     if arg.endswith("s"):
                         endtime += int(arg.replace("s", ""))
@@ -55,7 +57,7 @@ class Ban(commands.Cog):
                 await ctx.send(embed=discord.Embed(title=useful["invalid_format"], color=0xff0000))
                 return
 
-            args = args[topop - 1:]
+            args = args[topop:]
             args = " ".join(args)
             if args == "":
                 reason = "No reason provided"
