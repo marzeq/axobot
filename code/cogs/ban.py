@@ -63,6 +63,10 @@ class Ban(commands.Cog):
                 reason = "No reason provided"
             else:
                 reason = args
+            if len(reason) > 256:
+                response_embed = discord.Embed(title=useful["too_long"], color=0xdb2a2a)
+                await ctx.send(embed=response_embed)
+                return
             with open("config/tasks.json", "r") as f:
                 reminders = json.load(f)
             member: discord.Member = ctx.guild.get_membed(user.id)

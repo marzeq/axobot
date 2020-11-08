@@ -39,6 +39,12 @@ class Reminders(commands.Cog):
 
         args = args[topop:]
         args = " ".join(args)
+        if args == "":
+            raise discord.ext.commands.errors.MissingRequiredArgument(ReminderArg())
+        if len(args) > 256:
+            response_embed = discord.Embed(title=useful["too_long"], color=0xdb2a2a)
+            await ctx.send(embed=response_embed)
+            return
         with open("config/tasks.json", "r") as f:
             reminders = json.load(f)
 
@@ -47,6 +53,8 @@ class Reminders(commands.Cog):
             json.dump(reminders, f, indent=4)
         await ctx.send(embed=discord.Embed(title=useful["result"], color=0x00ff00))
 
+class ReminderArg:
+    name = "reminder"
 
 def setup(client):
     client.add_cog(Reminders(client))

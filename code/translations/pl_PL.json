@@ -179,7 +179,8 @@
         "ban": {
             "banned": "**Zbanowano {} za: {}**",
             "tempbanned": "**Tymczasowo zbanowano {} za: {}**",
-            "invalid_time": "Brak podanego czasu!"
+            "invalid_time": "Brak podanego czasu!",
+            "too_long": "Powód powinien mieć maksymalnie 256 znaków"
         },
         "command_error": {
             "nonexistent_command": "**Ta komenda nie istnieje!**",
@@ -253,7 +254,8 @@
         },
         "reminders": {
             "invalid_format": "Brak podanego czasu!",
-            "result": "Ok, dostaniesz przypomnienie!"
+            "result": "Ok, dostaniesz przypomnienie!",
+            "too_long": "Przypomnienie powinno mieć maksymalnie 256 znaków"
         },
         "bazaar": {
             "info": "Info z bazaru dla",
