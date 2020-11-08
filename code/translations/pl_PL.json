@@ -139,7 +139,7 @@
             },
             "desc": "Zmienia kanał do zapisywania zmienionych wiadomości na serwerze.",
             "aliases": [],
-            "required_perms": ["Manage Server or Administrator"]
+            "required_perms": ["Zarządzanie Serwerem albo Administrator"]
         },
         "blacklist": {
             "args": {
@@ -149,7 +149,7 @@
             },
             "desc": "Wyłącza/włącza dany kanał z zapisywania zmienionych wiadomości.",
             "aliases": ["bl"],
-            "required_perms": ["Manage Channels or Administrator"]
+            "required_perms": ["Zarządzanie Kanałami albo Administrator"]
         },
         "remind": {
             "args": {
@@ -160,7 +160,7 @@
                     "required": true
                 }
             },
-            "desc": "Reminds you after a set amount of time.",
+            "desc": "Przypomina cię o ustalonej rzeczy.",
             "aliases": [],
             "required_perms": []
         },
@@ -185,7 +185,8 @@
             "nonexistent_command": "**Ta komenda nie istnieje!**",
             "missing_argument": "**Nie podałeś/aś wymaganego argumentu!**",
             "bot_missing_permissions": "**Nie mam wymaganych permisjii do wykonania tej komendy!**",
-            "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `{}`"
+            "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `{}`",
+            "item_doesnt_exist": "Ten przedmiot nie istnieje. Spróbuj sformułować go trochę inaczej."
         },
         "guild_join": {
             "welcome": "**Witaj!**",
@@ -213,7 +214,7 @@
             "changed_prefix": "**Zmieniono prefix na `{}`.**"
         },
         "reddit": {
-            "submission_nsfw": "Ten post jest zaznaczony jako NSFW. Proszę włącz tryb NSFW na tym kanale, aby zobaczyć ten post.",
+            "submission_nsfw": "Ten post jest oznaczony jako NSFW. Proszę włącz tryb NSFW na tym kanale, aby zobaczyć ten post.",
             "title": "**Tytuł**: {}, Autor: u/{}",
             "content": "**Zawartość posta:**",
             "footer": "Stosunek upvote'ów i downvote'ów: {}, Link: {}"
@@ -252,6 +253,22 @@
         "reminders": {
             "invalid_format": "Czas dla przypomnienia powinien być w formacie: [miesiące,dni,godziny,minuty,sekundy]",
             "result": "Ok, dostaniesz przypomnienie!"
+        },
+        "bazaar": {
+            "info": "Info z bazaru dla",
+            "highest_buy_order": "Najwyższe zamówienie",
+            "highest_sell_offer": "Najwyższa oferta sprzedaży",
+            "amount_ordered": "Ilość zamówiona",
+            "amount_offered": "Ilość oferowana",
+            "price_per_unit": "Cena za jeden",
+            "in_orders": "W {} zamówieniach",
+            "in_offers": "W {} ofertach sprzedaży",
+            "inst_sell": "Cena szybkiej sprzedaży",
+            "inst_buy": "Cena szybkiego kupna",
+            "buy_volume": "Ilość we wszyskich zamówieniach",
+            "sell_volume": "Ilość we wszystkich ofertach",
+            "margin": "Margines",
+            "inaccurate": "* Jest niedokładne z wyniku na podatek"
         }
     }
 }

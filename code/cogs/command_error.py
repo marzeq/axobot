@@ -44,8 +44,7 @@ class CommandError(commands.Cog):
 
         elif type(error.original) == self.client.NoItemFound:
             await ctx.message.add_reaction(emoji)
-            # TODO: Translate this
-            response_embed = discord.Embed(title="This item doen't exist! Maybe try phrasing it a little bit differently.", color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["item_doesnt_exist"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
         # Raise the error so I can see it

@@ -186,7 +186,8 @@
             "nonexistent_command": "**This command does not exist!**",
             "missing_argument": "**You didn't provide a argument that is required!**",
             "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`"
+            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`",
+            "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently."
         },
         "guild_join": {
             "welcome": "**Welcome!**",
@@ -253,6 +254,22 @@
         "reminders": {
             "invalid_format": "The time for the reminder should be in this format: [months,days,hours,minutes,seconds]",
             "result": "Ok, you'll be reminded!"
+        },
+        "bazaar": {
+            "info": "Bazaar info for",
+            "highest_buy_order": "Highest buy order",
+            "highest_sell_offer": "Highest sell offer",
+            "amount_ordered": "Amound ordered",
+            "amount_offered": "Amount offered",
+            "price_per_unit": "Price per unit",
+            "in_orders": "In {} orders",
+            "in_offers": "In {} offers",
+            "inst_sell": "Instant sell price",
+            "inst_buy": "Instant buy price",
+            "buy_volume": "Buy volume",
+            "sell_volume": "Sell volume",
+            "margin": "Margin",
+            "inaccurate": "* Is inaccurate due to bazaar tax"
         }
     }
 }
