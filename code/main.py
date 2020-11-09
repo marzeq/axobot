@@ -114,7 +114,8 @@ client.admin_command_descriptions = \
                 "type": {"required": True},
                 "presence": {"required": True}
             },
-            "desc": "Changes the bot presence. Set type 0 for watching, 1 for listening, 2 for playing and 3 to reset."
+            "desc": "Changes the bot presence. Set type 0 for watching, 1 for listening, 2 for playing and 3 to reset.",
+            "aliases": []
         }
     }
 
