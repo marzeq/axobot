@@ -15,9 +15,9 @@ class BotStats(commands.Cog):
         try:
             if len(expr) >= 2:
                 names = ast.literal_eval(expr[1])
-                await ctx.send(embed=discord.Embed(title=simpleeval.simple_eval(expr[0], names=names)))
+                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0], names=names)}"))
             else:
-                await ctx.send(embed=discord.Embed(title=simpleeval.simple_eval(expr[0])))
+                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0])}"))
         except:
             pass
 
