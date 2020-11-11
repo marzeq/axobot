@@ -8,6 +8,7 @@ class BotStats(commands.Cog):
 
     def __init__(self, client):
         self.client = client
+        simpleeval.MAX_POWER = 100
 
     @commands.command()
     async def math(self, ctx: commands.Context, *, expr: str):
