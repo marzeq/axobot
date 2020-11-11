@@ -40,9 +40,9 @@ class HelpCommand(commands.Cog):
                     else:
                         args_to_put += f" ({arg})"
                 response_embed.add_field(name=useful["usage"], value=f"```{command}{args_to_put}```")
-                response_embed.add_field(name=useful["desc"], value=f"```{cmds[command]['desc']}```")
                 response_embed.add_field(name=useful["required_perms"], value=f"```{cmds[command]['required_perms']}```")
                 response_embed.add_field(name=useful["aliases"], value=f"```{cmds[command]['aliases']}```")
+                response_embed.add_field(name=useful["desc"], value=f"```{cmds[command]['desc']}```")
                 response_embed.set_footer(text=useful["required_notrequired_args"])
                 await ctx.send(embed=response_embed)
             except KeyError:
@@ -77,10 +77,10 @@ class HelpCommand(commands.Cog):
                     else:
                         args_to_put += f" ({arg})"
                 response_embed.add_field(name=f"**Usage:**", value=f"```{command}{args_to_put}```")
-                response_embed.add_field(name=f"**Description:**", value=f"```{self.adm_dsc[command]['desc']}```")
                 response_embed.add_field(name=f"**Required Permissions:**",
                                          value=f"```Bot Owner```")
                 response_embed.add_field(name=f"**Aliases:**", value=f"```{self.adm_dsc[command]['aliases']}```")
+                response_embed.add_field(name=f"**Description:**", value=f"```{self.adm_dsc[command]['desc']}```")
                 response_embed.set_footer(text="[] are required command arguments, () are optional command arguments")
                 await ctx.send(embed=response_embed)
             except KeyError:

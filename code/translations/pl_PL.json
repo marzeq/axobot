@@ -173,6 +173,19 @@
             "desc": "Pokazuje ci informacje na temat przedmiotu na bazarze w Hypixel Skyblock",
             "aliases": [],
             "required_perms": []
+        },
+        "math": {
+            "args": {
+                "expression": {
+                    "required": true
+                },
+                "names": {
+                    "required": false
+                }
+            },
+            "desc": "Bezpiecznie oblicza równanie matematyczne. Jeśli chcesz używać zmiennych, po równaniu użyj słownika pythonowego odzielonego ` | `.",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {
