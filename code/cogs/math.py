@@ -24,40 +24,39 @@ class Math(commands.Cog):
         )
         if len(expr) >= 3 and await self.client.is_owner(ctx.author):
             fc = expr[2:]
-            x = 0
             for func in fc:
                 func = func.replace("`", "").replace("py\n", "")
                 exec(f"{func}\nFuncs.{func.split(' ')[1].split('(')[0]} = {func.split(' ')[1].split('(')[0]}")
                 funcs.update({func.split(' ')[1].split('(')[0]: getattr(globals()["Funcs"](), func.split(' ')[1].split('(')[0])})
-        try:
-            if len(expr) >= 2:
-                names = ast.literal_eval(expr[1])
-                if type(simpleeval.simple_eval(expr[0], functions=funcs, names=names)) == bytes:
-                    res = simpleeval.simple_eval(expr[0], functions=funcs, names=names).decode("utf-8")
-                else:
-                    res = simpleeval.simple_eval(expr[0], functions=funcs, names=names)
+        # try:
+        if len(expr) >= 2:
+            names = ast.literal_eval(expr[1])
+            if type(simpleeval.simple_eval(expr[0], functions=funcs, names=names)) == bytes:
+                res = simpleeval.simple_eval(expr[0], functions=funcs, names=names).decode("utf-8")
             else:
-                if type(simpleeval.simple_eval(expr[0], functions=funcs)) == bytes:
-                    res = simpleeval.simple_eval(expr[0], functions=funcs).decode("utf-8")
-                else:
-                    res = simpleeval.simple_eval(expr[0], functions=funcs)
-            ansi_escape = re.compile(r'''
-                \x1B  # ESC
-                (?:   # 7-bit C1 Fe (except CSI)
-                    [@-Z\\-_]
-                |     # or [ for CSI, followed by a control sequence
-                    \[
-                    [0-?]*  # Parameter bytes
-                    [ -/]*  # Intermediate bytes
-                    [@-~]   # Final byte
-                )
-            ''', re.VERBOSE)
-            res = ansi_escape.sub('', res)
-            if len(res) > 1028:
-                res = res[:1013] + "[...]"
-            await ctx.send(embed=discord.Embed().add_field(name="**Output:**", value="```" + res + "```"))
-        except:
-            pass
+                res = simpleeval.simple_eval(expr[0], functions=funcs, names=names)
+        else:
+            if type(simpleeval.simple_eval(expr[0], functions=funcs)) == bytes:
+                res = simpleeval.simple_eval(expr[0], functions=funcs).decode("utf-8")
+            else:
+                res = simpleeval.simple_eval(expr[0], functions=funcs)
+        ansi_escape = re.compile(r'''
+               \x1B  # ESC
+               (?:   # 7-bit C1 Fe (except CSI)
+                   [@-Z\\-_]
+               |     # or [ for CSI, followed by a control sequence
+                   \[
+                   [0-?]*  # Parameter bytes
+                   [ -/]*  # Intermediate bytes
+                   [@-~]   # Final byte
+               )
+        ''', re.VERBOSE)
+        res = ansi_escape.sub('', res)
+        if len(res) > 1028:
+            res = res[:1013] + "[...]"
+        await ctx.send(embed=discord.Embed().add_field(name="**Output:**", value="```" + res + "```"))
+        # except:
+        #     pass
 
 
 def setup(client):
