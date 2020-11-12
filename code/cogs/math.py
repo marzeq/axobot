@@ -4,6 +4,7 @@ import simpleeval
 import ast
 import random
 import re
+import time
 class Funcs:
     pass
 
@@ -20,7 +21,8 @@ class Math(commands.Cog):
         funcs = simpleeval.DEFAULT_FUNCTIONS.copy()
         funcs.update(
             choice=random.choice,
-            list=lambda *args: list(args)
+            list=lambda *args: list(args),
+            time=time.time
         )
         if len(expr) >= 3 and await self.client.is_owner(ctx.author):
             fc = expr[2:]
