@@ -33,25 +33,37 @@ class Math(commands.Cog):
             names = ast.literal_eval(expr[1])
             if type(simpleeval.simple_eval(expr[0], functions=funcs, names=names)) == bytes:
                 res = simpleeval.simple_eval(expr[0], functions=funcs, names=names).decode("utf-8")
+                ansi_escape = re.compile(r'''
+                               \x1B  # ESC
+                               (?:   # 7-bit C1 Fe (except CSI)
+                                   [@-Z\\-_]
+                               |     # or [ for CSI, followed by a control sequence
+                                   \[
+                                   [0-?]*  # Parameter bytes
+                                   [ -/]*  # Intermediate bytes
+                                   [@-~]   # Final byte
+                               )
+                        ''', re.VERBOSE)
+                res = ansi_escape.sub('', res)
             else:
                 res = simpleeval.simple_eval(expr[0], functions=funcs, names=names)
         else:
             if type(simpleeval.simple_eval(expr[0], functions=funcs)) == bytes:
                 res = simpleeval.simple_eval(expr[0], functions=funcs).decode("utf-8")
+                ansi_escape = re.compile(r'''
+                               \x1B  # ESC
+                               (?:   # 7-bit C1 Fe (except CSI)
+                                   [@-Z\\-_]
+                               |     # or [ for CSI, followed by a control sequence
+                                   \[
+                                   [0-?]*  # Parameter bytes
+                                   [ -/]*  # Intermediate bytes
+                                   [@-~]   # Final byte
+                               )
+                        ''', re.VERBOSE)
+                res = ansi_escape.sub('', res)
             else:
                 res = simpleeval.simple_eval(expr[0], functions=funcs)
-        ansi_escape = re.compile(r'''
-               \x1B  # ESC
-               (?:   # 7-bit C1 Fe (except CSI)
-                   [@-Z\\-_]
-               |     # or [ for CSI, followed by a control sequence
-                   \[
-                   [0-?]*  # Parameter bytes
-                   [ -/]*  # Intermediate bytes
-                   [@-~]   # Final byte
-               )
-        ''', re.VERBOSE)
-        res = ansi_escape.sub('', res)
         if len(res) > 1028:
             res = res[:1013] + "[...]"
         await ctx.send(embed=discord.Embed().add_field(name="**Output:**", value="```" + res + "```"))
