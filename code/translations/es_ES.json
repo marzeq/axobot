@@ -184,7 +184,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ` | `",
+            "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by \\` | \\`",
             "aliases": [],
             "required_perms": []
         }

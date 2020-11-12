@@ -183,7 +183,7 @@
                     "required": false
                 }
             },
-            "desc": "Bezpiecznie oblicza równanie matematyczne. Jeśli chcesz używać zmiennych, po równaniu użyj słownika pythonowego odzielonego ` | `.",
+            "desc": "Bezpiecznie oblicza równanie matematyczne. Jeśli chcesz używać zmiennych, po równaniu użyj słownika pythonowego odzielonego \\` | \\`.",
             "aliases": [],
             "required_perms": []
         }
