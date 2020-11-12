@@ -11,7 +11,7 @@ class Math(commands.Cog):
         self.client: commands.Bot = client
         simpleeval.MAX_POWER = 100
 
-    @commands.command()
+    @commands.command(aliases=["safe_eval", "se"])
     async def math(self, ctx: commands.Context, *, expr: str):
         expr = expr.split(" | ")
         funcs = simpleeval.DEFAULT_FUNCTIONS.copy()
