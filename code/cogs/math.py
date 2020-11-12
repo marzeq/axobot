@@ -3,6 +3,7 @@ from discord.ext import commands
 import simpleeval
 import ast
 import random
+import re
 
 class Funcs:
     pass
@@ -32,9 +33,31 @@ class Math(commands.Cog):
         try:
             if len(expr) >= 2:
                 names = ast.literal_eval(expr[1])
-                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0], names=names, functions=funcs)}"))
+                if type(simpleeval.simple_eval(expr[0], functions=funcs, names=names)) == bytes:
+                    res = simpleeval.simple_eval(expr[0], functions=funcs, names=names).decode("utf-8")
+                else:
+                    res = simpleeval.simple_eval(expr[0], functions=funcs, names=names)
             else:
-                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0], functions=funcs)}"))
+                if type(simpleeval.simple_eval(expr[0], functions=funcs)) == bytes:
+                    res = simpleeval.simple_eval(expr[0], functions=funcs).decode("utf-8")
+                else:
+                    res = simpleeval.simple_eval(expr[0], functions=funcs)
+            import re
+            ansi_escape = re.compile(r'''
+                \x1B  # ESC
+                (?:   # 7-bit C1 Fe (except CSI)
+                    [@-Z\\-_]
+                |     # or [ for CSI, followed by a control sequence
+                    \[
+                    [0-?]*  # Parameter bytes
+                    [ -/]*  # Intermediate bytes
+                    [@-~]   # Final byte
+                )
+            ''', re.VERBOSE)
+            res = ansi_escape.sub('', res)
+            if len(res) > 1028:
+                res = res[:1013] + "[...]"
+            await ctx.send(embed=discord.Embed().add_field(name="**Output:**", value="```" + res + "```"))
         except:
             pass
 
