@@ -4,7 +4,6 @@ import simpleeval
 import ast
 import random
 import re
-
 class Funcs:
     pass
 
@@ -42,7 +41,6 @@ class Math(commands.Cog):
                     res = simpleeval.simple_eval(expr[0], functions=funcs).decode("utf-8")
                 else:
                     res = simpleeval.simple_eval(expr[0], functions=funcs)
-            import re
             ansi_escape = re.compile(r'''
                 \x1B  # ESC
                 (?:   # 7-bit C1 Fe (except CSI)
