@@ -64,6 +64,7 @@ class Math(commands.Cog):
                 res = ansi_escape.sub('', res)
             else:
                 res = simpleeval.simple_eval(expr[0], functions=funcs)
+        res = str(res)
         if len(res) > 1028:
             res = res[:1013] + "[...]"
         await ctx.send(embed=discord.Embed().add_field(name="**Output:**", value="```" + res + "```"))
