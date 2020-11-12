@@ -16,7 +16,7 @@ class LoggingEvents(commands.Cog):
         if config["channel"] == 0 or message.author.bot:
             return
         # Getting all translations
-        lang = self.client.get_server_lang(str(message.guild.id))
+        lang = self.client.get_server_lang(message.guild)
         useful = lang["translations"]["logging"]
         logging_channel = self.client.get_channel(config["channel"])
         if message.content == "":
@@ -41,7 +41,7 @@ class LoggingEvents(commands.Cog):
         if config["channel"] == 0:
             return
         # Getting all translations
-        lang = self.client.get_server_lang(str(messages[0].guild.id))
+        lang = self.client.get_server_lang(messages[0].guild)
         useful = lang["translations"]["logging"]
         for message in messages:
             logging_channel = self.client.get_channel(config["channel"])
@@ -69,7 +69,7 @@ class LoggingEvents(commands.Cog):
         if config["channel"] == 0:
             return
         # Getting all translations
-        lang = self.client.get_server_lang(str(after.guild.id))
+        lang = self.client.get_server_lang(after.guild)
         useful = lang["translations"]["logging_edit"]
         logging_channel = self.client.get_channel(config["channel"])
         if before.content == "":

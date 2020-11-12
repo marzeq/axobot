@@ -12,7 +12,7 @@ class Lang(commands.Cog):
     async def language(self, ctx, lang: str = "none"):
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
             # Getting all translations
-            lng = self.client.get_server_lang(str(ctx.guild.id))
+            lng = self.client.get_server_lang(ctx.guild)
             useful = lng["translations"]["lang"]
 
             if lang != "none":

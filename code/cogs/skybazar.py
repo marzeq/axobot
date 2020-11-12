@@ -23,7 +23,7 @@ class SkyBazar(commands.Cog):
     @commands.command()
     async def skybazar(self, ctx: commands.Context, *, item: str):
         # Getting all translations
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["bazaar"]
         result = self.sbazaritem(item)["product_info"]
         embed = discord.Embed(title=f"{useful['info']} {result['product_id']}").set_thumbnail(url="https://static.wikia"

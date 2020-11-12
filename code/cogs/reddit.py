@@ -14,7 +14,7 @@ class Reddit(commands.Cog):
         subreddit = subreddit[2:] if subreddit.startswith("r/") else subreddit
 
         # Getting all translations
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["reddit"]
 
         # Getting the Subreddit object from the provided name

@@ -9,9 +9,10 @@ class Prefix(commands.Cog):
         self.client = client
 
     @commands.command()
+    @commands.guild_only()
     async def prefix(self, ctx, *, prefix: str):
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
-            lang = self.client.get_server_lang(str(ctx.guild.id))
+            lang = self.client.get_server_lang(ctx.guild)
             useful = lang["translations"]["prefix"]
             with open('config/config.json', 'r') as f:
                 config = json.load(f)

@@ -12,7 +12,7 @@ class Ban(commands.Cog):
     @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
         # Getting all translations
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["ban"]
 
         # If user has perms to ban
@@ -28,7 +28,7 @@ class Ban(commands.Cog):
     @commands.command()
     async def tempban(self, ctx: commands.Context, user: discord.User, *, args):
         # Getting all translations
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["ban"]
 
         # If user has perms to ban

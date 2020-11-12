@@ -15,7 +15,7 @@ class CommandError(commands.Cog):
         except: # noqa
             error.original = type(error)
         # Getting all translations
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["command_error"]
 
         # Setting the emoji so I dont need to type it all the time

@@ -12,7 +12,7 @@ class HelpCommand(commands.Cog):
 
     @commands.command()
     async def help(self, ctx, *, command=None):
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["help"]
         cmds = lang["command_descriptions"]
         # TODO: Make command categories otherwise this command will become very messy later

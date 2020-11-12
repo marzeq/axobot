@@ -13,7 +13,7 @@ class Translate(commands.Cog):
     @commands.command()
     async def translate(self, ctx, src_lang: str, dest_lang: str, *, to_translate):
         # Getting all translations
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["translate"]
 
         try:

@@ -11,7 +11,7 @@ class Reminders(commands.Cog):
 
     @commands.command()
     async def remind(self, ctx: commands.Context, *, args: str):
-        lang = self.client.get_server_lang(str(ctx.guild.id))
+        lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["reminders"]
         args = args.split(" ")
         topop = 0

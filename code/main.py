@@ -20,6 +20,8 @@ with open("config/token.txt", "r") as f:
 
 # Returns the custom prefix for a specified guild
 def get_prefix(client, message):  # noqa
+    if message.guild is None:
+        return "--"
     with open('config/config.json', 'r') as f:  # noqa
         config = json.load(f)
 
@@ -27,19 +29,25 @@ def get_prefix(client, message):  # noqa
 
 
 # Returns the provided servers language file
-def get_server_lang(guild_id: int) -> dict:
+def get_server_lang(guild: discord.Guild) -> dict:
+    if guild is None:
+        with open(f"translations/en_US.json", "r") as langf:
+            lng = json.load(langf)
+            return lng
     with open("config/config.json", "r") as configf:
         cfg = json.load(configf)
-        lang_code = cfg[guild_id]["lang"]
+        lang_code = cfg[str(guild.id)]["lang"]
         with open(f"translations/{lang_code}.json", "r") as langf:
             lng = json.load(langf)
     return lng
 
 
-def get_server_lang_code(guild_id: int) -> str:
+def get_server_lang_code(guild: discord.Guild) -> str:
+    if guild is None:
+        return "en_US"
     with open("config/config.json", "r") as configf:
         cfg = json.load(configf)
-        lang_code = cfg[str(guild_id)]["lang"]
+        lang_code = cfg[str(guild.id)]["lang"]
     return lang_code
 
 

@@ -31,7 +31,7 @@ class GuildJoin(commands.Cog):
         channel = random.choice(list1)
 
         # Getting all translations
-        lang = self.client.get_server_lang(str(guild.id))
+        lang = self.client.get_server_lang(guild)
         useful = lang["translations"]["guild_join"]
 
         # Creates and sends the response embed
