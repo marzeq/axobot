@@ -4,6 +4,9 @@ import simpleeval
 import ast
 import random
 
+class Funcs:
+    pass
+
 
 class Math(commands.Cog):
 
@@ -19,6 +22,13 @@ class Math(commands.Cog):
             choice=random.choice,
             list=lambda *args: list(args)
         )
+        if len(expr) >= 3 and await self.client.is_owner(ctx.author):
+            fc = expr[2:]
+            x = 0
+            for func in fc:
+                func = func.replace("`", "").replace("py\n", "")
+                exec(f"{func}\nFuncs.{func.split(' ')[1].split('(')[0]} = {func.split(' ')[1].split('(')[0]}")
+                funcs.update({func.split(' ')[1].split('(')[0]: getattr(globals()["Funcs"](), func.split(' ')[1].split('(')[0])})
         try:
             if len(expr) >= 2:
                 names = ast.literal_eval(expr[1])
