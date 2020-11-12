@@ -2,9 +2,10 @@ import discord
 from discord.ext import commands
 import simpleeval
 import ast
+import random
 
 
-class BotStats(commands.Cog):
+class Math(commands.Cog):
 
     def __init__(self, client):
         self.client: commands.Bot = client
@@ -13,15 +14,20 @@ class BotStats(commands.Cog):
     @commands.command()
     async def math(self, ctx: commands.Context, *, expr: str):
         expr = expr.split(" | ")
+        funcs = simpleeval.DEFAULT_FUNCTIONS.copy()
+        funcs.update(
+            choice=random.choice,
+            list=lambda *args: list(args)
+        )
         try:
             if len(expr) >= 2:
                 names = ast.literal_eval(expr[1])
-                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0], names=names)}"))
+                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0], names=names, functions=funcs)}"))
             else:
-                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0])}"))
+                await ctx.send(embed=discord.Embed(title=f"{simpleeval.simple_eval(expr[0], functions=funcs)}"))
         except:
             pass
 
 
 def setup(client):
-    client.add_cog(BotStats(client))
+    client.add_cog(Math(client))
