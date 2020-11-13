@@ -7,6 +7,8 @@ from logging import Logger
 import discord
 import praw
 from discord.ext import commands
+import pathlib
+os.chdir(f"{pathlib.Path(__file__).parent.absolute()}")
 
 # Determining if we need to send a restart alert after everything is finished
 if len(sys.argv) >= 2:
