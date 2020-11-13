@@ -22,7 +22,8 @@ class Math(commands.Cog):
         funcs.update(
             choice=random.choice,
             list=lambda *args: list(args),
-            time=time.time
+            time=time.time,
+            round=round
         )
         if len(expr) >= 3 and await self.client.is_owner(ctx.author):
             fc = expr[2:]
@@ -76,3 +77,11 @@ class Math(commands.Cog):
 
 def setup(client):
     client.add_cog(Math(client))
+    Funcs.client = client
+
+if __name__ == "__main__":
+    import sys
+    import os
+    import pathlib
+    os.chdir(f"{pathlib.Path(__file__).parent.absolute()}/..")
+    os.system(f"{sys.executable} {pathlib.Path(__file__).parent.absolute()}/../main.py")

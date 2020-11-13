@@ -1,2 +1,4 @@
 /code/config/
 /code/cogs/ufland.py
+/code/cogs/__pycache__
+.idea

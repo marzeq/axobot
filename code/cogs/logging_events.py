@@ -91,3 +91,10 @@ class LoggingEvents(commands.Cog):
 
 def setup(client):
     client.add_cog(LoggingEvents(client))
+
+if __name__ == "__main__":
+    import sys
+    import os
+    import pathlib
+    os.chdir(f"{pathlib.Path(__file__).parent.absolute()}/..")
+    os.system(f"{sys.executable} {pathlib.Path(__file__).parent.absolute()}/../main.py")

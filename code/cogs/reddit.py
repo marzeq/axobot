@@ -23,7 +23,7 @@ class Reddit(commands.Cog):
         # Stackoverflow dark magic that I don't understand
         # I just know it gives us one of the 10 most hottest posts of the provided subreddit
         post_to_pick = random.randint(1, 10)
-        for i in range(0, post_to_pick):
+        for _ in range(0, post_to_pick):
             submission = next(x for x in memes_submissions if not x.stickied)
 
         # Checking if post if NSFW and the channel is not, because we do not want our bot to get taken down
@@ -60,3 +60,10 @@ class Reddit(commands.Cog):
 
 def setup(client):
     client.add_cog(Reddit(client))
+
+if __name__ == "__main__":
+    import sys
+    import os
+    import pathlib
+    os.chdir(f"{pathlib.Path(__file__).parent.absolute()}/..")
+    os.system(f"{sys.executable} {pathlib.Path(__file__).parent.absolute()}/../main.py")
