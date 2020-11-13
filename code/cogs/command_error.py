@@ -1,4 +1,5 @@
 import discord
+import simpleeval
 from discord.ext import commands
 from time import time
 
@@ -45,6 +46,12 @@ class CommandError(commands.Cog):
         elif type(error) == discord.ext.commands.errors.BadArgument:
             await ctx.message.add_reaction(emoji)
             response_embed = discord.Embed(title=useful["bad_format"], color=0xdb2a2a)
+            await ctx.send(embed=response_embed)
+
+        # TODO: Translate this
+        elif type(error.original) == simpleeval.NumberTooHigh:
+            await ctx.message.add_reaction(emoji)
+            response_embed = discord.Embed(title="This number is to high and might freeze me!", color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
         elif type(error.original) == self.client.NoItemFound:
