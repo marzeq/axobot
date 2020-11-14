@@ -54,6 +54,16 @@ class CommandError(commands.Cog):
             response_embed = discord.Embed(title="This number is to high and might freeze me!", color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
+        elif type(error.original) == simpleeval.NameNotDefined:
+            await ctx.message.add_reaction(emoji)
+            response_embed = discord.Embed(title="This variable is not defined!", color=0xdb2a2a)
+            await ctx.send(embed=response_embed)
+
+        elif type(error.original) == ZeroDivisionError:
+            await ctx.message.add_reaction(emoji)
+            response_embed = discord.Embed(title="You are dividing by zero!", color=0xdb2a2a)
+            await ctx.send(embed=response_embed)
+
         elif type(error.original) == self.client.NoItemFound:
             await ctx.message.add_reaction(emoji)
             response_embed = discord.Embed(title=useful["item_doesnt_exist"], color=0xdb2a2a)
