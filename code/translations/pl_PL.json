@@ -1,13 +1,12 @@
 {
-    "command_descriptions":
-    {
+    "command_descriptions": {
         "help": {
             "args": {
                 "command": {
                     "required": false
                 }
             },
-            "desc": "Pokazuje wszystkie komendy i ich argumenty, aliasy oraz jej opis. Jeśli jest podana nazwa komendy, zostanie pokazana pomoc tycząca się danej komendy",
+            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
             "aliases": [],
             "required_perms": []
         },
@@ -20,9 +19,9 @@
                     "required": false
                 }
             },
-            "desc": "Banuje podanego członka. Jeśli podany, wysyła powód bana do dziennika zdarzeń serwera.",
+            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
             "aliases": [],
-            "required_perms": "Banowanie Członków albo Administrator"
+            "required_perms": "Ban Members or Administrator"
         },
         "tempban": {
             "args": {
@@ -36,9 +35,9 @@
                     "required": false
                 }
             },
-            "desc": "Banuje tymczasowo podanego członka. Jeśli podany, wysyła powód bana do dziennika zdarzeń serwera.",
+            "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
             "aliases": [],
-            "required_perms": "Banowanie Członków albo Administrator"
+            "required_perms": "Ban Members or Administrator"
         },
         "kick": {
             "args": {
@@ -49,9 +48,9 @@
                     "required": false
                 }
             },
-            "desc": "Wyrzuca podanego członka. Jeśli podany, wysyła powód wyrzucenia do dziennika zdarzeń serwera.",
+            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
             "aliases": [],
-            "required_perms": "Wyrzucanie Członków albo Administrator"
+            "required_perms": "Kick Members or Administrator"
         },
         "prefix": {
             "args": {
@@ -59,9 +58,9 @@
                     "required": true
                 }
             },
-            "desc": "Zmienia prefix bota na serwerze.",
+            "desc": "Changes the prefix for the bot on the server.",
             "aliases": [],
-            "required_perms": "Zarządzanie Serwerem albo Administrator"
+            "required_perms": "Manage Server or Administrator"
         },
         "lang": {
             "args": {
@@ -69,19 +68,19 @@
                     "required": false
                 }
             },
-            "desc": "Zmienia język bota na serwerze.",
+            "desc": "Changes the language for the bot on the server.",
             "aliases": [],
-            "required_perms": "Zarządzanie Serwerem albo Administrator"
+            "required_perms": "Manage Server or Administrator"
         },
         "meme": {
             "args": {},
-            "desc": "Pokazuje ci jeden z 10 najnowszych postów na r/memes",
+            "desc": "Shows you one of the 10 most recent submissions on r/memes",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
-            "desc": "Pokazuje ci jeden z 10 najnowszych postów na r/dankmemes",
+            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
             "aliases": [],
             "required_perms": []
         },
@@ -91,7 +90,7 @@
                     "required": true
                 }
             },
-            "desc": "Pokazuje ci jeden z 10 najostrzejszych postów na wybranym subreddicie",
+            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
             "aliases": [],
             "required_perms": []
         },
@@ -102,7 +101,9 @@
                 }
             },
             "desc": "Returns you a ready link for a Google search",
-            "aliases": ["ggl"],
+            "aliases": [
+                "ggl"
+            ],
             "required_perms": []
         },
         "wiki": {
@@ -111,8 +112,10 @@
                     "required": true
                 }
             },
-            "desc": "Daje ci gotowy link do artykułu na wikipedii",
-            "aliases": ["wikipedia"],
+            "desc": "Gives you n ready link to an wikipedia article.",
+            "aliases": [
+                "wikipedia"
+            ],
             "required_perms": []
         },
         "translate": {
@@ -127,7 +130,7 @@
                     "required": true
                 }
             },
-            "desc": "Tłumaczy daną frazę w Google Tłumaczu. Jeśli src_lang równa się \"auto\" lub \"none\", język tekstu źródłowego będzie wybrany automatycznie.",
+            "desc": "Uses Google Translate directly from Discord. If src_lang is set to \"auto\" or \"none\" it will detect the source language.",
             "aliases": [],
             "required_perms": []
         },
@@ -137,9 +140,11 @@
                     "required": true
                 }
             },
-            "desc": "Zmienia kanał do zapisywania zmienionych wiadomości na serwerze.",
+            "desc": "Changes the channel for message logging provided by the bot.",
             "aliases": [],
-            "required_perms": ["Zarządzanie Serwerem albo Administrator"]
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
         },
         "blacklist": {
             "args": {
@@ -147,9 +152,13 @@
                     "required": true
                 }
             },
-            "desc": "Wyłącza/włącza dany kanał z zapisywania zmienionych wiadomości.",
-            "aliases": ["bl"],
-            "required_perms": ["Zarządzanie Kanałami albo Administrator"]
+            "desc": "Blacklists/unblackists the channel from message logging!",
+            "aliases": [
+                "bl"
+            ],
+            "required_perms": [
+                "Manage Channels or Administrator"
+            ]
         },
         "remind": {
             "args": {
@@ -160,7 +169,7 @@
                     "required": true
                 }
             },
-            "desc": "Przypomina cię o ustalonej rzeczy.",
+            "desc": "Reminds you after a set amount of time.",
             "aliases": [],
             "required_perms": []
         },
@@ -170,7 +179,7 @@
                     "required": true
                 }
             },
-            "desc": "Pokazuje ci informacje na temat przedmiotu na bazarze w Hypixel Skyblock",
+            "desc": "Shows you stats about a specific item in Hypixel Skyblock",
             "aliases": [],
             "required_perms": []
         },
@@ -183,108 +192,108 @@
                     "required": false
                 }
             },
-            "desc": "Bezpiecznie oblicza równanie matematyczne. Jeśli chcesz używać zmiennych, po równaniu użyj słownika pythonowego odzielonego ' | '.",
+            "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
             "aliases": [],
             "required_perms": []
         }
     },
     "translations": {
         "ban": {
-            "banned": "**Zbanowano {} za: {}**",
-            "tempbanned": "**Tymczasowo zbanowano {} za: {}**",
-            "invalid_time": "Brak podanego czasu!",
+            "banned": "**Banned {} for: {}**",
+            "tempbanned": "**Tempbanned {} for: {}**",
+            "invalid_time": "No time specified!",
             "too_long": "Powód powinien mieć maksymalnie 256 znaków"
         },
         "command_error": {
-            "nonexistent_command": "**Ta komenda nie istnieje!**",
-            "missing_argument": "**Nie podałeś/aś wymaganego argumentu!**",
-            "bot_missing_permissions": "**Nie mam wymaganych permisjii do wykonania tej komendy!**",
-            "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `{}`",
-            "item_doesnt_exist": "Ten przedmiot nie istnieje. Spróbuj sformułować go trochę inaczej.",
-            "bad_format": "Ten argument jest w złym formacie"
+            "nonexistent_command": "**This command does not exist!**",
+            "missing_argument": "**You didn't provide a argument that is required!**",
+            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
+            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`",
+            "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently.",
+            "bad_format": "This argument is in a bad format"
         },
         "guild_join": {
-            "welcome": "**Witaj!**",
-            "thx_for_invite": "Dzięki że mnie zaprosiłeś!",
-            "prefix": "Moim domyślnym prefixem jest `--`. Jeśli chcesz go zmenić, napisz `--prefix [new_prefix]`!"
+            "welcome": "**Welcome!**",
+            "thx_for_invite": "Thanks for inviting me!",
+            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
         },
         "help": {
-            "heres_your_help": "**Tutaj jest twoja pomoc {}!**",
-            "available_commands": "Dostępne komendy:",
-            "required_notrequired_args": "[] to wymagane argumenty, () to opcjonalne argumeny",
-            "the_cmd": "**Komenda {}:**",
-            "usage": "**Użycie:**",
-            "desc": "**Opis:**",
-            "required_perms": "**Wymagane Permisje:**",
-            "aliases": "**Skróty:**"
+            "heres_your_help": "**Here's your help {}!**",
+            "available_commands": "Available Commands:",
+            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
+            "the_cmd": "**The {} command:**",
+            "usage": "**Usage:**",
+            "desc": "**Description:**",
+            "required_perms": "**Required Permissions:**",
+            "aliases": "**Aliases:**"
         },
         "kick": {
-            "kicked": "**Wyrzucono {} za: {}**"
+            "kicked": "**Kicked {} for: {}**"
         },
         "lang": {
-            "changed_lang": "**Zmieniono język na `{}`.**",
-            "available_langs": "**Dostępne języki:**"
+            "changed_lang": "**Changed the language to `{}`.**",
+            "available_langs": "**Available languages:**"
         },
         "prefix": {
-            "changed_prefix": "**Zmieniono prefix na `{}`.**"
+            "changed_prefix": "**Changed the custom prefix to `{}`.**"
         },
         "reddit": {
-            "submission_nsfw": "Ten post jest oznaczony jako NSFW. Proszę włącz tryb NSFW na tym kanale, aby zobaczyć ten post.",
-            "title": "**Tytuł**: {}, Autor: u/{}",
-            "content": "**Zawartość posta:**",
-            "footer": "Stosunek upvote'ów i downvote'ów: {}, Link: {}"
+            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
+            "title": "**Title**: {}, By: u/{}",
+            "content": "**Content:**",
+            "footer": "Upvote Ratio: {}, Link: {}"
         },
         "google": {
-            "ur_link": "**Twój gotowy link: {}**"
+            "ur_link": "**Here's your link: {}**"
         },
         "translate": {
-            "lang_not_supported": "Ten język nie jest wspierany przez tłumacza!",
-            "heres_translated": "Oto twoje tłumaczenie: `{}`"
+            "lang_not_supported": "This language isn't supported by the translator!",
+            "heres_translated": "Here's your translated phrase: `{}`"
         },
         "logging": {
-            "success": "Pomyślnie zaktualizowano to ustawienie!",
-            "msg_deleted": "**Wiadomość została usunięta!**",
-            "channel": "Kanał",
-            "content": "Zawartość",
-            "author": "Autor",
-            "time": "Czas",
-            "tts": "Tekst na Mowę",
-            "pinned": "Przypięta",
-            "everyone-here": "@Everyone albo @Here"
+            "success": "Successfully updated this setting!",
+            "msg_deleted": "**A message was deleted!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS",
+            "pinned": "Pinned",
+            "everyone-here": "Mentioned Everyone or Here"
         },
         "logging_edit": {
-            "msg_edited": "**Wiadomość została zedytowana!**",
-            "channel": "Kanał",
-            "content": "Zawartość",
-            "author": "Autor",
-            "time": "Czas",
-            "tts": "Tekst na Mowę po edycji",
-            "pinned": "Przypięta po edyscji",
-            "everyone-here": "@Everyone albo @Here",
-            "content_value": "**Przed**: {}\n**Po**: {}",
-            "time_value": "**Utworzona**: {} GMT\n**Zedytowana**: {} GMT",
-            "everyone-here_value": "**Przed**: {}\n**Po**: {}"
+            "msg_edited": "**A message was edited!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS After",
+            "pinned": "Pinned After",
+            "everyone-here": "Mentioned Everyone or Here",
+            "content_value": "**Before**: {}\n**After**: {}",
+            "time_value": "**Created At**: {} GMT\n**Edited At**: {} GMT",
+            "everyone-here_value": "**Before**: {}\n**After**: {}"
         },
         "reminders": {
-            "invalid_format": "Brak podanego czasu!",
-            "result": "Ok, dostaniesz przypomnienie!",
+            "invalid_format": "No time specified!",
+            "result": "Ok, you'll be reminded!",
             "too_long": "Przypomnienie powinno mieć maksymalnie 256 znaków"
         },
         "bazaar": {
-            "info": "Info z bazaru dla",
-            "highest_buy_order": "Najwyższe zamówienie",
-            "highest_sell_offer": "Najwyższa oferta sprzedaży",
-            "amount_ordered": "Ilość zamówiona",
-            "amount_offered": "Ilość oferowana",
-            "price_per_unit": "Cena za jeden",
-            "in_orders": "W {} zamówieniach",
-            "in_offers": "W {} ofertach sprzedaży",
-            "inst_sell": "Cena szybkiej sprzedaży",
-            "inst_buy": "Cena szybkiego kupna",
-            "buy_volume": "Ilość we wszyskich zamówieniach",
-            "sell_volume": "Ilość we wszystkich ofertach",
-            "margin": "Margines",
-            "inaccurate": "* Jest niedokładne z wyniku na podatek"
+            "info": "Bazaar info for",
+            "highest_buy_order": "Highest buy order",
+            "highest_sell_offer": "Highest sell offer",
+            "amount_ordered": "Amound ordered",
+            "amount_offered": "Amount offered",
+            "price_per_unit": "Price per unit",
+            "in_orders": "In {} orders",
+            "in_offers": "In {} offers",
+            "inst_sell": "Instant sell price",
+            "inst_buy": "Instant buy price",
+            "buy_volume": "Buy volume",
+            "sell_volume": "Sell volume",
+            "margin": "Margin",
+            "inaccurate": "* Is inaccurate due to bazaar tax"
         }
     }
 }
