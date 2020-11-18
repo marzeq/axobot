@@ -113,9 +113,7 @@
                 }
             },
             "desc": "Gives you n ready link to an wikipedia article.",
-            "aliases": [
-                "wikipedia"
-            ],
+            "aliases": ["wikipedia"],
             "required_perms": []
         },
         "translate": {
@@ -142,9 +140,7 @@
             },
             "desc": "Changes the channel for message logging provided by the bot.",
             "aliases": [],
-            "required_perms": [
-                "Manage Server or Administrator"
-            ]
+            "required_perms": ["Manage Server or Administrator"]
         },
         "blacklist": {
             "args": {
@@ -153,12 +149,8 @@
                 }
             },
             "desc": "Blacklists/unblackists the channel from message logging!",
-            "aliases": [
-                "bl"
-            ],
-            "required_perms": [
-                "Manage Channels or Administrator"
-            ]
+            "aliases": ["bl"],
+            "required_perms": ["Manage Channels or Administrator"]
         },
         "remind": {
             "args": {
@@ -202,7 +194,7 @@
             "banned": "**Banned {} for: {}**",
             "tempbanned": "**Tempbanned {} for: {}**",
             "invalid_time": "No time specified!",
-            "too_long": "Powód powinien mieć maksymalnie 256 znaków"
+            "too_long": "The reason should be 256 charachters long"
         },
         "command_error": {
             "nonexistent_command": "**This command does not exist!**",
@@ -277,7 +269,7 @@
         "reminders": {
             "invalid_format": "No time specified!",
             "result": "Ok, you'll be reminded!",
-            "too_long": "Przypomnienie powinno mieć maksymalnie 256 znaków"
+            "too_long": "The reminder should be 256 charachters long"
         },
         "bazaar": {
             "info": "Bazaar info for",
