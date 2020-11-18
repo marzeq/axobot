@@ -69,6 +69,11 @@ class CommandError(commands.Cog):
             response_embed = discord.Embed(title=useful["item_doesnt_exist"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
+        elif type(error.original) == SyntaxError:
+            await ctx.message.add_reaction(emoji)
+            response_embed = discord.Embed(title="Invalid syntax!", color=0xdb2a2a)
+            await ctx.send(embed=response_embed)
+
         # Raise the error so I can see it
         else:
             errorid = round(time())
