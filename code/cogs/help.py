@@ -15,10 +15,9 @@ class HelpCommand(commands.Cog):
         lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["help"]
         cmds = lang["command_descriptions"]
-        # TODO: Make command categories otherwise this command will become very messy later
+        categories = lang["help_cattegories"]
         if not command:
             response_embed = discord.Embed(title=useful["heres_your_help"].format(ctx.author), color=0x1ced23)
-            command_list = ""
             for command in cmds:
                 args_to_put = ""
                 for arg in cmds[command]["args"]:
@@ -26,8 +25,10 @@ class HelpCommand(commands.Cog):
                         args_to_put += f" [{arg}]"
                     else:
                         args_to_put += f" ({arg})"
-                command_list += f"{command}{args_to_put}\n"
-            response_embed.add_field(name=useful["available_commands"], value=f"```{command_list}```")
+                command_usage = f"{command}{args_to_put}\n"
+                categories[cmds[command]["cattegory"]] += command_usage
+            for cat in categories:
+                response_embed.add_field(name=cat, value=f"```\n{categories[cat]}```")
             response_embed.set_footer(text=useful["required_notrequired_args"])
             await ctx.send(embed=response_embed)
         else:
@@ -90,6 +91,7 @@ class HelpCommand(commands.Cog):
 
 def setup(client):
     client.add_cog(HelpCommand(client))
+
 
 if __name__ == "__main__":
     import sys

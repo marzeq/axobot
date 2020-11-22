@@ -1,4 +1,5 @@
 {
+    "help_cattegories": {"Main": "", "User managment": "", "Bot settings": "", "Fun": "", "Utilities": "", "Logging": ""},
     "command_descriptions": {
         "help": {
             "args": {
@@ -7,6 +8,7 @@
                 }
             },
             "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
+            "cattegory": "Main",
             "aliases": [],
             "required_perms": []
         },
@@ -20,6 +22,7 @@
                 }
             },
             "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+            "cattegory": "User managment",
             "aliases": [],
             "required_perms": "Ban Members or Administrator"
         },
@@ -36,6 +39,7 @@
                 }
             },
             "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
+            "cattegory": "User managment",
             "aliases": [],
             "required_perms": "Ban Members or Administrator"
         },
@@ -49,6 +53,7 @@
                 }
             },
             "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "cattegory": "User managment",
             "aliases": [],
             "required_perms": "Kick Members or Administrator"
         },
@@ -59,6 +64,7 @@
                 }
             },
             "desc": "Changes the prefix for the bot on the server.",
+            "cattegory": "Bot settings",
             "aliases": [],
             "required_perms": "Manage Server or Administrator"
         },
@@ -69,18 +75,21 @@
                 }
             },
             "desc": "Changes the language for the bot on the server.",
+            "cattegory": "Bot settings",
             "aliases": [],
             "required_perms": "Manage Server or Administrator"
         },
         "meme": {
             "args": {},
             "desc": "Shows you one of the 10 most recent submissions on r/memes",
+            "cattegory": "Fun",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
             "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
+            "cattegory": "Fun",
             "aliases": [],
             "required_perms": []
         },
@@ -91,6 +100,7 @@
                 }
             },
             "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "cattegory": "Fun",
             "aliases": [],
             "required_perms": []
         },
@@ -101,6 +111,7 @@
                 }
             },
             "desc": "Returns you a ready link for a Google search",
+            "cattegory": "Utilities",
             "aliases": [
                 "ggl"
             ],
@@ -113,6 +124,7 @@
                 }
             },
             "desc": "Gives you n ready link to an wikipedia article.",
+            "cattegory": "Utilities",
             "aliases": ["wikipedia"],
             "required_perms": []
         },
@@ -129,6 +141,7 @@
                 }
             },
             "desc": "Uses Google Translate directly from Discord. If src_lang is set to \"auto\" or \"none\" it will detect the source language.",
+            "cattegory": "Utilities",
             "aliases": [],
             "required_perms": []
         },
@@ -139,6 +152,7 @@
                 }
             },
             "desc": "Changes the channel for message logging provided by the bot.",
+            "cattegory": "Logging",
             "aliases": [],
             "required_perms": ["Manage Server or Administrator"]
         },
@@ -149,6 +163,7 @@
                 }
             },
             "desc": "Blacklists/unblackists the channel from message logging!",
+            "cattegory": "Logging",
             "aliases": ["bl"],
             "required_perms": ["Manage Channels or Administrator"]
         },
@@ -162,6 +177,7 @@
                 }
             },
             "desc": "Reminds you after a set amount of time.",
+            "cattegory": "Utilities",
             "aliases": [],
             "required_perms": []
         },
@@ -172,6 +188,7 @@
                 }
             },
             "desc": "Shows you stats about a specific item in Hypixel Skyblock",
+            "cattegory": "Utilities",
             "aliases": [],
             "required_perms": []
         },
@@ -185,6 +202,7 @@
                 }
             },
             "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "cattegory": "Utilities",
             "aliases": [],
             "required_perms": []
         }
