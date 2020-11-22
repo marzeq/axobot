@@ -55,6 +55,7 @@ class Lang(commands.Cog):
 def setup(client):
     client.add_cog(Lang(client))
 
+
 if __name__ == "__main__":
     import sys
     import os

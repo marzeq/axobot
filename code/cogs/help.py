@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 
-# Fuck it I'm not commenting this now
 
 class HelpCommand(commands.Cog):
 
@@ -44,6 +43,7 @@ class HelpCommand(commands.Cog):
                 response_embed.add_field(name=useful["required_perms"], value=f"```{cmds[command]['required_perms']}```")
                 response_embed.add_field(name=useful["aliases"], value=f"```{cmds[command]['aliases']}```")
                 response_embed.add_field(name=useful["desc"], value=f"```{cmds[command]['desc']}```")
+                response_embed.add_field(name="Category", value=f"```{cmds[command]['cattegory']}```")
                 response_embed.set_footer(text=useful["required_notrequired_args"])
                 await ctx.send(embed=response_embed)
             except KeyError:
@@ -85,6 +85,7 @@ class HelpCommand(commands.Cog):
                 response_embed.set_footer(text="[] are required command arguments, () are optional command arguments")
                 await ctx.send(embed=response_embed)
             except KeyError:
+                # TODO: Translate this
                 response_embed = discord.Embed(title=f"**The {command} command sadly doesn't exist!**", color=0xdb2a2a)
                 await ctx.send(embed=response_embed)
 
