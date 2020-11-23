@@ -15,8 +15,11 @@ class Kick(commands.Cog):
 
         # If user has perms to kick
         if ctx.author.guild_permissions.kick_members or ctx.author.guild_permissions.administrator:
-            # Ban the member
-            await member.kick(reason=reason)
+            # Kick the member
+            try:
+                await member.kick(reason=reason)
+            except:
+                raise commands.errors.BotMissingPermissions("kick_members")
 
             # Creates and sends the response embed
             response_embed = discord.Embed(title=useful["kicked"].format(member, reason), color=0xdb2a2a)

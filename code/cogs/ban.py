@@ -19,7 +19,10 @@ class Ban(commands.Cog):
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
 
             # Ban the member
-            await member.ban(reason=reason)
+            try:
+                await member.ban(reason=reason)
+            except:
+                raise commands.errors.BotMissingPermissions("ban_members")
 
             # Creates and sends the response embed
             response_embed = discord.Embed(title=useful["banned"].format(member, reason), color=0xdb2a2a)
@@ -70,7 +73,10 @@ class Ban(commands.Cog):
             with open("config/tasks.json", "r") as f:
                 reminders = json.load(f)
             member: discord.Member = ctx.guild.get_membed(user.id)
-            await member.ban(reason=reason)
+            try:
+                await member.ban(reason=reason)
+            except:
+                raise commands.errors.BotMissingPermissions("ban_members")
             with open("config/tasks.json", "w") as f:
                 reminders[str(round(endtime))] = {"unban": {"user": f"{user.name}#{user.discriminator}", "guild": ctx.guild.id}}
                 json.dump(reminders, f, indent=4)
@@ -79,6 +85,7 @@ class Ban(commands.Cog):
 
 def setup(client):
     client.add_cog(Ban(client))
+
 
 if __name__ == "__main__":
     import sys
