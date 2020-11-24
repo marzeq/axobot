@@ -20,7 +20,7 @@ class SkyBazar(commands.Cog):
                 return request
         raise self.client.NoItemFound(f"This item doen't exist")
 
-    @commands.command()
+    @commands.command(aliases=["skybazaar"])
     async def skybazar(self, ctx: commands.Context, *, item: str):
         # Getting all translations
         lang = self.client.get_server_lang(ctx.guild)
@@ -53,6 +53,7 @@ class SkyBazar(commands.Cog):
 
 def setup(client):
     client.add_cog(SkyBazar(client))
+
 
 if __name__ == "__main__":
     import sys
