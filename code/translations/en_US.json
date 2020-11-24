@@ -205,6 +205,17 @@
             "cattegory": "Utilities",
             "aliases": [],
             "required_perms": []
+        },
+        "embed": {
+            "args": {
+                "search": {
+                    "required": true
+                }
+            },
+            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "Utilities",
+            "aliases": ["ebd"],
+            "required_perms": []
         }
     },
     "translations": {
