@@ -68,7 +68,7 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
                             user_agent='RoboMarzeq by u/Marzeq_')
 
-client.__version__ = "0.1.13b"
+client.__version__ = "0.1.14b"
 
 # Admin command descriptions. It's here because it shouldn't be translated
 client.admin_command_descriptions = \
