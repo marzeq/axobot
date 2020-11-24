@@ -208,7 +208,7 @@
         },
         "embed": {
             "args": {
-                "search": {
+                "embed_json": {
                     "required": true
                 }
             },
