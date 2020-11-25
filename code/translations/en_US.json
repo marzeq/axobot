@@ -216,6 +216,20 @@
             "cattegory": "Utilities",
             "aliases": ["ebd"],
             "required_perms": []
+        },
+        "editembed": {
+            "args": {
+                "message_id": {
+                    "required": true
+                },
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "Utilities",
+            "aliases": ["eebd"],
+            "required_perms": []
         }
     },
     "translations": {
