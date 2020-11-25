@@ -45,10 +45,23 @@ class Embed(commands.Cog):
             return
 
     @commands.command(aliases=["eebd"])
-    async def editembed(self, ctx: commands.Context, id: str, *, jsonstr: str):
+    async def editembed(self, ctx: commands.Context, id: str, chid: str, *, jsonstr: str):
         # # Getting all translations
         # lang = self.client.get_server_lang(ctx.guild)
         # useful = lang["translations"]["embed"]
+        try:
+            chid = int(chid)
+        except ValueError:
+            chid = 0
+
+        if chid == 0:
+            raise discord.ext.commands.errors.BadArgument(ctx.message)
+
+        try:
+            chnl = await self.client.fetch_channel(chid)
+        except:
+            raise discord.ext.commands.errors.BadArgument(ctx.message)
+
         try:
             id = int(id)
         except ValueError:
@@ -58,7 +71,7 @@ class Embed(commands.Cog):
             raise discord.ext.commands.errors.BadArgument(ctx.message)
 
         try:
-            msg = await ctx.fetch_message(id)
+            msg = await chnl.fetch_message(id)
         except:
             raise discord.ext.commands.errors.BadArgument(ctx.message)
 
