@@ -66,7 +66,7 @@ with open("config/reddit.json", "r") as f:
 
 client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
-                            user_agent='RoboMarzeq by u/Marzeq_')
+                            user_agent='MarzeqsUtilities by u/Marzeq_')
 
 client.__version__ = "0.1.14b"
 
@@ -263,7 +263,7 @@ client.logger = Logger("log")
 
 # Thanks to mini_bomba for helping me with this part of code
 @client.event
-async def on_error(name, *args, **_):
+async def on_error(name, *args, **_): # noqa
     errorid = round(time.time())
     etype, value, tb = sys.exc_info()
     tb = traceback.TracebackException(type(value), value, tb)
