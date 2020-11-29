@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import time
 import json
 
 
@@ -8,6 +7,7 @@ class Ban(commands.Cog):
 
     def __init__(self, client):
         self.client = client
+        self.utils = __import__("utils")
 
     @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
@@ -36,33 +36,10 @@ class Ban(commands.Cog):
 
         # If user has perms to ban
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
-            args = args.split(" ")
-            topop = 0
-            endtime = time.time()
-            for arg in args:
-                if [arg.endswith(char) for char in "smhdMy"]:
-                    if not arg[:-1].isdigit():
-                        break
-                    topop += 1
-                    if arg.endswith("s"):
-                        endtime += int(arg.replace("s", ""))
-                    elif arg.endswith("m"):
-                        endtime += int(arg.replace("m", "")) * 60
-                    elif arg.endswith("h"):
-                        endtime += int(arg.replace("h", "")) * 3600
-                    elif arg.endswith("d"):
-                        endtime += int(arg.replace("d", "")) * 86400
-                    elif arg.endswith("M"):
-                        endtime += int(arg.replace("M", "")) * 2629800
-                    elif arg.endswith("y"):
-                        endtime += int(arg.replace("y", "")) * 31556952
-            if topop == 0:
-                await ctx.send(embed=discord.Embed(title=useful["invalid_format"], color=0xff0000))
+            args, endtime = await self.utils.process_time(ctx, args, useful["invalid_format"])
+            if args == "err":
                 return
-
-            args = args[topop:]
-            args = " ".join(args)
-            if args == "":
+            elif args == "":
                 reason = "No reason provided"
             else:
                 reason = args
