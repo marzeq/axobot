@@ -27,7 +27,7 @@ class CommandError(commands.Cog):
             # Adds emoji
             await ctx.message.add_reaction(emoji)
 
-            # Creates and sends the response embed
+            # Creates and sends the response embed back
             response_embed = discord.Embed(title=useful["nonexistent_command"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
@@ -82,8 +82,10 @@ class CommandError(commands.Cog):
             raise error
             # Rest of the command handler in /code/main.py/on_error
 
+
 def setup(client):
     client.add_cog(CommandError(client))
+
 
 if __name__ == "__main__":
     import sys

@@ -3,12 +3,7 @@ from discord.ext import commands
 import simpleeval
 import ast
 import random
-import re
 import time
-
-
-class Funcs:
-    pass
 
 
 class Math(commands.Cog):
@@ -19,7 +14,10 @@ class Math(commands.Cog):
 
     @commands.command(aliases=["safe_eval", "se"])
     async def math(self, ctx: commands.Context, *, expr: str):
+        # Make a list of expressions [expression to be evaluated | variables (optional)]
         expr = expr.split(" | ")
+
+        # Add some custom default funcs
         funcs = simpleeval.DEFAULT_FUNCTIONS.copy()
         funcs.update(
             choice=random.choice,
@@ -27,35 +25,16 @@ class Math(commands.Cog):
             time=time.time,
             round=round
         )
-        if len(expr) >= 3 and await self.client.is_owner(ctx.author):
-            fc = expr[2:]
-            for func in fc:
-                func = func.replace("`", "").replace("py\n", "")
-                exec(f"{func}\nFuncs.{func.split(' ')[1].split('(')[0]} = {func.split(' ')[1].split('(')[0]}")
-                funcs.update(
-                    {func.split(' ')[1].split('(')[0]: getattr(globals()["Funcs"](), func.split(' ')[1].split('(')[0])})
+
+        # Empty variables dict
         names = {}
+
+        # Update the names with custom names if provided
         try:
             names.update(ast.literal_eval(expr[1]))
         except IndexError:
             pass
-        if type(simpleeval.simple_eval(expr[0], functions=funcs, names=names)) == bytes:
-            res = simpleeval.simple_eval(expr[0], functions=funcs, names=names).decode("utf-8")
-            ansi_escape = re.compile(r'''
-                                    \x1B  # ESC
-                                    (?:   # 7-bit C1 Fe (except CSI)
-                                        [@-Z\\-_]
-                                    |     # or [ for CSI, followed by a control sequence
-                                        \[
-                                        [0-?]*  # Parameter bytes
-                                        [ -/]*  # Intermediate bytes
-                                        [@-~]   # Final byte
-                                    )
-                             ''', re.VERBOSE)
-            res = ansi_escape.sub('', res)
-        else:
-            res = simpleeval.simple_eval(expr[0], functions=funcs, names=names)
-        res = str(res)
+        res = str(simpleeval.simple_eval(expr[0], functions=funcs, names=names))
         if len(res) > 1028:
             res = res[:1013] + "[...]"
         # TODO: Translate this
@@ -64,7 +43,6 @@ class Math(commands.Cog):
 
 def setup(client):
     client.add_cog(Math(client))
-    Funcs.client = client
 
 
 if __name__ == "__main__":

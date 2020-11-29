@@ -7,6 +7,13 @@ class Kick(commands.Cog):
     def __init__(self, client):
         self.client = client
 
+    @staticmethod
+    async def safe_kick(member, reason):
+        try:
+            await member.kick(reason=reason)
+        except:
+            raise commands.errors.BotMissingPermissions("kick_members")
+
     @commands.command()
     async def kick(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
         # Getting all translations
@@ -16,10 +23,7 @@ class Kick(commands.Cog):
         # If user has perms to kick
         if ctx.author.guild_permissions.kick_members or ctx.author.guild_permissions.administrator:
             # Kick the member
-            try:
-                await member.kick(reason=reason)
-            except:
-                raise commands.errors.BotMissingPermissions("kick_members")
+            await self.safe_kick(member, reason)
 
             # Creates and sends the response embed
             response_embed = discord.Embed(title=useful["kicked"].format(member, reason), color=0xdb2a2a)

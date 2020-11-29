@@ -11,27 +11,47 @@ class HelpCommand(commands.Cog):
 
     @commands.command()
     async def help(self, ctx, *, command=None):
+        # Get all required translations and command descriptions
         lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["help"]
         cmds = lang["command_descriptions"]
         categories = lang["help_cattegories"]
+
+        # If a command is not provided
         if not command:
+            # Make the initial embed
             response_embed = discord.Embed(title=useful["heres_your_help"].format(ctx.author), color=0x1ced23)
+
+            # Loop through all the available commands
             for command in cmds:
                 args_to_put = ""
+
+                # Loop through all args for the command
                 for arg in cmds[command]["args"]:
+
+                    # If an arg is required
                     if cmds[command]["args"][arg]["required"]:
                         args_to_put += f" [{arg}]"
+
+                    # Else
                     else:
                         args_to_put += f" ({arg})"
+
+                # Final command usage
                 command_usage = f"{command}{args_to_put}\n"
+
+                # Assign to the appropriate category
                 categories[cmds[command]["cattegory"]] += command_usage
             for cat in categories:
                 response_embed.add_field(name=cat, value=f"```\n{categories[cat]}```")
             response_embed.set_footer(text=useful["required_notrequired_args"])
             await ctx.send(embed=response_embed)
+
+        # Else
         else:
+            # Check if provided command exists
             try:
+                # Basically the same as above
                 response_embed = discord.Embed(title=useful["the_cmd"].format(command), color=0x1ced23)
                 args_to_put = ""
                 for arg in cmds[command]["args"]:
@@ -46,12 +66,15 @@ class HelpCommand(commands.Cog):
                 response_embed.add_field(name="Category", value=f"```{cmds[command]['cattegory']}```")
                 response_embed.set_footer(text=useful["required_notrequired_args"])
                 await ctx.send(embed=response_embed)
+
+            # Else
             except KeyError:
                 response_embed = discord.Embed(title=lang["translations"]["command_error"]["nonexistent_command"], color=0xdb2a2a)
                 await ctx.send(embed=response_embed)
 
     @commands.command(aliases=["adminhelp", "admhelp"])
     async def admin_help(self, ctx, *, command=None):
+        # Same as above, but without categories
         if not await self.client.is_owner(ctx.author):
             return
         if not command:

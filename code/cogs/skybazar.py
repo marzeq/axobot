@@ -3,6 +3,7 @@ from discord.ext import commands
 import json
 import requests
 
+
 class SkyBazar(commands.Cog):
 
     def __init__(self, client):

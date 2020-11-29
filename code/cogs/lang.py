@@ -15,6 +15,7 @@ class Lang(commands.Cog):
             lng = self.client.get_server_lang(ctx.guild)
             useful = lng["translations"]["lang"]
 
+            # If a lang is provided
             if lang != "none":
                 lang = lang.replace("-", "_")
                 lang = lang.replace(" ", "_")
@@ -40,6 +41,8 @@ class Lang(commands.Cog):
                 # Creates and sends the response embed
                 embed = discord.Embed(title=useful["changed_lang"].format(lang), color=0x00ff00)
                 await ctx.send(embed=embed)
+
+            # If a lang is still none
             else:
 
                 # Send all available langs

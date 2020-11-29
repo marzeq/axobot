@@ -1,5 +1,4 @@
 import random
-import discord
 from discord.ext import commands
 
 
@@ -26,8 +25,10 @@ class Memes(commands.Cog):
 
         await ctx.send(submission.url)  # noqa
 
+
 def setup(client):
     client.add_cog(Memes(client))
+
 
 if __name__ == "__main__":
     import sys

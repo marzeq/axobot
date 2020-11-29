@@ -9,6 +9,13 @@ class Ban(commands.Cog):
         self.client = client
         self.utils = __import__("utils")
 
+    @staticmethod
+    async def safe_ban(member: discord.Member, reason: str):
+        try:
+            await member.ban(reason=reason)
+        except:
+            raise commands.errors.BotMissingPermissions("ban_members")
+
     @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
         # Getting all translations
@@ -19,10 +26,7 @@ class Ban(commands.Cog):
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
 
             # Ban the member
-            try:
-                await member.ban(reason=reason)
-            except:
-                raise commands.errors.BotMissingPermissions("ban_members")
+            await self.safe_ban(member, reason)
 
             # Creates and sends the response embed
             response_embed = discord.Embed(title=useful["banned"].format(member, reason), color=0xdb2a2a)
@@ -37,26 +41,36 @@ class Ban(commands.Cog):
         # If user has perms to ban
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
             args, endtime = await self.utils.process_time(ctx, args, useful["invalid_format"])
+
+            # Figuring ot if something went
             if args == "err":
                 return
+
+            # If reason is empty
             elif args == "":
                 reason = "No reason provided"
+
+            # Else the reason is the remains of args
             else:
                 reason = args
+
+            # If the reason length exceeds the maximum length for a reason
             if len(reason) > 256:
                 response_embed = discord.Embed(title=useful["too_long"], color=0xdb2a2a)
-                await ctx.send(embed=response_embed)
-                return
+                await ctx.send(embed=response_embed); return
+
+            # Schedule the unban
             with open("config/tasks.json", "r") as f:
                 reminders = json.load(f)
-            member: discord.Member = ctx.guild.get_membed(user.id)
-            try:
-                await member.ban(reason=reason)
-            except:
-                raise commands.errors.BotMissingPermissions("ban_members")
+
             with open("config/tasks.json", "w") as f:
                 reminders[str(round(endtime))] = {"unban": {"user": f"{user.name}#{user.discriminator}", "guild": ctx.guild.id}}
                 json.dump(reminders, f, indent=4)
+
+            # Safely ban he member
+            member: discord.Member = ctx.guild.get_membed(user.id)
+            await self.safe_ban(member, reason)
+
             await ctx.send(embed=discord.Embed(title=useful["tempbanned"].format(member, reason), color=0x00ff00))
 
 

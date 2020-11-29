@@ -42,6 +42,7 @@ class Tasks(commands.Cog):
 def setup(client):
     client.add_cog(Tasks(client))
 
+
 if __name__ == "__main__":
     import sys
     import os

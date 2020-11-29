@@ -1,15 +1,12 @@
-# activity = discord.Activity(name=next(status), type=discord.ActivityType.watching)
-#    await client.change_presence(activity=activity)
-
 import discord
 from discord.ext import commands
+
 
 class Presence(commands.Cog):
 
     def __init__(self, client):
         self.client: commands.Bot = client
 
-    # Dont translate or add to help command, lets make this a secret
     @commands.command()
     async def presence(self, ctx: commands.Context, type_of_activity: int, *, presence: str):
         if not await self.client.is_owner(ctx.author):
@@ -26,6 +23,7 @@ class Presence(commands.Cog):
 
 def setup(client):
     client.add_cog(Presence(client))
+
 
 if __name__ == "__main__":
     import sys
