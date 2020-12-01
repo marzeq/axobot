@@ -1,5 +1,12 @@
 {
-    "help_cattegories": {"Main": "", "User managment": "", "Bot settings": "", "Fun": "", "Utilities": "", "Logging": ""},
+    "help_cattegories": {
+        "Main": "",
+        "User managment": "",
+        "Bot settings": "",
+        "Fun": "",
+        "Utilities": "",
+        "Logging": ""
+    },
     "command_descriptions": {
         "help": {
             "args": {
@@ -125,7 +132,9 @@
             },
             "desc": "Gives you n ready link to an wikipedia article.",
             "cattegory": "Utilities",
-            "aliases": ["wikipedia"],
+            "aliases": [
+                "wikipedia"
+            ],
             "required_perms": []
         },
         "translate": {
@@ -154,7 +163,9 @@
             "desc": "Changes the channel for message logging provided by the bot.",
             "cattegory": "Logging",
             "aliases": [],
-            "required_perms": ["Manage Server or Administrator"]
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
         },
         "blacklist": {
             "args": {
@@ -164,8 +175,12 @@
             },
             "desc": "Blacklists/unblackists the channel from message logging!",
             "cattegory": "Logging",
-            "aliases": ["bl"],
-            "required_perms": ["Manage Channels or Administrator"]
+            "aliases": [
+                "bl"
+            ],
+            "required_perms": [
+                "Manage Channels or Administrator"
+            ]
         },
         "remind": {
             "args": {
@@ -204,6 +219,35 @@
             "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
             "cattegory": "Utilities",
             "aliases": [],
+            "required_perms": []
+        },
+        "embed": {
+            "args": {
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "Utilities",
+            "aliases": [
+                "ebd"
+            ],
+            "required_perms": []
+        },
+        "editembed": {
+            "args": {
+                "message_id": {
+                    "required": true
+                },
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "Utilities",
+            "aliases": [
+                "eebd"
+            ],
             "required_perms": []
         }
     },
