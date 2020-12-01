@@ -2,6 +2,8 @@
 
 ### This is a multipurpose Discord bot, but mostly containing fun and utility commands
 
+[Invite me!](https://discord.com/api/oauth2/authorize?client_id=767075315595345930&permissions=8&scope=bot)
+
 ---
 
 #### Contributing to the code or translating the project is highly encouraged!
