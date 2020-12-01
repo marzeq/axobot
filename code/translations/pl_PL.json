@@ -1,5 +1,30 @@
 {
-    "help_cattegories": {"0": ["Main", ""], "1": ["User management", ""], "2": ["Bot settings", ""], "3": ["Fun", ""], "4": ["Utilities", ""], "5": ["Logging", ""]},
+    "help_cattegories": {
+        "0": [
+            "Główne",
+            ""
+        ],
+        "1": [
+            "Zarządzanie użytkownikami",
+            ""
+        ],
+        "2": [
+            "Ustawienia bota",
+            ""
+        ],
+        "3": [
+            "Zabawa",
+            ""
+        ],
+        "4": [
+            "Narzędzia",
+            ""
+        ],
+        "5": [
+            "Logowanie",
+            ""
+        ]
+    },
     "command_descriptions": {
         "help": {
             "args": {
@@ -125,7 +150,9 @@
             },
             "desc": "Gives you n ready link to an wikipedia article.",
             "cattegory": "4",
-            "aliases": ["wikipedia"],
+            "aliases": [
+                "wikipedia"
+            ],
             "required_perms": []
         },
         "translate": {
@@ -154,7 +181,9 @@
             "desc": "Changes the channel for message logging provided by the bot.",
             "cattegory": "5",
             "aliases": [],
-            "required_perms": ["Manage Server or Administrator"]
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
         },
         "blacklist": {
             "args": {
@@ -164,8 +193,12 @@
             },
             "desc": "Blacklists/unblackists the channel from message logging!",
             "cattegory": "5",
-            "aliases": ["bl"],
-            "required_perms": ["Manage Channels or Administrator"]
+            "aliases": [
+                "bl"
+            ],
+            "required_perms": [
+                "Manage Channels or Administrator"
+            ]
         },
         "remind": {
             "args": {
@@ -214,7 +247,9 @@
             },
             "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
-            "aliases": ["ebd"],
+            "aliases": [
+                "ebd"
+            ],
             "required_perms": []
         },
         "editembed": {
@@ -228,7 +263,9 @@
             },
             "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
-            "aliases": ["eebd"],
+            "aliases": [
+                "eebd"
+            ],
             "required_perms": []
         }
     },
