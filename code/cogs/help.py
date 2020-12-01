@@ -41,9 +41,9 @@ class HelpCommand(commands.Cog):
                 command_usage = f"{command}{args_to_put}\n"
 
                 # Assign to the appropriate category
-                categories[cmds[command]["cattegory"]] += command_usage
+                categories[cmds[command]["cattegory"]][1] += command_usage
             for cat in categories:
-                response_embed.add_field(name=cat, value=f"```\n{categories[cat]}```")
+                response_embed.add_field(name=categories[cat][0], value=f"```\n{categories[cat][1]}```")
             response_embed.set_footer(text=useful["required_notrequired_args"])
             await ctx.send(embed=response_embed)
 
