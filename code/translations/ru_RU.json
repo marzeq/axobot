@@ -179,7 +179,7 @@
                 }
             },
             "desc": "Changes the channel for message logging provided by the bot.",
-            "cattegory": "logging",
+            "cattegory": "5",
             "aliases": [],
             "required_perms": [
                 "Manage Server or Administrator"
@@ -192,7 +192,7 @@
                 }
             },
             "desc": "Blacklists/unblackists the channel from message logging!",
-            "cattegory": "logging",
+            "cattegory": "5",
             "aliases": [
                 "bl"
             ],
