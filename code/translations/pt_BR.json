@@ -1,5 +1,30 @@
 {
-    "help_cattegories": {"Main": "", "User managment": "", "Bot settings": "", "Fun": "", "Utilities": "", "Logging": ""},
+    "help_cattegories": {
+        "0": [
+            "Main",
+            ""
+        ],
+        "1": [
+            "User management",
+            ""
+        ],
+        "2": [
+            "Bot settings",
+            ""
+        ],
+        "3": [
+            "Fun",
+            ""
+        ],
+        "4": [
+            "Utilities",
+            ""
+        ],
+        "5": [
+            "Logging",
+            ""
+        ]
+    },
     "command_descriptions": {
         "help": {
             "args": {
@@ -8,7 +33,7 @@
                 }
             },
             "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
-            "cattegory": "Main",
+            "cattegory": "0",
             "aliases": [],
             "required_perms": []
         },
@@ -22,7 +47,7 @@
                 }
             },
             "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
-            "cattegory": "User managment",
+            "cattegory": "1",
             "aliases": [],
             "required_perms": "Ban Members or Administrator"
         },
@@ -39,7 +64,7 @@
                 }
             },
             "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
-            "cattegory": "User managment",
+            "cattegory": "1",
             "aliases": [],
             "required_perms": "Ban Members or Administrator"
         },
@@ -53,7 +78,7 @@
                 }
             },
             "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
-            "cattegory": "User managment",
+            "cattegory": "1",
             "aliases": [],
             "required_perms": "Kick Members or Administrator"
         },
@@ -64,7 +89,7 @@
                 }
             },
             "desc": "Changes the prefix for the bot on the server.",
-            "cattegory": "Bot settings",
+            "cattegory": "2",
             "aliases": [],
             "required_perms": "Manage Server or Administrator"
         },
@@ -75,21 +100,21 @@
                 }
             },
             "desc": "Changes the language for the bot on the server.",
-            "cattegory": "Bot settings",
+            "cattegory": "2",
             "aliases": [],
             "required_perms": "Manage Server or Administrator"
         },
         "meme": {
             "args": {},
             "desc": "Shows you one of the 10 most recent submissions on r/memes",
-            "cattegory": "Fun",
+            "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
             "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
-            "cattegory": "Fun",
+            "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
@@ -100,7 +125,7 @@
                 }
             },
             "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
-            "cattegory": "Fun",
+            "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
@@ -111,7 +136,7 @@
                 }
             },
             "desc": "Returns you a ready link for a Google search",
-            "cattegory": "Utilities",
+            "cattegory": "4",
             "aliases": [
                 "ggl"
             ],
@@ -124,8 +149,10 @@
                 }
             },
             "desc": "Gives you n ready link to an wikipedia article.",
-            "cattegory": "Utilities",
-            "aliases": ["wikipedia"],
+            "cattegory": "4",
+            "aliases": [
+                "wikipedia"
+            ],
             "required_perms": []
         },
         "translate": {
@@ -141,7 +168,7 @@
                 }
             },
             "desc": "Uses Google Translate directly from Discord. If src_lang is set to \"auto\" or \"none\" it will detect the source language.",
-            "cattegory": "Utilities",
+            "cattegory": "4",
             "aliases": [],
             "required_perms": []
         },
@@ -151,10 +178,12 @@
                     "required": true
                 }
             },
-            "desc": "Changes the channel for message logging provided by the bot.",
-            "cattegory": "Logging",
+            "desc": "Changes the channel for message 5 provided by the bot.",
+            "cattegory": "5",
             "aliases": [],
-            "required_perms": ["Manage Server or Administrator"]
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
         },
         "blacklist": {
             "args": {
@@ -162,10 +191,14 @@
                     "required": true
                 }
             },
-            "desc": "Blacklists/unblackists the channel from message logging!",
-            "cattegory": "Logging",
-            "aliases": ["bl"],
-            "required_perms": ["Manage Channels or Administrator"]
+            "desc": "Blacklists/unblackists the channel from message 5!",
+            "cattegory": "5",
+            "aliases": [
+                "bl"
+            ],
+            "required_perms": [
+                "Manage Channels or Administrator"
+            ]
         },
         "remind": {
             "args": {
@@ -177,7 +210,7 @@
                 }
             },
             "desc": "Reminds you after a set amount of time.",
-            "cattegory": "Utilities",
+            "cattegory": "4",
             "aliases": [],
             "required_perms": []
         },
@@ -188,7 +221,7 @@
                 }
             },
             "desc": "Shows you stats about a specific item in Hypixel Skyblock",
-            "cattegory": "Utilities",
+            "cattegory": "4",
             "aliases": [],
             "required_perms": []
         },
@@ -202,8 +235,37 @@
                 }
             },
             "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
-            "cattegory": "Utilities",
+            "cattegory": "4",
             "aliases": [],
+            "required_perms": []
+        },
+        "embed": {
+            "args": {
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "ebd"
+            ],
+            "required_perms": []
+        },
+        "editembed": {
+            "args": {
+                "message_id": {
+                    "required": true
+                },
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "eebd"
+            ],
             "required_perms": []
         }
     },
