@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-import os
 
 
 class BotStats(commands.Cog):
@@ -35,5 +34,4 @@ if __name__ == "__main__":
     import os
     import pathlib
 
-    os.chdir(f"{pathlib.Path(__file__).parent.absolute()}/..")
     os.system(f"{sys.executable} {pathlib.Path(__file__).parent.absolute()}/../main.py")

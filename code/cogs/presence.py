@@ -13,7 +13,7 @@ class Presence(commands.Cog):
             return
         if type_of_activity == 3:
             await self.client.change_presence()
-            await ctx.send(embed=discord.Embed(title=f"Reseted the presence!", color=0x2be040))
+            await ctx.send(embed=discord.Embed(title=f"Reset the presence!", color=0x2be040))
             return
         activities = [discord.ActivityType.watching, discord.ActivityType.listening, discord.ActivityType.playing]
         activity = discord.Activity(name=presence, type=activities[type_of_activity])
