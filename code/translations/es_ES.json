@@ -151,8 +151,8 @@
                     "required": true
                 }
             },
-            "desc": "Changes the channel for message 5 provided by the bot.",
-            "cattegory": "5",
+            "desc": "Changes the channel for message logging provided by the bot.",
+            "cattegory": "logging",
             "aliases": [],
             "required_perms": ["Manage Server or Administrator"]
         },
@@ -162,8 +162,8 @@
                     "required": true
                 }
             },
-            "desc": "Blacklists/unblackists the channel from message 5!",
-            "cattegory": "5",
+            "desc": "Blacklists/unblackists the channel from message logging!",
+            "cattegory": "logging",
             "aliases": ["bl"],
             "required_perms": ["Manage Channels or Administrator"]
         },
