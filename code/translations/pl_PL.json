@@ -1,27 +1,27 @@
 {
     "help_cattegories": {
         "0": [
-            "Main",
+            "Główne",
             ""
         ],
         "1": [
-            "User management",
+            "Zarządzanie użytkownikami",
             ""
         ],
         "2": [
-            "Bot settings",
+            "Ustawienia bota",
             ""
         ],
         "3": [
-            "Fun",
+            "Zabawa",
             ""
         ],
         "4": [
-            "Utilities",
+            "Narzędzia",
             ""
         ],
         "5": [
-            "Logging",
+            "Logowanie",
             ""
         ]
     },
