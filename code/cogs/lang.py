@@ -47,11 +47,14 @@ class Lang(commands.Cog):
 
                 # Send all available langs
                 response_embed = discord.Embed(title=useful["available_langs"], color=0x1ced23)
-                response_embed.add_field(name=f"**🇺🇸 English (USA)**", value=f"Type `lang en_US` to set the bot to the English (USA) language")
-                response_embed.add_field(name=f"**🇪🇸 Español (España) INCONCLUSO**", value=f"Escribe `lang es_ES` para modificar la lengua de bot de Español (España)")
-                response_embed.add_field(name=f"**🇵🇱 Polski NIEDOKOŃCZONE**", value=f"Wpisz komendę `lang pl_PL` aby zmienić język bota na polski")
-                response_embed.add_field(name=f"**🇧🇷 Português (Brazil) INACABADO**", value=f"Digite `lang pt_BR` para definir o bot para Português (Brazil)")
-                response_embed.add_field(name=f"**🇷🇺 Pусский (Россия) НЕЗАКОНЧЕННЫЙ**", value=f"Введите `lang ru_RU`, чтобы изменить язык бота на русский (Россия).")
+                response_embed.add_field(name=f"🇺🇸", value=f"`lang en_US`")
+                response_embed.add_field(name=f"🇪🇸", value=f"`lang es_ES`")
+                response_embed.add_field(name=f"🇵🇱", value=f"`lang pl_PL`")
+                response_embed.add_field(name=f"🇧🇷", value=f"`lang pt_BR`")
+                response_embed.add_field(name=f"🇷🇺", value=f"`lang ru_RU`")
+                response_embed.add_field(name=f"🇨🇳", value=f"`lang zh_CN`")
+                response_embed.add_field(name=f"🇮🇳 (Hindi)", value=f"`lang hi_HI`")
+                response_embed.add_field(name=f"🇫🇷", value=f"`lang fr_FR`")
                 await ctx.send(embed=response_embed)
 
 

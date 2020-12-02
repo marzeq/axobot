@@ -45,7 +45,7 @@ client.__version__ = "0.1.14.1b"
 client.admin_command_descriptions = utils.admin_command_descriptions
 
 # All valid language codes
-client.valid_langs = ["en_US", "es_ES", "pl_PL", "pt_BR", "ru_RU"]
+client.valid_langs = ["en_US", "es_ES", "pl_PL", "pt_BR", "ru_RU", "zh_CN", "hi_HI", "fr_FR"]
 # client.valid_langs = ["en_US", "pl_PL"]
 
 
