@@ -23,6 +23,10 @@
         "5": [
             "Logowanie",
             ""
+        ],
+        "6": [
+            "Support Tickets",
+            ""
         ]
     },
     "command_descriptions": {
@@ -267,6 +271,61 @@
                 "eebd"
             ],
             "required_perms": []
+        },
+        "ticket": {
+            "args": {
+                "message_id": {
+                    "required": true
+                },
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Edytuje embed stworzony komendą `embed`. Przykładowy embed możesz znaleźć na https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "eebd"
+            ],
+            "required_perms": []
+        },
+        "ticket_role": {
+            "args": {
+                "category_id": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the role for staff who handle tickets",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Zarządzanie Serwerem lub Administrator"
+            ]
+        },
+        "ticket_category": {
+            "args": {
+                "category_id": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the category to create tickets in",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Zarządzanie Serwerem lub Administrator"
+            ]
+        },
+        "close": {
+            "args": {
+                "channel": {
+                    "required": false
+                }
+            },
+            "desc": "Closes a ticket",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Ticket Creator or Assigned Staff Member"
+            ]
         }
     },
     "translations": {
