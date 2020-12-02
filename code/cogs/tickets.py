@@ -15,6 +15,12 @@ class Tickets(commands.Cog):
             with open("config/config.json", "r+") as f:
                 # Get the file
                 config = json.load(f)
+                try:
+                    config[str(ctx.guild.id)]["tickets"]
+                except KeyError:
+                    config[str(ctx.guild.id)]["tickets"] = {}
+                    f.seek(0)
+                    json.dump(config, f, indent=4)
 
                 config[str(ctx.guild.id)]["tickets"]["category"] = category.id
 
@@ -30,6 +36,12 @@ class Tickets(commands.Cog):
             with open("config/config.json", "r+") as f:
                 # Get the file
                 config = json.load(f)
+                try:
+                    config[str(ctx.guild.id)]["tickets"]
+                except KeyError:
+                    config[str(ctx.guild.id)]["tickets"] = {}
+                    f.seek(0)
+                    json.dump(config, f, indent=4)
 
                 config[str(ctx.guild.id)]["tickets"]["role"] = role.id
 
@@ -44,6 +56,12 @@ class Tickets(commands.Cog):
         with open("config/config.json", "r+") as f:
             # Get the file
             config = json.load(f)
+            try:
+                config[str(ctx.guild.id)]["tickets"]
+            except KeyError:
+                config[str(ctx.guild.id)]["tickets"] = {}
+                f.seek(0)
+                json.dump(config, f, indent=4)
             try:
                 category_id = config[str(ctx.guild.id)]["tickets"]["category"]
             except KeyError:
