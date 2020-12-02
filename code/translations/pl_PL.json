@@ -49,7 +49,7 @@
             "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": "Banowanie Użytkowników lub Administrator"
         },
         "tempban": {
             "args": {
@@ -66,7 +66,7 @@
             "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": "Banowanie Użytkowników lub Administrator"
         },
         "kick": {
             "args": {
@@ -80,7 +80,7 @@
             "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Kick Members or Administrator"
+            "required_perms": "Wyrzucanie Użytkowników lub Administrator"
         },
         "prefix": {
             "args": {
@@ -91,7 +91,7 @@
             "desc": "Changes the prefix for the bot on the server.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": "Zarządzanie Serwerem lub Administrator"
         },
         "lang": {
             "args": {
@@ -102,7 +102,7 @@
             "desc": "Changes the language for the bot on the server.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": "Zarządzanie Serwerem lub Administrator"
         },
         "meme": {
             "args": {},
@@ -135,7 +135,7 @@
                     "required": true
                 }
             },
-            "desc": "Returns you a ready link for a Google search",
+            "desc": "Zwraca ci gotowy link w Google",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -182,7 +182,7 @@
             "cattegory": "5",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Zarządzanie Serwerem lub Administrator"
             ]
         },
         "blacklist": {
@@ -197,7 +197,7 @@
                 "bl"
             ],
             "required_perms": [
-                "Manage Channels or Administrator"
+                "Zarządzanie Kanałami lub Administrator"
             ]
         },
         "remind": {
@@ -282,7 +282,7 @@
             "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`",
             "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "bad_format": "Ten argument jest w złym formacie"
         },
         "guild_join": {
             "welcome": "**Witaj!**",
@@ -323,25 +323,25 @@
             "heres_translated": "Here's your translated phrase: `{}`"
         },
         "logging": {
-            "success": "Successfully updated this setting!",
-            "msg_deleted": "**A message was deleted!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS",
-            "pinned": "Pinned",
-            "everyone-here": "Mentioned Everyone or Here"
+            "success": "Pomyślnie zaktualizowano to ustawienie!",
+            "msg_deleted": "**Wiadomość została usunięta!**",
+            "channel": "Kanał",
+            "content": "Zawartość",
+            "author": "Autor",
+            "time": "Czas",
+            "tts": "Tekst na mowę",
+            "pinned": "Przypięta",
+            "everyone-here": "@everyone albo @here"
         },
         "logging_edit": {
-            "msg_edited": "**A message was edited!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS After",
-            "pinned": "Pinned After",
-            "everyone-here": "Mentioned Everyone or Here",
+            "msg_edited": "**Wiadomość została edytowana!**",
+            "channel": "Kanał",
+            "content": "Zawartość",
+            "author": "Autor",
+            "time": "Czas",
+            "tts": "Tekst na mowę po edycji",
+            "pinned": "Przypięta po edycji",
+            "everyone-here": "@everyone albo @here",
             "content_value": "**Before**: {}\n**After**: {}",
             "time_value": "**Created At**: {} GMT\n**Edited At**: {} GMT",
             "everyone-here_value": "**Before**: {}\n**After**: {}"
@@ -363,9 +363,9 @@
             "inst_sell": "Instant sell price",
             "inst_buy": "Instant buy price",
             "buy_volume": "Buy volume",
-            "sell_volume": "Sell volume",
-            "margin": "Margin",
-            "inaccurate": "* Is inaccurate due to bazaar tax"
+            "sell_volume": "Ilość oferty sprzedaży",
+            "margin": "Margines profitu",
+            "inaccurate": "* Jest niedokładne z powodu podatku na bazarze"
         }
     }
 }
