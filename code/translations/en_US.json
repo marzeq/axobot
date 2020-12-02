@@ -271,6 +271,20 @@
             "cattegory": "6",
             "aliases": [],
             "required_perms": ["Ticket Creator or Assigned Staff Member"]
+        },
+        "blacklist_command": {
+            "args": {
+                "mode": {
+                    "required": true
+                },
+                "name": {
+                    "required": true
+                }
+            },
+            "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": ["Manage Server or Administrator"]
         }
     },
     "translations": {

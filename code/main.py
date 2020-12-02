@@ -30,6 +30,7 @@ client = commands.Bot(command_prefix=get_prefix, intents=discord.Intents.all())
 # So you can access the functions from cogs
 client.get_server_lang = utils.get_server_lang
 client.get_server_lang_code = utils.get_server_lang_code
+client.if_command_disabled = utils.if_command_disabled
 
 # Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:

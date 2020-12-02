@@ -11,6 +11,8 @@ class Embed(commands.Cog):
 
     @commands.command(aliases=["ebd"])
     async def embed(self, ctx, *, jsonstr: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         # # Getting all translations
         # lang = self.client.get_server_lang(ctx.guild)
         # useful = lang["translations"]["embed"]
@@ -51,6 +53,8 @@ class Embed(commands.Cog):
 
     @commands.command(aliases=["eebd"])
     async def editembed(self, ctx: commands.Context, id: str, chid: str, *, jsonstr: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         # # Getting all translations
         # lang = self.client.get_server_lang(ctx.guild)
         # useful = lang["translations"]["embed"]

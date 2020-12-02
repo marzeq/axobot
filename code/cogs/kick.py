@@ -16,6 +16,8 @@ class Kick(commands.Cog):
 
     @commands.command()
     async def kick(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         # Getting all translations
         lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["kick"]

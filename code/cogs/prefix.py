@@ -11,6 +11,8 @@ class Prefix(commands.Cog):
     @commands.command()
     @commands.guild_only()
     async def prefix(self, ctx, *, prefix: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
             lang = self.client.get_server_lang(ctx.guild)
             useful = lang["translations"]["prefix"]
@@ -26,6 +28,7 @@ class Prefix(commands.Cog):
 
 def setup(client):
     client.add_cog(Prefix(client))
+
 
 if __name__ == "__main__":
     import sys

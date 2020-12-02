@@ -11,6 +11,8 @@ class Reminders(commands.Cog):
 
     @commands.command()
     async def remind(self, ctx: commands.Context, *, args: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["reminders"]
         args, endtime = await self.utils.process_time(ctx, args, useful["invalid_format"])

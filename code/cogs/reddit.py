@@ -10,6 +10,8 @@ class Reddit(commands.Cog):
 
     @commands.command()
     async def reddit(self, ctx, subreddit: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         # Deleting `r/` before subreddit name because PRAW doesn't like it when we put it
         subreddit = subreddit[2:] if subreddit.startswith("r/") else subreddit
 

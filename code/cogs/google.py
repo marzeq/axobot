@@ -11,6 +11,8 @@ class Google(commands.Cog):
 
     @commands.command(aliases=["ggl"])
     async def google(self, ctx, *, search_term: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         # Getting all translations
         lang = self.client.get_server_lang(ctx.guild)
         useful = lang["translations"]["google"]

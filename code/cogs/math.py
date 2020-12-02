@@ -14,6 +14,8 @@ class Math(commands.Cog):
 
     @commands.command(aliases=["safe_eval", "se"])
     async def math(self, ctx: commands.Context, *, expr: str):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         # Make a list of expressions [expression to be evaluated | variables (optional)]
         expr = expr.split(" | ")
 

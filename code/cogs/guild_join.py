@@ -13,7 +13,7 @@ class GuildJoin(commands.Cog):
     async def on_guild_join(self, guild):
 
         # Dict that we update the json file with
-        toupdate = {str(guild.id): {"prefix": "--", "lang": "en_US", "logging": {"channel": 0, "blacklist-channels": []}}, "tickets": {"category": 0}}
+        toupdate = {str(guild.id): {"prefix": "--", "lang": "en_US", "logging": {"channel": 0, "blacklist-channels": []}}, "tickets": {"category": 0}, "disabled_commands": []}
         with open("config/config.json", "r+") as f:
 
             # Get the file

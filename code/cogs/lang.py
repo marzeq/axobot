@@ -10,6 +10,8 @@ class Lang(commands.Cog):
 
     @commands.command(aliases=["lang"])
     async def language(self, ctx, lang: str = "none"):
+        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+            return
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
             # Getting all translations
             lng = self.client.get_server_lang(ctx.guild)
