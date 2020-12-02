@@ -271,8 +271,8 @@
     },
     "translations": {
         "ban": {
-            "banned": "**Banned {} for: {}**",
-            "tempbanned": "**Tempbanned {} for: {}**",
+            "banned": "**Zbanowano {} za: {}**",
+            "tempbanned": "**Tymczasowo zbanowano {} za: {}**",
             "invalid_time": "No time specified!",
             "too_long": "The reason should be 256 charachters long"
         },
@@ -285,26 +285,26 @@
             "bad_format": "This argument is in a bad format"
         },
         "guild_join": {
-            "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
-            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+            "welcome": "**Witaj!**",
+            "thx_for_invite": "Dzięki za dodanie mnie!",
+            "prefix": "Mój domyślny prefix to `--`. Jeśli chcesz go zmienić, wpisz komendę `--prefix [new_prefix]`!"
         },
         "help": {
-            "heres_your_help": "**Here's your help {}!**",
-            "available_commands": "Available Commands:",
-            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
-            "the_cmd": "**The {} command:**",
-            "usage": "**Usage:**",
-            "desc": "**Description:**",
-            "required_perms": "**Required Permissions:**",
-            "aliases": "**Aliases:**"
+            "heres_your_help": "**{}, oto twoja pomoc!**",
+            "available_commands": "Dostępne komendy:",
+            "required_notrequired_args": "[] to wymagane argumenty, () to opcjonalne argumenty",
+            "the_cmd": "**Komenda {}:**",
+            "usage": "**Użycie:**",
+            "desc": "**Opis:**",
+            "required_perms": "**Wymagane permisje:**",
+            "aliases": "**Skróty:**"
         },
         "kick": {
-            "kicked": "**Kicked {} for: {}**"
+            "kicked": "**Wyrzucono {} za: {}**"
         },
         "lang": {
-            "changed_lang": "**Changed the language to `{}`.**",
-            "available_langs": "**Available languages:**"
+            "changed_lang": "**Zmieniono język bota na `{}`.**",
+            "available_langs": "**Dostępne języki:**"
         },
         "prefix": {
             "changed_prefix": "**Changed the custom prefix to `{}`.**"
