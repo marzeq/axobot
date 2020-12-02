@@ -137,6 +137,22 @@ async def update(ctx):
     os.system(f"{sys.executable} {os.path.dirname(os.path.realpath(__file__))}/main.py {ctx.channel.id}")
 
 
+# Update the internal files from the git repo and rerun the program
+@client.command(aliases=["prl"])
+async def pull_reload(ctx):
+    if not await client.is_owner(ctx.author):
+        return
+    await ctx.send(embed=discord.Embed(title="🟡  Pulling from the GitHub repo..", color=0xdaed2d))
+    os.system(f"git pull")
+    for extensionname in os.listdir(f"./cogs"):
+        if extensionname.endswith(".py"):
+            try:
+                client.reload_extension(f"cogs.{extensionname[:-3]}")
+            except commands.errors.ExtensionNotFound:
+                pass
+    await ctx.send(embed=discord.Embed(title="✅  Reloaded all extensions", color=0x2be040))
+
+
 @client.command(aliases=["hr"])
 async def hardreload(ctx):
     if not await client.is_owner(ctx.author):
