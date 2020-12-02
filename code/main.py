@@ -78,7 +78,7 @@ async def load(ctx, extension=None):
                     client.load_extension(f"cogs.{extensionname[:-3]}")
                 except commands.errors.ExtensionAlreadyLoaded or commands.errors.ExtensionNotFound:
                     pass
-        await ctx.message.channel.send(f"Loaded all extensions!")
+        await ctx.send(embed=discord.Embed(title="✅  Loaded all extensions", color=0x2be040))
 
 
 @client.command(aliases=["ul"])
@@ -98,7 +98,7 @@ async def unload(ctx, extension=None):
                     client.unload_extension(f"cogs.{extensionname[:-3]}")
                 except commands.ExtensionNotLoaded or commands.errors.ExtensionNotFound:
                     pass
-        await ctx.message.channel.send("Unloaded all extensions!")
+        await ctx.send(embed=discord.Embed(title="✅  Unloaded all extensions", color=0x2be040))
 
 
 @client.command(aliases=["rl"])
@@ -118,7 +118,7 @@ async def reload(ctx, extension=None):
                     client.reload_extension(f"cogs.{extensionname[:-3]}")
                 except commands.errors.ExtensionNotFound:
                     pass
-        await ctx.message.channel.send("Reloaded all extensions!")
+        await ctx.send(embed=discord.Embed(title="✅  Reloaded all extensions", color=0x2be040))
 
 
 for filename in os.listdir(f"./cogs"):
