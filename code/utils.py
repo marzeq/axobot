@@ -108,13 +108,18 @@ admin_command_descriptions = \
         },
         "update": {
             "args": {},
-            "desc": "Updates the internal files from the git repo and reruns the program",
+            "desc": "Pulls from the Github repo and reruns the program",
             "aliases": ["up"]
         },
         "hardreload": {
             "args": {},
             "desc": "Reruns the program",
             "aliases": ["hr"]
+        },
+        "pull_reload": {
+            "args": {},
+            "desc": "Pulls from the Github repo and reloads all extensions",
+            "aliases": ["prl"]
         },
         "presence": {
             "args": {
