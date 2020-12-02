@@ -24,21 +24,8 @@ class HelpCommand(commands.Cog):
 
             # Loop through all the available commands
             for command in cmds:
-                args_to_put = ""
-
-                # Loop through all args for the command
-                for arg in cmds[command]["args"]:
-
-                    # If an arg is required
-                    if cmds[command]["args"][arg]["required"]:
-                        args_to_put += f" [{arg}]"
-
-                    # Else
-                    else:
-                        args_to_put += f" ({arg})"
-
                 # Final command usage
-                command_usage = f"{command}{args_to_put}\n"
+                command_usage = f"{command}\n"
 
                 # Assign to the appropriate category
                 categories[cmds[command]["cattegory"]][1] += command_usage
