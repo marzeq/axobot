@@ -108,7 +108,6 @@ class HelpCommand(commands.Cog):
                 response_embed.set_footer(text="[] are required command arguments, () are optional command arguments")
                 await ctx.send(embed=response_embed)
             except KeyError:
-                # TODO: Translate this
                 response_embed = discord.Embed(title=f"**The {command} command sadly doesn't exist!**", color=0xdb2a2a)
                 await ctx.send(embed=response_embed)
 

@@ -25,7 +25,7 @@ get_prefix = utils.get_prefix
 
 
 # Creates the client instance
-client = commands.Bot(command_prefix=get_prefix)
+client = commands.Bot(command_prefix=get_prefix, intents=discord.Intents.all())
 
 # So you can access the functions from cogs
 client.get_server_lang = utils.get_server_lang
