@@ -273,19 +273,10 @@
             "required_perms": []
         },
         "ticket": {
-            "args": {
-                "message_id": {
-                    "required": true
-                },
-                "embed_json": {
-                    "required": true
-                }
-            },
-            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
-            "cattegory": "4",
-            "aliases": [
-                "eebd"
-            ],
+            "args": {},
+            "desc": "Opens a support ticket",
+            "cattegory": "6",
+            "aliases": [],
             "required_perms": []
         },
         "ticket_role": {
