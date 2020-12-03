@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 from urllib.parse import quote as valid_url
+from utils import language
+from utils import commands as command
 
 
 class Wiki(commands.Cog):
@@ -10,10 +12,10 @@ class Wiki(commands.Cog):
 
     @commands.command(aliases=["wikipedia"])
     async def wiki(self, ctx, *, search):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         search = valid_url(search)
-        url = discord.Embed(title=f"https://{self.client.get_server_lang_code(ctx.guild).split('_')[0]}.wikipedia.org/wiki/{search}")
+        url = discord.Embed(title=f"https://{language.get_server_lang_code(ctx.guild).split('_')[0]}.wikipedia.org/wiki/{search}")
         await ctx.send(embed=url)
 
 

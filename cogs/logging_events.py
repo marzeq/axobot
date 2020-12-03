@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+from utils import language
 
 
 class LoggingEvents(commands.Cog):
@@ -16,7 +17,7 @@ class LoggingEvents(commands.Cog):
         if config["channel"] == 0 or message.author.bot:
             return
         # Getting all translations
-        lang = self.client.get_server_lang(message.guild)
+        lang = language.get_server_lang(message.guild)
         useful = lang["translations"]["logging"]
         logging_channel = self.client.get_channel(config["channel"])
         if message.content == "":
@@ -41,7 +42,7 @@ class LoggingEvents(commands.Cog):
         if config["channel"] == 0:
             return
         # Getting all translations
-        lang = self.client.get_server_lang(messages[0].guild)
+        lang = language.get_server_lang(messages[0].guild)
         useful = lang["translations"]["logging"]
         for message in messages:
             logging_channel = self.client.get_channel(config["channel"])
@@ -69,7 +70,7 @@ class LoggingEvents(commands.Cog):
         if config["channel"] == 0:
             return
         # Getting all translations
-        lang = self.client.get_server_lang(after.guild)
+        lang = language.get_server_lang(after.guild)
         useful = lang["translations"]["logging_edit"]
         logging_channel = self.client.get_channel(config["channel"])
         if before.content == "":

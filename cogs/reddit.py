@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import random
+from utils import language
+from utils import commands as command
 
 
 class Reddit(commands.Cog):
@@ -10,13 +12,13 @@ class Reddit(commands.Cog):
 
     @commands.command()
     async def reddit(self, ctx, subreddit: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # Deleting `r/` before subreddit name because PRAW doesn't like it when we put it
         subreddit = subreddit[2:] if subreddit.startswith("r/") else subreddit
 
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["reddit"]
 
         # Getting the Subreddit object from the provided name

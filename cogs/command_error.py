@@ -2,6 +2,7 @@ import discord
 import simpleeval
 from discord.ext import commands
 from time import time
+from utils import language, skyblock
 
 
 class CommandError(commands.Cog):
@@ -16,7 +17,7 @@ class CommandError(commands.Cog):
         except: # noqa
             error.original = type(error)
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["command_error"]
 
         # Setting the emoji so I dont need to type it all the time
@@ -64,7 +65,7 @@ class CommandError(commands.Cog):
             response_embed = discord.Embed(title="You are dividing by zero!", color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
-        elif type(error.original) == self.client.NoItemFound:
+        elif type(error.original) == skyblock.NoItemFound:
             await ctx.message.add_reaction(emoji)
             response_embed = discord.Embed(title=useful["item_doesnt_exist"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)

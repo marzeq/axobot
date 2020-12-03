@@ -1,5 +1,6 @@
 import random
 from discord.ext import commands
+from utils import commands as command
 
 
 class Memes(commands.Cog):
@@ -9,7 +10,7 @@ class Memes(commands.Cog):
 
     @commands.command()
     async def meme(self, ctx):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         memes_submissions = self.client.reddit.subreddit('memes').new()
         post_to_pick = random.randint(1, 10)
@@ -20,7 +21,7 @@ class Memes(commands.Cog):
 
     @commands.command()
     async def dankmeme(self, ctx):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         memes_submissions = self.client.reddit.subreddit('dankmemes').new()
         post_to_pick = random.randint(1, 10)

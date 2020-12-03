@@ -28,7 +28,7 @@ class Tasks(commands.Cog):
                     elif instruction == "remind":
                         await self.client.get_user(dct[instruction]["who"]).send(embed=discord.Embed(title=dct[instruction]["value"]))
                     elif instruction == "unban":
-                        await self.client.get_guild(dct[instruction]["guild"]).unban(user=dct[instruction]["who"])
+                        await self.client.get_guild(dct[instruction]["guild"]).unban(user=await self.client.fetch_user(dct[instruction]["user"]))
                     tasksjson.pop(key)
                     action = True
                     break

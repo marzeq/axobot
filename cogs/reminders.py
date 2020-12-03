@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import json
+from utils import language, tasks
+from utils import commands as command
 
 
 class Reminders(commands.Cog):
@@ -11,11 +13,11 @@ class Reminders(commands.Cog):
 
     @commands.command()
     async def remind(self, ctx: commands.Context, *, args: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["reminders"]
-        args, endtime = await self.utils.process_time(ctx, args, useful["invalid_format"])
+        args, endtime = await tasks.process_time(ctx, args, useful["invalid_format"])
         if args == "err":
             return
         elif args == "":

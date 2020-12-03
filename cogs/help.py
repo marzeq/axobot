@@ -1,18 +1,19 @@
 import discord
 from discord.ext import commands
+from utils import help, language
 
 
 class HelpCommand(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.adm_dsc = client.admin_command_descriptions
+        self.adm_dsc = help.admin_command_descriptions
         client.remove_command("help")
 
     @commands.command()
     async def help(self, ctx, *, command=None):
         # Get all required translations and command descriptions
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["help"]
         cmds = lang["command_descriptions"]
         categories = lang["help_cattegories"]
@@ -107,5 +108,5 @@ if __name__ == "__main__":
     import sys
     import os
     import pathlib
-    os.chdir(f"{pathlib.Path(__file__).parent.absolute()}/..")
+
     os.system(f"{sys.executable} {pathlib.Path(__file__).parent.absolute()}/../main.py")

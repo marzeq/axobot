@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import json
 import requests
+from utils import language, skyblock
+from utils import commands as command
 
 
 class SkyBazar(commands.Cog):
@@ -19,14 +21,14 @@ class SkyBazar(commands.Cog):
             if item.lower() in itemjson["items"][itemid] or itemid.lower().replace("_", " ") == item.lower() or itemid == item:
                 request = requests.get(f"https://api.hypixel.net/skyblock/bazaar/product?productId={itemid}&key={self.api_key}").json()
                 return request
-        raise self.client.NoItemFound(f"This item doen't exist")
+        raise skyblock.NoItemFound(f"This item doen't exist")
 
     @commands.command(aliases=["skybazaar"])
     async def skybazar(self, ctx: commands.Context, *, item: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["bazaar"]
         result = self.sbazaritem(item)["product_info"]
         embed = discord.Embed(title=f"{useful['info']} {result['product_id']}").set_thumbnail(url="https://static.wikia"

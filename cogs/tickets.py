@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import json
 import random
+from utils import commands as command
 
 
 class Tickets(commands.Cog):
@@ -11,7 +12,7 @@ class Tickets(commands.Cog):
 
     @commands.command()
     async def ticket_category(self, ctx: commands.Context, category: discord.CategoryChannel):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
             with open("config/config.json", "r+") as f:
@@ -34,7 +35,7 @@ class Tickets(commands.Cog):
 
     @commands.command()
     async def ticket_role(self, ctx: commands.Context, role: discord.Role):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
             with open("config/config.json", "r+") as f:
@@ -57,7 +58,7 @@ class Tickets(commands.Cog):
 
     @commands.command()
     async def ticket(self, ctx: commands.Context):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         with open("config/config.json", "r+") as f:
             # Get the file
@@ -98,7 +99,7 @@ class Tickets(commands.Cog):
 
     @commands.command()
     async def close(self, ctx: commands.Context, channel=None):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         if channel is None:
             channel: discord.TextChannel = ctx.channel

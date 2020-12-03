@@ -2,6 +2,7 @@
 import discord
 from discord.ext import commands
 import json
+from utils import commands as command
 
 
 class Embed(commands.Cog):
@@ -11,10 +12,10 @@ class Embed(commands.Cog):
 
     @commands.command(aliases=["ebd"])
     async def embed(self, ctx, *, jsonstr: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # # Getting all translations
-        # lang = self.client.get_server_lang(ctx.guild)
+        # lang = utils.language.get_server_lang(ctx.guild)
         # useful = lang["translations"]["embed"]
 
         # Clear the string from code block indicators
@@ -53,7 +54,7 @@ class Embed(commands.Cog):
 
     @commands.command(aliases=["eebd"])
     async def editembed(self, ctx: commands.Context, id: str, chid: str, *, jsonstr: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # # Getting all translations
         # lang = self.client.get_server_lang(ctx.guild)

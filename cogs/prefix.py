@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import json
+from utils import language
+from utils import commands as command
 
 
 class Prefix(commands.Cog):
@@ -11,10 +13,10 @@ class Prefix(commands.Cog):
     @commands.command()
     @commands.guild_only()
     async def prefix(self, ctx, *, prefix: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
-            lang = self.client.get_server_lang(ctx.guild)
+            lang = language.get_server_lang(ctx.guild)
             useful = lang["translations"]["prefix"]
             with open('config/config.json', 'r') as f:
                 config = json.load(f)

@@ -8,7 +8,8 @@ import discord
 import praw
 from discord.ext import commands
 import pathlib
-import utils # noqa
+import utils
+from utils import main
 os.chdir(f"{pathlib.Path(__file__).parent.absolute()}")
 
 # Determining if we need to send a restart alert after everything is finished
@@ -21,16 +22,9 @@ with open("config/token.txt", "r") as f:
     TOKEN = f.read()
 
 
-get_prefix = utils.get_prefix
-
-
 # Creates the client instance
-client = commands.Bot(command_prefix=get_prefix, intents=discord.Intents.all())
+client = commands.Bot(command_prefix=main.get_prefix, intents=discord.Intents.all())
 
-# So you can access the functions from cogs
-client.get_server_lang = utils.get_server_lang
-client.get_server_lang_code = utils.get_server_lang_code
-client.if_command_disabled = utils.if_command_disabled
 
 # Setting up connection between Reddit and the bot
 with open("config/reddit.json", "r") as f:
@@ -40,21 +34,14 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
                             user_agent='MarzeqsUtilities by u/Marzeq_')
 
-client.__version__ = "0.1.14.1b"
-
-# Admin command descriptions. It's here because it shouldn't be translated
-client.admin_command_descriptions = utils.admin_command_descriptions
-
-# All valid language codes
-client.valid_langs = ["en_US", "es_ES", "pl_PL", "pt_BR", "ru_RU", "zh_CN", "hi_IN", "fr_FR"]
-# client.valid_langs = ["en_US", "pl_PL"]
+client.__version__ = "0.2b"
 
 
 # Shows that the bot is working
 @client.event
 async def on_ready():
     print("The bot is ready.")
-    await utils.do_undone_tasks(client)
+    await utils.tasks.do_undone_tasks(client)
     if channel_to_send != 0:
         channel = await client.fetch_channel(channel_to_send)
         await channel.send(embed=discord.Embed(title="✅  Restarted the bot", color=0x2be040))
@@ -73,7 +60,7 @@ async def load(ctx, extension=None):
         except commands.errors.ExtensionAlreadyLoaded or commands.errors.ExtensionNotFound:
             await ctx.message.channel.send(f"The cog {extension} is already loaded or does not exist!")
     else:
-        for extensionname in os.listdir(f"./cogs"):
+        for extensionname in os.listdir(f"cogs"):
             if extensionname.endswith(".py"):
                 try:
                     client.load_extension(f"cogs.{extensionname[:-3]}")
@@ -93,7 +80,7 @@ async def unload(ctx, extension=None):
         except commands.ExtensionNotLoaded or commands.errors.ExtensionNotFound:
             await ctx.message.channel.send(f"The cog {extension} is not loaded or does not exist!")
     else:
-        for extensionname in os.listdir(f"./cogs"):
+        for extensionname in os.listdir(f"cogs"):
             if extensionname.endswith(".py"):
                 try:
                     client.unload_extension(f"cogs.{extensionname[:-3]}")
@@ -113,7 +100,7 @@ async def reload(ctx, extension=None):
         except commands.errors.ExtensionNotFound:
             await ctx.message.channel.send(f"The cog {extension} is not loaded or does not exist!")
     else:
-        for extensionname in os.listdir(f"./cogs"):
+        for extensionname in os.listdir(f"cogs"):
             if extensionname.endswith(".py"):
                 try:
                     client.reload_extension(f"cogs.{extensionname[:-3]}")
@@ -122,7 +109,7 @@ async def reload(ctx, extension=None):
         await ctx.send(embed=discord.Embed(title="✅  Reloaded all extensions", color=0x2be040))
 
 
-for filename in os.listdir(f"./cogs"):
+for filename in os.listdir(f"cogs"):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")
 
@@ -145,7 +132,7 @@ async def pull_reload(ctx):
         return
     await ctx.send(embed=discord.Embed(title="🟡  Pulling from the GitHub repo..", color=0xdaed2d))
     os.system(f"git pull")
-    for extensionname in os.listdir(f"./cogs"):
+    for extensionname in os.listdir(f"cogs"):
         if extensionname.endswith(".py"):
             try:
                 client.reload_extension(f"cogs.{extensionname[:-3]}")
@@ -186,8 +173,6 @@ async def on_error(name, *args, **_): # noqa
     user = await client.fetch_user(500669086947344384)
     await user.send(embed=embed)
     client.logger.critical("".join(ready) + "Error id: " + str(errorid))
-
-client.NoItemFound = utils.NoItemFound
 
 # Run the bot
 client.run(TOKEN)

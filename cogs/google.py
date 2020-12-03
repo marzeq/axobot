@@ -2,6 +2,9 @@ import discord
 from discord.ext import commands
 from urllib.parse import quote as valid_url
 import random
+from utils import language
+from utils import commands as command
+
 
 class Google(commands.Cog):
 
@@ -11,10 +14,10 @@ class Google(commands.Cog):
 
     @commands.command(aliases=["ggl"])
     async def google(self, ctx, *, search_term: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["google"]
 
         # Search term ready to combine with the google prefix

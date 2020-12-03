@@ -1,13 +1,14 @@
 import discord
 from discord.ext import commands
 import json
+from utils import language, tasks
+from utils import commands as command
 
 
 class Ban(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.utils = __import__("utils")
 
     @staticmethod
     async def safe_ban(member: discord.Member, reason: str):
@@ -18,10 +19,10 @@ class Ban(commands.Cog):
 
     @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["ban"]
 
         # If user has perms to ban
@@ -36,15 +37,15 @@ class Ban(commands.Cog):
 
     @commands.command()
     async def tempban(self, ctx: commands.Context, user: discord.User, *, args):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["ban"]
 
         # If user has perms to ban
         if ctx.author.guild_permissions.ban_members or ctx.author.guild_permissions.administrator:
-            args, endtime = await self.utils.process_time(ctx, args, useful["invalid_format"])
+            args, endtime = await tasks.process_time(ctx, args, useful["invalid_time"])
 
             # Figuring ot if something went
             if args == "err":
@@ -68,11 +69,11 @@ class Ban(commands.Cog):
                 reminders = json.load(f)
 
             with open("config/tasks.json", "w") as f:
-                reminders[str(round(endtime))] = {"unban": {"user": f"{user.name}#{user.discriminator}", "guild": ctx.guild.id}}
+                reminders[str(round(endtime))] = {"unban": {"user": user.id, "guild": ctx.guild.id}}
                 json.dump(reminders, f, indent=4)
 
             # Safely ban he member
-            member: discord.Member = ctx.guild.get_membed(user.id)
+            member: discord.Member = ctx.guild.get_member(user.id)
             await self.safe_ban(member, reason)
 
             await ctx.send(embed=discord.Embed(title=useful["tempbanned"].format(member, reason), color=0x00ff00))

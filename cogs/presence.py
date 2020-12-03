@@ -9,8 +9,6 @@ class Presence(commands.Cog):
 
     @commands.command()
     async def presence(self, ctx: commands.Context, type_of_activity: int, *, presence: str):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
-            return
         if not await self.client.is_owner(ctx.author):
             return
         if type_of_activity == 3:

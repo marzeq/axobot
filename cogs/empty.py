@@ -1,5 +1,7 @@
 import discord
 from discord.ext import commands
+import utils
+from utils import commands as command
 
 
 class Empty(commands.Cog):
@@ -9,9 +11,9 @@ class Empty(commands.Cog):
 
     @commands.command()
     async def empty(self, ctx: commands.Context):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
-        print(ctx.command.name)
+        await ctx.send("Nothing to see here :O")
 
 
 def setup(client):

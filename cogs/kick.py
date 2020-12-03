@@ -1,5 +1,7 @@
 import discord
 from discord.ext import commands
+from utils import language
+from utils import commands as command
 
 
 class Kick(commands.Cog):
@@ -16,10 +18,10 @@ class Kick(commands.Cog):
 
     @commands.command()
     async def kick(self, ctx, member: discord.Member, *, reason: str = "No reason provided."):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         # Getting all translations
-        lang = self.client.get_server_lang(ctx.guild)
+        lang = language.get_server_lang(ctx.guild)
         useful = lang["translations"]["kick"]
 
         # If user has perms to kick

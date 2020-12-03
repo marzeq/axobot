@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import json
+from utils import language
+from utils import commands as command
 
 
 class Lang(commands.Cog):
@@ -10,11 +12,11 @@ class Lang(commands.Cog):
 
     @commands.command(aliases=["lang"])
     async def language(self, ctx, lang: str = "none"):
-        if self.client.if_command_disabled(ctx.command.name, ctx.guild):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
             # Getting all translations
-            lng = self.client.get_server_lang(ctx.guild)
+            lng = language.get_server_lang(ctx.guild)
             useful = lng["translations"]["lang"]
 
             # If a lang is provided
@@ -30,7 +32,7 @@ class Lang(commands.Cog):
                     pass
 
             # If provided lang is valid
-            if lang in self.client.valid_langs:
+            if lang in language.valid_langs:
 
                 # Change the language of the server in the config
                 with open('config/config.json', 'r') as f:
