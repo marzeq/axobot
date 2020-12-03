@@ -159,23 +159,6 @@
             ],
             "required_perms": []
         },
-        "translate": {
-            "args": {
-                "src_lang": {
-                    "required": true
-                },
-                "dest_lang": {
-                    "required": true
-                },
-                "to_translate": {
-                    "required": true
-                }
-            },
-            "desc": "Uses Google Translate directly from Discord. If src_lang is set to \"auto\" or \"none\" it will detect the source language.",
-            "cattegory": "4",
-            "aliases": [],
-            "required_perms": []
-        },
         "log": {
             "args": {
                 "channel": {
@@ -383,10 +366,6 @@
         },
         "google": {
             "ur_link": "**Here's your link: {}**"
-        },
-        "translate": {
-            "lang_not_supported": "This language isn't supported by the translator!",
-            "heres_translated": "Here's your translated phrase: `{}`"
         },
         "logging": {
             "success": "Successfully updated this setting!",
