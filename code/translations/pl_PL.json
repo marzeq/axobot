@@ -159,23 +159,6 @@
             ],
             "required_perms": []
         },
-        "translate": {
-            "args": {
-                "src_lang": {
-                    "required": true
-                },
-                "dest_lang": {
-                    "required": true
-                },
-                "to_translate": {
-                    "required": true
-                }
-            },
-            "desc": "Używa Google Tłumacza bezpośrednio z Discorda. Jeśli src_lang jest ustawiony na \"auto\" lub \"none\" wykryje język źródłowy.",
-            "cattegory": "4",
-            "aliases": [],
-            "required_perms": []
-        },
         "log": {
             "args": {
                 "channel": {
@@ -383,10 +366,6 @@
         },
         "google": {
             "ur_link": "**Oto twój link\" {}**"
-        },
-        "translate": {
-            "lang_not_supported": "Ten język nie jest wspierany przez tłumacza!",
-            "heres_translated": "Oto twoja przetłumaczona fraza: `{}`"
         },
         "logging": {
             "success": "Pomyślnie zaktualizowano to ustawienie!",
