@@ -1,317 +1,148 @@
 {
     "help_cattegories": {
         "0": [
-            "Główne",
-            ""
+            "Główne"
         ],
         "1": [
-            "Zarządzanie użytkownikami",
-            ""
+            "Zarządzanie użytkownikami"
         ],
         "2": [
-            "Ustawienia bota",
-            ""
+            "Ustawienia bota"
         ],
         "3": [
-            "Zabawa",
-            ""
+            "Zabawa"
         ],
         "4": [
-            "Narzędzia",
-            ""
+            "Narzędzia"
         ],
         "5": [
-            "Logowanie",
-            ""
+            "Logowanie"
         ],
         "6": [
-            "Support Tickets",
-            ""
+            "Support Tickets"
         ]
     },
     "command_descriptions": {
         "help": {
-            "args": {
-                "command": {
-                    "required": false
-                }
-            },
             "desc": "Pokazuje wszystkie komendy i ich argumenty. Jeśli nazwa komendy jest podana, pokaże pomoc na temat podanej komendy",
-            "cattegory": "0",
             "aliases": [],
             "required_perms": []
         },
         "ban": {
-            "args": {
-                "member": {
-                    "required": true
-                },
-                "reason": {
-                    "required": false
-                }
-            },
             "desc": "Banuje podanego członka. Jeśli podany, wyśle również powód do dziennika serwerowego.",
-            "cattegory": "1",
             "aliases": [],
             "required_perms": "Banowanie Użytkowników lub Administrator"
         },
         "tempban": {
-            "args": {
-                "member": {
-                    "required": true
-                },
-                "time": {
-                    "required": true
-                },
-                "reason": {
-                    "required": false
-                }
-            },
             "desc": "Tymczasowo banuje podanego członka. Jeśli podany, wyśle również powód do dziennika serwerowego.",
-            "cattegory": "1",
             "aliases": [],
             "required_perms": "Banowanie Użytkowników lub Administrator"
         },
         "kick": {
-            "args": {
-                "member": {
-                    "required": true
-                },
-                "reason": {
-                    "required": false
-                }
-            },
             "desc": "Wyrzuca podanego członka. Jeśli podany, wyśle również powód do dziennika serwerowego.",
-            "cattegory": "1",
             "aliases": [],
             "required_perms": "Wyrzucanie Użytkowników lub Administrator"
         },
         "prefix": {
-            "args": {
-                "new_prefix": {
-                    "required": true
-                }
-            },
             "desc": "Zmienia prefix bota na serwerze.",
-            "cattegory": "2",
             "aliases": [],
             "required_perms": "Zarządzanie Serwerem lub Administrator"
         },
         "lang": {
-            "args": {
-                "lang": {
-                    "required": false
-                }
-            },
             "desc": "Zmienia język bota na serwerze.",
-            "cattegory": "2",
             "aliases": [],
             "required_perms": "Zarządzanie Serwerem lub Administrator"
         },
         "meme": {
             "args": {},
             "desc": "Pokazuje jeden z 10 najnowszych postów na r/memes",
-            "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
             "desc": "Pokazuje jeden z 10 najnowszych postów na r/dankmemes",
-            "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "reddit": {
-            "args": {
-                "subreddit": {
-                    "required": true
-                }
-            },
             "desc": "Pokazuje jeden z 10 najgorętszych postów na danym subreddicie",
-            "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "google": {
-            "args": {
-                "search_term": {
-                    "required": true
-                }
-            },
             "desc": "Zwraca ci gotowy link w Google",
-            "cattegory": "4",
-            "aliases": [
-                "ggl"
-            ],
             "required_perms": []
         },
         "wiki": {
-            "args": {
-                "search": {
-                    "required": true
-                }
-            },
             "desc": "Daje ci gotowy link do artykułu z Wikipedii.",
-            "cattegory": "4",
-            "aliases": [
-                "wikipedia"
-            ],
             "required_perms": []
         },
         "log": {
-            "args": {
-                "channel": {
-                    "required": true
-                }
-            },
             "desc": "Zmienia kanał do logowania wiadomości.",
-            "cattegory": "5",
             "aliases": [],
             "required_perms": [
                 "Zarządzanie Serwerem lub Administrator"
             ]
         },
         "blacklist": {
-            "args": {
-                "channel": {
-                    "required": true
-                }
-            },
             "desc": "Dodaje/usuwa kanał na czarną listę logowania wiadomości!",
-            "cattegory": "5",
-            "aliases": [
-                "bl"
-            ],
             "required_perms": [
                 "Zarządzanie Kanałami lub Administrator"
             ]
         },
         "remind": {
-            "args": {
-                "time": {
-                    "required": true
-                },
-                "reminder": {
-                    "required": true
-                }
-            },
             "desc": "Przypomina cię po ustalonym czasie.",
-            "cattegory": "4",
             "aliases": [],
             "required_perms": []
         },
         "skybazar": {
-            "args": {
-                "item": {
-                    "required": true
-                }
-            },
             "desc": "Pokazuje ci statystyki podanego przedmiotu w Hypixel Skyblock",
-            "cattegory": "4",
             "aliases": [],
             "required_perms": []
         },
         "math": {
-            "args": {
-                "expression": {
-                    "required": true
-                },
-                "names": {
-                    "required": false
-                }
-            },
             "desc": "Bezpiecznie rozwiązuje równanie matematyczne. Jeśli chcesz zdefiniować zmienne, użyj słownika pythonowego, oddzielonego od równania znakiem `|`",
-            "cattegory": "4",
             "aliases": [],
             "required_perms": []
         },
         "embed": {
-            "args": {
-                "embed_json": {
-                    "required": true
-                }
-            },
             "desc": "Tworzy dla ciebie embed. Przykładowy embed możesz znaleźć na https://pastebin.com/vX9PVLqf",
-            "cattegory": "4",
-            "aliases": [
-                "ebd"
-            ],
             "required_perms": []
         },
         "editembed": {
-            "args": {
-                "message_id": {
-                    "required": true
-                },
-                "embed_json": {
-                    "required": true
-                }
-            },
             "desc": "Edytuje embed stworzony komendą `embed`. Przykładowy embed możesz znaleźć na https://pastebin.com/vX9PVLqf",
-            "cattegory": "4",
-            "aliases": [
-                "eebd"
-            ],
             "required_perms": []
         },
         "ticket": {
             "args": {},
             "desc": "Opens a support ticket",
-            "cattegory": "6",
             "aliases": [],
             "required_perms": []
         },
         "ticket_role": {
-            "args": {
-                "category_id": {
-                    "required": true
-                }
-            },
             "desc": "Changes the role for staff who handle tickets",
-            "cattegory": "6",
             "aliases": [],
             "required_perms": [
                 "Zarządzanie Serwerem lub Administrator"
             ]
         },
         "ticket_category": {
-            "args": {
-                "category_id": {
-                    "required": true
-                }
-            },
             "desc": "Changes the category to create tickets in",
-            "cattegory": "6",
             "aliases": [],
             "required_perms": [
                 "Zarządzanie Serwerem lub Administrator"
             ]
         },
         "close": {
-            "args": {
-                "channel": {
-                    "required": false
-                }
-            },
             "desc": "Closes a ticket",
-            "cattegory": "6",
             "aliases": [],
             "required_perms": [
                 "Ticket Creator or Assigned Staff Member"
             ]
         },
         "blacklist_command": {
-            "args": {
-                "mode": {
-                    "required": true
-                },
-                "name": {
-                    "required": true
-                }
-            },
             "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
-            "cattegory": "2",
             "aliases": [],
             "required_perms": [
                 "Zarządzanie Serwerem lub Administrator"
