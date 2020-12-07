@@ -104,7 +104,13 @@ class Tickets(commands.Cog):
         if channel is None:
             channel: discord.TextChannel = ctx.channel
         else:
-            channel: discord.TextChannel = channel
+            try:
+                channel: discord.TextChannel = ctx.message.channel_mentions[0]
+            except KeyError:
+                response_embed = discord.Embed(
+                    title="Please mention the channel!", color=0xdb2a2a)
+                await ctx.send(embed=response_embed)
+                return
         with open("config/config.json", "r+") as f:
             # Get the file
             config = json.load(f)

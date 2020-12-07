@@ -125,7 +125,6 @@ async def update(ctx):
     os.system(f"{sys.executable} {os.path.dirname(os.path.realpath(__file__))}/main.py {ctx.channel.id}")
 
 
-# Update the internal files from the git repo and rerun the program
 @client.command(aliases=["prl"])
 async def pull_reload(ctx):
     if not await client.is_owner(ctx.author):
