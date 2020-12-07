@@ -106,7 +106,7 @@ class Tickets(commands.Cog):
         else:
             try:
                 channel: discord.TextChannel = ctx.message.channel_mentions[0]
-            except KeyError:
+            except IndexError:
                 response_embed = discord.Embed(
                     title="Please mention the channel!", color=0xdb2a2a)
                 await ctx.send(embed=response_embed)
