@@ -316,6 +316,20 @@
             "required_perms": [
                 "Manage Server or Administrator"
             ]
+        },
+        "dice": {
+            "args": {
+                "start": {
+                    "required": false
+                },
+                "end": {
+                    "required": false
+                }
+            },
+            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped. Negative numbers supported.",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
         }
     },
     "translations": {
