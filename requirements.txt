@@ -3,3 +3,4 @@ praw>=7.1.0
 googletrans>=3.0.0
 simpleeval>=0.9.10
 requests>=2.25.0
+aiohttp>=3.6.0
