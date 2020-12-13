@@ -282,6 +282,17 @@
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
+        },
+        "pastebin": {
+            "args": {
+                "content": {
+                    "required": false
+                }
+            },
+            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "cattegory": "4",
+            "aliases": ["paste"],
+            "required_perms": []
         }
     },
     "translations": {
