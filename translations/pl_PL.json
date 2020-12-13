@@ -326,7 +326,7 @@
                     "required": false
                 }
             },
-            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped. Negative numbers supported.",
+            "desc": "Rzuca kostką dla ciebie. Jeśli wartości graniczne nie zostaną podane, będą one równe 1 i 6.\n\nProszę pamiętać że jeśli wartość startowa jest większa niż końcowa, zostaną one zamienione miejscami. Wartości na minusie są wspierane.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -337,7 +337,7 @@
                     "required": false
                 }
             },
-            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "desc": "Wrzuca twój tekst na pastebin\n\nPodświetlenie kodu dla języków programowania będzie dostępne później.",
             "cattegory": "4",
             "aliases": [
                 "paste"
