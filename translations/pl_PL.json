@@ -310,7 +310,7 @@
                     "required": true
                 }
             },
-            "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "desc": "Włącza wyłącza komendę na serwerze.\n\nJeśli `mode` jest ustawione na `add`, podana komenda zostanie dodana do czarnej listy i zostanie wyłączona\n\nJeśli `mode` jest ustawione na `remove`, podana komenda zostanie usunięta z czarnej listy i zostanie włączona spowrotem.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
