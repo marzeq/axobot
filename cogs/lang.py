@@ -59,6 +59,13 @@ class Lang(commands.Cog):
                 response_embed.add_field(name=f"🇨🇳", value=f"`lang zh_CN`")
                 response_embed.add_field(name=f"🇮🇳 (Hindi)", value=f"`lang hi_IN`")
                 response_embed.add_field(name=f"🇫🇷", value=f"`lang fr_FR`")
+                response_embed.add_field(name=f"🏴‍☠️", value=f"`lang en_PT`")
+                response_embed.add_field(name=f"🇸🇦", value=f"`lang ar_SA`")
+                response_embed.add_field(name=f"🇨🇿", value=f"`lang cz_CZ`")
+                response_embed.add_field(name=f"🇮🇹", value=f"`lang it_IT`")
+                response_embed.add_field(name=f"🇳🇱", value=f"`lang nl_NL`")
+                response_embed.add_field(name=f"🇹🇼", value=f"`lang zh_TW`")
+                response_embed.add_field(name=f"🇺🇦", value=f"`lang uk_UA`")
                 await ctx.send(embed=response_embed)
 
 
