@@ -1,31 +1,31 @@
 {
     "help_cattegories": {
         "0": [
-            "Main",
+            "Principal",
             ""
         ],
         "1": [
-            "Pirate management",
+            "Gestão de utilizadores",
             ""
         ],
         "2": [
-            "Bot settin's",
+            "Definições do bot",
             ""
         ],
         "3": [
-            "Fun",
+            "Diversão",
             ""
         ],
         "4": [
-            "Utilities",
+            "Utilidades",
             ""
         ],
         "5": [
-            "Loggin'",
+            "Registo",
             ""
         ],
         "6": [
-            "Support Tickets",
+            "Tickets de suporte",
             ""
         ]
     },
@@ -36,7 +36,7 @@
                     "required": false
                 }
             },
-            "desc": "Shows all commands an' their respective arguments, aliases an' its description. If a command name be passed, it will show help 'bout th' specified command",
+            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
             "cattegory": "0",
             "aliases": [],
             "required_perms": []
@@ -50,10 +50,10 @@
                     "required": false
                 }
             },
-            "desc": "Bans a specified scallywag. If provided, sends a ban reason t' th' server audit log.",
+            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Pirates or Captain"
+            "required_perms": "Ban Members or Administrator"
         },
         "tempban": {
             "args": {
@@ -67,10 +67,10 @@
                     "required": false
                 }
             },
-            "desc": "Tempbans a specified scallywag. If provided, sends a ban reason t' th' server audit log.",
+            "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Pirates or Captain"
+            "required_perms": "Ban Members or Administrator"
         },
         "kick": {
             "args": {
@@ -294,7 +294,7 @@
                     "required": false
                 }
             },
-            "desc": "Closes a ticket",
+            "desc": "Fecha um ticket",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -347,7 +347,7 @@
     },
     "translations": {
         "ban": {
-            "banned": "**Banned {} for: {}**",
+            "banned": "**{} foi banido por {}**",
             "tempbanned": "**Tempbanned {} for: {}**",
             "invalid_time": "No time specified!",
             "too_long": "The reason should be 256 charachters long"

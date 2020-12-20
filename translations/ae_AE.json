@@ -1,15 +1,15 @@
 {
     "help_cattegories": {
         "0": [
-            "Main",
+            "Mæin",
             ""
         ],
         "1": [
-            "User management",
+            "Usœr mænægœmœnt",
             ""
         ],
         "2": [
-            "Bot settings",
+            "Böt sœttings",
             ""
         ],
         "3": [
@@ -17,15 +17,15 @@
             ""
         ],
         "4": [
-            "Utilities",
+            "Utilitiœs",
             ""
         ],
         "5": [
-            "Logging",
+            "Lögging",
             ""
         ],
         "6": [
-            "Support Tickets",
+            "Suppört Tickœts",
             ""
         ]
     },
@@ -36,7 +36,7 @@
                     "required": false
                 }
             },
-            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
+            "desc": "Shöws æll cömmænds ænd thœir rœspœctivœ ærgumœnts, æliæsœs ænd its dœscriptiön. If æ cömmænd næmœ is pæssœd, it will shöw hœlp æböut thœ spœcifiœd cömmænd",
             "cattegory": "0",
             "aliases": [],
             "required_perms": []
@@ -50,10 +50,10 @@
                     "required": false
                 }
             },
-            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+            "desc": "Bæns æ spœcifiœd mœmbœr. If prövidœd, sœnds æ bæn rœæsön tö thœ sœrvœr æudit lög.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": "Bæn Mœmbœrs ör Ædministrætör"
         },
         "tempban": {
             "args": {
@@ -67,10 +67,10 @@
                     "required": false
                 }
             },
-            "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
+            "desc": "Tœmpbæns æ spœcifiœd mœmbœr. If prövidœd, sœnds æ bæn rœæsön tö thœ sœrvœr æudit lög.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": "Bæn Mœmbœrs ör Ædministrætör"
         },
         "kick": {
             "args": {
@@ -81,10 +81,10 @@
                     "required": false
                 }
             },
-            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "desc": "Kick æ spœcifiœd mœmbœr. If prövidœd, sœnds æ kick rœæsön tö thœ sœrvœr æudit lög.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Kick Members or Administrator"
+            "required_perms": "Kick Mœmbœrs ör Ædministrætör"
         },
         "prefix": {
             "args": {
@@ -92,10 +92,10 @@
                     "required": true
                 }
             },
-            "desc": "Changes the prefix for the bot on the server.",
+            "desc": "Chængœs thœ prœfix för thœ böt ön thœ sœrvœr.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": "Mænægœ Sœrvœr ör Ædministrætör"
         },
         "lang": {
             "args": {
@@ -103,21 +103,21 @@
                     "required": false
                 }
             },
-            "desc": "Changes the language for the bot on the server.",
+            "desc": "Chængœs thœ længuægœ för thœ böt ön thœ sœrvœr.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": "Mænægœ Sœrvœr ör Ædministrætör"
         },
         "meme": {
             "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/memes",
+            "desc": "Shöws yöu önœ öf thœ 10 möst rœcœnt submissiöns ön r/mœmœs",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
+            "desc": "Shöws yöu önœ öf thœ 10 möst rœcœnt submissiöns ön r/dænkmœmœs",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
@@ -128,7 +128,7 @@
                     "required": true
                 }
             },
-            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "desc": "Shöws yöu önœ öf thœ 10 höttœst submissiöns ön æny prövidœd subrœddit",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
@@ -139,7 +139,7 @@
                     "required": true
                 }
             },
-            "desc": "Returns you a ready link for a Google search",
+            "desc": "Rœturns yöu æ rœædy link för æ Gööglœ sœærch",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -152,7 +152,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you n ready link to an wikipedia article.",
+            "desc": "Givœs yöu æ rœædy link tö æn wikipœdiæ ærticlœ.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -165,11 +165,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the channel for message logging provided by the bot.",
+            "desc": "Chængœs thœ chænnœl för mœssægœ lögging prövidœd by thœ böt.",
             "cattegory": "5",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mænægœ Sœrvœr ör Ædministrætör"
             ]
         },
         "blacklist": {
@@ -178,13 +178,13 @@
                     "required": true
                 }
             },
-            "desc": "Blacklists/unblackists the channel from message logging!",
+            "desc": "Blæcklists/unblæckists thœ chænnœl fröm mœssægœ lögging!",
             "cattegory": "5",
             "aliases": [
                 "bl"
             ],
             "required_perms": [
-                "Manage Channels or Administrator"
+                "Mænægœ Chænnœls ör Ædministrætör"
             ]
         },
         "remind": {
@@ -196,7 +196,7 @@
                     "required": true
                 }
             },
-            "desc": "Reminds you after a set amount of time.",
+            "desc": "Rœminds yöu æftœr æ sœt æmöunt öf timœ.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -207,7 +207,7 @@
                     "required": true
                 }
             },
-            "desc": "Shows you stats about a specific item in Hypixel Skyblock",
+            "desc": "Shöws yöu stæts æböut æ spœcific itœm in Hypixœl Skyblöck",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -221,7 +221,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "desc": "Sæfœly œvæluœætœs æ mæth œxprœssiön. If yöu wænt tö pæss sömœ væriæblœs, usœ æ pythön dictiönæry, sœpærætœd fröm thœ œxprœssiön by ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -232,7 +232,7 @@
                     "required": true
                 }
             },
-            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Crœætœs æ nicœ œmbœd för yöu. Æn œxæmplœ cæn bœ föund æt https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -248,7 +248,7 @@
                     "required": true
                 }
             },
-            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Œdits æn œmbœd crœætœd with 'œmbœd'. Æn œxæmplœ cæn bœ föund æt https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -257,7 +257,7 @@
         },
         "ticket": {
             "args": {},
-            "desc": "Opens a support ticket",
+            "desc": "Öpœns æ suppört tickœt",
             "cattegory": "6",
             "aliases": [],
             "required_perms": []
@@ -268,11 +268,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the role for staff who handle tickets",
+            "desc": "Chængœs thœ rölœ för stæff whö hændlœ tickœts",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mænægœ Sœrvœr ör Ædministrætör"
             ]
         },
         "ticket_category": {
@@ -281,11 +281,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the category to create tickets in",
+            "desc": "Chængœs thœ cætœgöry tö crœætœ tickœts in",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mænægœ Sœrvœr ör Ædministrætör"
             ]
         },
         "close": {
@@ -314,7 +314,7 @@
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mænægœ Sœrvœr ör Ædministrætör"
             ]
         },
         "dice": {
