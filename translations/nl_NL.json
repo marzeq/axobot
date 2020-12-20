@@ -54,7 +54,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Leden verbannen of Administrator"
             ]
         },
         "tempban": {
@@ -73,7 +73,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Leden verbannen of Administrator"
             ]
         },
         "kick": {
@@ -89,7 +89,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Kick Members or Administrator"
+                "Leden kicken of Administrator"
             ]
         },
         "prefix": {
@@ -102,7 +102,7 @@
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Server beheren of Administrator"
             ]
         },
         "lang": {
@@ -115,7 +115,7 @@
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Server beheren of Administrator"
             ]
         },
         "meme": {
@@ -179,7 +179,7 @@
             "cattegory": "5",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Server beheren of Administrator"
             ]
         },
         "blacklist": {
@@ -194,7 +194,7 @@
                 "bl"
             ],
             "required_perms": [
-                "Manage Channels or Administrator"
+                "Kanalen beheren of Administrator"
             ]
         },
         "remind": {
@@ -267,7 +267,7 @@
         },
         "ticket": {
             "args": {},
-            "desc": "Opens a support ticket",
+            "desc": "Opent een ondersteuningsticket",
             "cattegory": "6",
             "aliases": [],
             "required_perms": []
@@ -282,7 +282,7 @@
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Server beheren of Administrator"
             ]
         },
         "ticket_category": {
@@ -295,7 +295,7 @@
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Server beheren of Administrator"
             ]
         },
         "close": {
@@ -304,11 +304,11 @@
                     "required": false
                 }
             },
-            "desc": "Closes a ticket",
+            "desc": "Sluit een ticket",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Ticket Creator or Assigned Staff Member"
+                "Ticketmaker of toegewezen personeelslid"
             ]
         },
         "blacklist_command": {
@@ -324,7 +324,7 @@
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Server beheren of Administrator"
             ]
         },
         "dice": {
@@ -357,97 +357,97 @@
     },
     "translations": {
         "ban": {
-            "banned": "Banned %%member%% for: %%reason%%",
-            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
-            "invalid_time": "No time specified!",
-            "too_long": "The reason should be 256 charachters long"
+            "banned": "%%member%% verbannen wegens: %%reason%%",
+            "tempbanned": "%%member%% tijdelijk verbannen wegens: %%reason%%",
+            "invalid_time": "Geen tijd opgegeven!",
+            "too_long": "De reden mag 256 tekens lang zijn"
         },
         "command_error": {
-            "nonexistent_command": "**This command does not exist!**",
-            "missing_argument": "**You didn't provide a argument that is required!**",
-            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
-            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "nonexistent_command": "**Dit commando bestaat niet!**",
+            "missing_argument": "**Je bent vergeten een vereist argument op te geven!**",
+            "bot_missing_permissions": "**Ik mis machtigingen om dit commando uit te voeren!**",
+            "explain": "Onbekende fout. Meld dit bij: `marzeq_#2137`. Foutcode: `%%id%%`",
+            "item_doesnt_exist": "Dit item bestaat niet! Probeer het anders te formuleren.",
+            "bad_format": "Dit argument heeft een onjuiste indeling"
         },
         "guild_join": {
-            "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
-            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+            "welcome": "**Welkom!**",
+            "thx_for_invite": "Bedankt voor het uitnodigen!",
+            "prefix": "Mijn standaardvoorvoegsel is `--`. Om het te veranderen, kun je `--prefix [nieuw_voorvoegsel]` uitvoeren!"
         },
         "help": {
-            "heres_your_help": "**Here's your help %%username%%!**",
-            "available_commands": "Available Commands:",
-            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
-            "the_cmd": "**The %%command_name%% command:**",
-            "usage": "**Usage:**",
-            "desc": "**Description:**",
-            "required_perms": "**Required Permissions:**",
-            "aliases": "**Aliases:**"
+            "heres_your_help": "**Hulp voor %%username%%**",
+            "available_commands": "Beschikbare commando's:",
+            "required_notrequired_args": "[] zijn vereiste argumenten, () zijn optionele argumenten",
+            "the_cmd": "**Commando %%command_name%%:**",
+            "usage": "**Gebruik:**",
+            "desc": "**Omschrijving:**",
+            "required_perms": "**Vereiste machtigingen:**",
+            "aliases": "**Aliassen:**"
         },
         "kick": {
-            "kicked": "Kicked %%member%% for: %%reason%%"
+            "kicked": "%%member%% gekickt wegens: %%reason%%"
         },
         "lang": {
-            "changed_lang": "**Changed the language to `%%lang_code%%`.**",
-            "available_langs": "**Available languages:**"
+            "changed_lang": "**Taal veranderd naar `%%lang_code%%`.**",
+            "available_langs": "**Beschikbare talen:**"
         },
         "prefix": {
-            "changed_prefix": "**Changed the custom prefix to `%%prefix%%`.**"
+            "changed_prefix": "**Voorvoegsel veranderd naar `%%prefix%%`.**"
         },
         "reddit": {
-            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
-            "title": "**Title**: %%title%%, By: u/%%username%%",
-            "content": "**Content:**",
-            "footer": "Upvote Ratio: %%ratio%%, URL: %%url%%"
+            "submission_nsfw": "Deze inzending is gemarkeerd als NSFW. Schakel NSFW-modus in op dit kanaal om deze indiening te zien!",
+            "title": "**Titel**: %%title%%, Door u/%%username%%",
+            "content": "**Inhoud:**",
+            "footer": "Stemmen voor: %%ratio%%, Adres: %%url%%"
         },
         "google": {
-            "ur_link": "**Here's your URL: %%url%%**"
+            "ur_link": "**Webadres: %%url%%**"
         },
         "logging": {
-            "success": "Successfully updated this setting!",
-            "msg_deleted": "**A message was deleted!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS",
-            "pinned": "Pinned",
-            "everyone-here": "Mentioned Everyone or Here"
+            "success": "Instelling succesvol bijgewerkt!",
+            "msg_deleted": "**Er is een bericht verwijderd!**",
+            "channel": "Kanaal",
+            "content": "Inhoud",
+            "author": "Auteur",
+            "time": "Tijd",
+            "tts": "Spraaksynthese",
+            "pinned": "Vastgezet",
+            "everyone-here": "Everyone of here vermeld"
         },
         "logging_edit": {
-            "msg_edited": "**A message was edited!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS After",
-            "pinned": "Pinned After",
-            "everyone-here": "Mentioned Everyone or Here",
-            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
-            "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
-            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
+            "msg_edited": "**Er is een bericht bewerkt!**",
+            "channel": "Kanaal",
+            "content": "Inhoud",
+            "author": "Auteur",
+            "time": "Tijd",
+            "tts": "Spraaksynthese na",
+            "pinned": "Vastgezet na",
+            "everyone-here": "Everyone of here vermeld",
+            "content_value": "**Voor**: %%before%%\n**Na**: %%after%%",
+            "time_value": "**Aangemaakt op**: %%created%% GMT\n**Bewerkt op**: %%edited%% GMT",
+            "everyone-here_value": "**Voor**: %%before%%\n**Na**: %%after%%"
         },
         "reminders": {
-            "invalid_format": "No time specified!",
-            "result": "Ok, you'll be reminded!",
-            "too_long": "The reminder should be 256 characters long"
+            "invalid_format": "Geen tijd opgegeven!",
+            "result": "Oké, ik help je te herinneren!",
+            "too_long": "De herinnering mag 256 tekens lang zijn"
         },
         "bazaar": {
-            "info": "Bazaar info for",
-            "highest_buy_order": "Highest buy order",
-            "highest_sell_offer": "Highest sell offer",
-            "amount_ordered": "Amount ordered",
-            "amount_offered": "Amount offered",
-            "price_per_unit": "Price per unit",
-            "in_orders": "In %%orders%% orders",
-            "in_offers": "In %%offers%% offers",
-            "inst_sell": "Instant sell price",
-            "inst_buy": "Instant buy price",
-            "buy_volume": "Buy volume",
-            "sell_volume": "Sell volume",
-            "margin": "Margin",
-            "inaccurate": "* Is inaccurate due to bazaar tax"
+            "info": "Bazaarinfo voor",
+            "highest_buy_order": "Volg. hoogste aankoop",
+            "highest_sell_offer": "Volg. hoogste verkoop",
+            "amount_ordered": "Aantal gevraagd",
+            "amount_offered": "Aantal aangeboden",
+            "price_per_unit": "Prijs per stuk",
+            "in_orders": "In %%orders%% aankopen",
+            "in_offers": "In %%offers%% aanbiedingen",
+            "inst_sell": "Directe verkoopprijs",
+            "inst_buy": "Directe aankoopprijs",
+            "buy_volume": "Aankoopvolume",
+            "sell_volume": "Verkoopvolume",
+            "margin": "Marge",
+            "inaccurate": "* is onnauwkeurig dankzij belasting"
         }
     }
 }

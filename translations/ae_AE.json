@@ -347,7 +347,7 @@
                     "required": true
                 }
             },
-            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "desc": "Uplöæds yöur dœsirœd tœxt tö pæstœbin\n\n\nSyntæx highlighting för prögræmming will bœ suppörtœd lætœr.",
             "cattegory": "4",
             "aliases": [
                 "paste"
@@ -357,97 +357,97 @@
     },
     "translations": {
         "ban": {
-            "banned": "Banned %%member%% for: %%reason%%",
-            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
-            "invalid_time": "No time specified!",
-            "too_long": "The reason should be 256 charachters long"
+            "banned": "Bænnœd %%member%% för: %%reason%%",
+            "tempbanned": "Tœmpænnœd %%member%% för: %%reason%%",
+            "invalid_time": "Nö timœ spœcifiœd!",
+            "too_long": "Thœ rœæsön shöuld bœ 256 chæræchtœrs löng"
         },
         "command_error": {
-            "nonexistent_command": "**This command does not exist!**",
-            "missing_argument": "**You didn't provide a argument that is required!**",
-            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
-            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "nonexistent_command": "**This cömmænd döœs nöt œxist!**",
+            "missing_argument": "**Yöu didn't prövidœ æ ærgumœnt thæt is rœquirœd!**",
+            "bot_missing_permissions": "**I'm missing thœ rœquirœd pœrmissiöns för this cömmænd!**",
+            "explain": "Unœxpœctœd œrrör. Rœpört thœ œrrör tö `marzeq_#2137`. Œrrör ID: `%%id%%`",
+            "item_doesnt_exist": "This itœm döœsn't œxist! Mæbœ try phræsing it æ littlœ bit diffœrœntly.",
+            "bad_format": "This ærgumœnt is in æ bæd förmæt"
         },
         "guild_join": {
-            "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
-            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+            "welcome": "**Wœlcöme!**",
+            "thx_for_invite": "Thænks för inviting mœ!",
+            "prefix": "My dœfæult prœfix is `--`. If yöu wish tö chængœ it, typœ `--prefix [nœw_prœfix]`!"
         },
         "help": {
-            "heres_your_help": "**Here's your help %%username%%!**",
-            "available_commands": "Available Commands:",
-            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
-            "the_cmd": "**The %%command_name%% command:**",
-            "usage": "**Usage:**",
-            "desc": "**Description:**",
-            "required_perms": "**Required Permissions:**",
-            "aliases": "**Aliases:**"
+            "heres_your_help": "**Hœrœ's yöur hœlp %%username%%!**",
+            "available_commands": "Ævæilæblœ Cömmænds:",
+            "required_notrequired_args": "[] ærœ rœquirœd cömmænd ærgumœnts, () ærœ öptiönæl cömmænd ærgumœnts",
+            "the_cmd": "**Thœ %%command_name%% cömmænd:**",
+            "usage": "**Usægœ:**",
+            "desc": "**Dœscriptiön:**",
+            "required_perms": "**Rœquirœd Pœrmissiöns:**",
+            "aliases": "**Æliæsœs:**"
         },
         "kick": {
-            "kicked": "Kicked %%member%% for: %%reason%%"
+            "kicked": "Kickœd %%member%% för: %%reason%%"
         },
         "lang": {
-            "changed_lang": "**Changed the language to `%%lang_code%%`.**",
-            "available_langs": "**Available languages:**"
+            "changed_lang": "**Chængœd thœ længuægœ tö `%%lang_code%%`.**",
+            "available_langs": "**Ævæilæblœ længuægœs:**"
         },
         "prefix": {
-            "changed_prefix": "**Changed the custom prefix to `%%prefix%%`.**"
+            "changed_prefix": "**Chængœd thœ custöm prœfix tö `%%prefix%%`.**"
         },
         "reddit": {
-            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
-            "title": "**Title**: %%title%%, By: u/%%username%%",
-            "content": "**Content:**",
-            "footer": "Upvote Ratio: %%ratio%%, URL: %%url%%"
+            "submission_nsfw": "This submissiön is mærkœd æs NSFW. Plœæsœ œnæblœ NSFW mödœ ön this chænnœl tö sœœ this submissiön!",
+            "title": "**Titlœ**: %%title%%, By: u/%%username%%",
+            "content": "**Cöntœnt:**",
+            "footer": "Upvötœ Rætiö: %%ratio%%, URL: %%url%%"
         },
         "google": {
-            "ur_link": "**Here's your URL: %%url%%**"
+            "ur_link": "**Hœrœ's yöur URL: %%url%%**"
         },
         "logging": {
-            "success": "Successfully updated this setting!",
-            "msg_deleted": "**A message was deleted!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
+            "success": "Succœssfully updætœd this sœtting!",
+            "msg_deleted": "**Æ mœssægœ wæs dœlœtœd!**",
+            "channel": "Chænnœl",
+            "content": "Cöntœnt",
+            "author": "Æuthör",
+            "time": "Timœ",
             "tts": "TTS",
-            "pinned": "Pinned",
-            "everyone-here": "Mentioned Everyone or Here"
+            "pinned": "Pinnœd",
+            "everyone-here": "Mœntiönœd Œvœryönœ ör Hœrœ"
         },
         "logging_edit": {
-            "msg_edited": "**A message was edited!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS After",
-            "pinned": "Pinned After",
-            "everyone-here": "Mentioned Everyone or Here",
-            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
-            "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
-            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
+            "msg_edited": "**Æ mœssægœ wæs œditœd!**",
+            "channel": "Chænnœl",
+            "content": "Cöntœnt",
+            "author": "Æuthör",
+            "time": "Timœ",
+            "tts": "TTS Æftœr",
+            "pinned": "Pinnœd Æftœr",
+            "everyone-here": "Mœntiönœd Œvœryönœ ör Hœrœ",
+            "content_value": "**Bœförœ**: %%before%%\n**Æftœr**: %%after%%",
+            "time_value": "**Crœætœd Æt**: %%created%% GMT\n**Œditœd Æt**: %%edited%% GMT",
+            "everyone-here_value": "**Bœförœ**: %%before%%\n**Æftœr**: %%after%%"
         },
         "reminders": {
-            "invalid_format": "No time specified!",
-            "result": "Ok, you'll be reminded!",
-            "too_long": "The reminder should be 256 characters long"
+            "invalid_format": "Nö timœ spœcifiœd!",
+            "result": "Ök, yöu'll bœ rœmindœd!",
+            "too_long": "Thœ rœmindœr shöuld bœ 256 chæræctœrs löng"
         },
         "bazaar": {
-            "info": "Bazaar info for",
-            "highest_buy_order": "Highest buy order",
-            "highest_sell_offer": "Highest sell offer",
-            "amount_ordered": "Amount ordered",
-            "amount_offered": "Amount offered",
-            "price_per_unit": "Price per unit",
-            "in_orders": "In %%orders%% orders",
-            "in_offers": "In %%offers%% offers",
-            "inst_sell": "Instant sell price",
-            "inst_buy": "Instant buy price",
-            "buy_volume": "Buy volume",
-            "sell_volume": "Sell volume",
-            "margin": "Margin",
-            "inaccurate": "* Is inaccurate due to bazaar tax"
+            "info": "Bæzæær infö för",
+            "highest_buy_order": "Highœst buy ördœr",
+            "highest_sell_offer": "Highœst sœll öffœr",
+            "amount_ordered": "Æmöunt ördœrœd",
+            "amount_offered": "Æmöunt öffœrœd",
+            "price_per_unit": "Pricœ pœr unit",
+            "in_orders": "In %%orders%% ördœrs",
+            "in_offers": "In %%offers%% öffœrs",
+            "inst_sell": "Instænt sœll pricœ",
+            "inst_buy": "Instænt buy pricœ",
+            "buy_volume": "Buy völumœ",
+            "sell_volume": "Sœll völumœ",
+            "margin": "Mærgin",
+            "inaccurate": "* Is inæccurætœ duœ tö bæzæær tæx"
         }
     }
 }
