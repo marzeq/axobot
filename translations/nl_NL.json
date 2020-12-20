@@ -363,20 +363,20 @@
             "too_long": "The reason should be 256 charachters long"
         },
         "command_error": {
-            "nonexistent_command": "**This command does not exist!**",
-            "missing_argument": "**You didn't provide a argument that is required!**",
-            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
-            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "nonexistent_command": "**Dit commando bestaat niet!**",
+            "missing_argument": "**Je bent vergeten een vereist argument op te geven!**",
+            "bot_missing_permissions": "**Ik mis machtigingen om dit commando uit te voeren!**",
+            "explain": "Onbekende fout. Meld dit bij: `marzeq_#2137`. Foutcode: `%%id%%`",
+            "item_doesnt_exist": "Dit item bestaat niet! Probeer het anders te formuleren.",
+            "bad_format": "Dit argument heeft een onjuiste indeling"
         },
         "guild_join": {
-            "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
-            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+            "welcome": "**Welkom!**",
+            "thx_for_invite": "Bedankt voor het uitnodigen!",
+            "prefix": "Mijn standaardvoorvoegsel is `--`. Om het te veranderen, kun je `--prefix [nieuw_voorvoegsel]` uitvoeren!"
         },
         "help": {
-            "heres_your_help": "**Here's your help %%username%%!**",
+            "heres_your_help": "**Hulp voor %%username%%**",
             "available_commands": "Available Commands:",
             "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
             "the_cmd": "**The %%command_name%% command:**",
@@ -406,21 +406,21 @@
         },
         "logging": {
             "success": "Successfully updated this setting!",
-            "msg_deleted": "**A message was deleted!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS",
-            "pinned": "Pinned",
+            "msg_deleted": "**Er is een bericht verwijderd!**",
+            "channel": "Kanaal",
+            "content": "Inhoud",
+            "author": "Auteur",
+            "time": "Tijd",
+            "tts": "Spraaksynthese",
+            "pinned": "Vastgezet",
             "everyone-here": "Mentioned Everyone or Here"
         },
         "logging_edit": {
             "msg_edited": "**A message was edited!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
+            "channel": "Kanaal",
+            "content": "Inhoud",
+            "author": "Auteur",
+            "time": "Tijd",
             "tts": "TTS After",
             "pinned": "Pinned After",
             "everyone-here": "Mentioned Everyone or Here",
