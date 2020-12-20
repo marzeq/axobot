@@ -347,7 +347,7 @@
                     "required": true
                 }
             },
-            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "desc": "Uplöæds yöur dœsirœd tœxt tö pæstœbin\n\n\nSyntæx highlighting för prögræmming will bœ suppörtœd lætœr.",
             "cattegory": "4",
             "aliases": [
                 "paste"
@@ -357,13 +357,13 @@
     },
     "translations": {
         "ban": {
-            "banned": "Banned %%member%% for: %%reason%%",
-            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
-            "invalid_time": "No time specified!",
-            "too_long": "The reason should be 256 charachters long"
+            "banned": "Bænnœd %%member%% för: %%reason%%",
+            "tempbanned": "Tœmpænnœd %%member%% för: %%reason%%",
+            "invalid_time": "Nö timœ spœcifiœd!",
+            "too_long": "Thœ rœæsön shöuld bœ 256 chæræchtœrs löng"
         },
         "command_error": {
-            "nonexistent_command": "**This command does not exist!**",
+            "nonexistent_command": "**This cömmænd döœs nöt œxist!**",
             "missing_argument": "**You didn't provide a argument that is required!**",
             "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
@@ -429,7 +429,7 @@
             "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
         },
         "reminders": {
-            "invalid_format": "No time specified!",
+            "invalid_format": "Nö timœ spœcifiœd!",
             "result": "Ok, you'll be reminded!",
             "too_long": "The reminder should be 256 characters long"
         },
