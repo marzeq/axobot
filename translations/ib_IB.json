@@ -85,11 +85,11 @@
                     "required": false
                 }
             },
-            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "desc": "Kcike a specifed membre. If provide, sned a kcike reon t he serve audi logger.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Kick Members or Administrator"
+                "Kcicke Membre or Adminitrate"
             ]
         },
         "prefix": {
@@ -98,11 +98,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the prefix for the bot on the server.",
+            "desc": "Chang he preik froe he botter on he servre.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mnage Servre or Adminitrate"
             ]
         },
         "lang": {
@@ -111,23 +111,23 @@
                     "required": false
                 }
             },
-            "desc": "Changes the language for the bot on the server.",
+            "desc": "Chang he lange froe he botter on he servre.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mnage Servre or Adminitrate"
             ]
         },
         "meme": {
             "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/memes",
+            "desc": "Show yuo on of he 10 mot recet submissione on r/memes",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
+            "desc": "Show yuo on of he 10 mot recet submissione on r/dankmemes",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
@@ -138,7 +138,7 @@
                     "required": true
                 }
             },
-            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "desc": "Show yuo on of he 10 mot hoyest submissione on ane provide subredittter",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
@@ -149,7 +149,7 @@
                     "required": true
                 }
             },
-            "desc": "Returns you a ready link for a Google search",
+            "desc": "Retur yuo a redi lik fro a Goge serc",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -162,7 +162,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you n ready link to an wikipedia article.",
+            "desc": "Giv yuo a redi lik t an wkipeda artice.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -175,11 +175,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the channel for message logging provided by the bot.",
+            "desc": "Chabge he channele fro mesag loggers provide by he bor.",
             "cattegory": "5",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mnage Servre or Adminitrate"
             ]
         },
         "blacklist": {
@@ -188,13 +188,13 @@
                     "required": true
                 }
             },
-            "desc": "Blacklists/unblackists the channel from message logging!",
+            "desc": "Backist/unbackist he chanle fomr mesag loggers!",
             "cattegory": "5",
             "aliases": [
                 "bl"
             ],
             "required_perms": [
-                "Manage Channels or Administrator"
+                "Mnage Chanle or Adminitrate"
             ]
         },
         "remind": {
@@ -206,7 +206,7 @@
                     "required": true
                 }
             },
-            "desc": "Reminds you after a set amount of time.",
+            "desc": "Remin yuo aftre a ste amont of tme.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -217,7 +217,7 @@
                     "required": true
                 }
             },
-            "desc": "Shows you stats about a specific item in Hypixel Skyblock",
+            "desc": "Show yuo stat abot a specife iem in Hypixle Skybloc",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evaluates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "desc": "Safe evauat a meth expressione. Fi yuo wan to passs som vaiable, us a pyto disconare, spearate fomr he expressione by ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -242,7 +242,7 @@
                     "required": true
                 }
             },
-            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Creat a ncie embe for yuo. An examp cna e foud at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -258,7 +258,7 @@
                     "required": true
                 }
             },
-            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Edi an embe create whit 'embed'. An examp cna e foud at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -267,7 +267,7 @@
         },
         "ticket": {
             "args": {},
-            "desc": "Opens a support ticket",
+            "desc": "Opems a supor ticketter",
             "cattegory": "6",
             "aliases": [],
             "required_perms": []
@@ -278,11 +278,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the role for staff who handle tickets",
+            "desc": "Chane he rol fro staffers hwo hande ticketter",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mnage Servre or Adminitrate"
             ]
         },
         "ticket_category": {
@@ -291,11 +291,11 @@
                     "required": true
                 }
             },
-            "desc": "Changes the category to create tickets in",
+            "desc": "Chane he catego to creat ticketters in",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mnage Servre or Adminitrate"
             ]
         },
         "close": {
@@ -304,11 +304,11 @@
                     "required": false
                 }
             },
-            "desc": "Closes a ticket",
+            "desc": "Clos a ticketter",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Ticket Creator or Assigned Staff Member"
+                "Ticketter Creatore or Assigne Staffer Membre"
             ]
         },
         "blacklist_command": {
@@ -324,7 +324,7 @@
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Mnage Servre or Adminitrate"
             ]
         },
         "dice": {
@@ -357,15 +357,15 @@
     },
     "translations": {
         "ban": {
-            "banned": "Banned %%member%% for: %%reason%%",
-            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
-            "invalid_time": "No time specified!",
-            "too_long": "The reason should be 256 charachters long"
+            "banned": "Bane %%member%% fro: %%reason%%",
+            "tempbanned": "Tembna %%member%% fro: %%reason%%",
+            "invalid_time": "On tme specife!",
+            "too_long": "He reso shod eb 256 chasracheter logn"
         },
         "command_error": {
-            "nonexistent_command": "**This command does not exist!**",
-            "missing_argument": "**You didn't provide a argument that is required!**",
-            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
+            "nonexistent_command": "**His commande not existe!**",
+            "missing_argument": "**Yuo didet providre arument ha is requre!**",
+            "bot_missing_permissions": "**I misserinno he require permise fro his commandre!**",
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
             "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
             "bad_format": "This argument is in a bad format"
@@ -429,7 +429,7 @@
             "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
         },
         "reminders": {
-            "invalid_format": "No time specified!",
+            "invalid_format": "On tme specife!",
             "result": "Ok, you'll be reminded!",
             "too_long": "The reminder should be 256 characters long"
         },
