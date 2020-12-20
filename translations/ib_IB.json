@@ -1,0 +1,453 @@
+{
+    "help_cattegories": {
+        "0": [
+            "Maine",
+            ""
+        ],
+        "1": [
+            "Usre managmete",
+            ""
+        ],
+        "2": [
+            "Bot seting",
+            ""
+        ],
+        "3": [
+            "Fun",
+            ""
+        ],
+        "4": [
+            "Utile",
+            ""
+        ],
+        "5": [
+            "Logers",
+            ""
+        ],
+        "6": [
+            "Supporte Ticke",
+            ""
+        ]
+    },
+    "command_descriptions": {
+        "help": {
+            "args": {
+                "command": {
+                    "required": false
+                }
+            },
+            "desc": "Show al commande and thei respetiv agumen, aliase and is descriptione. If a commande nam is pased, it wil shwo hwelp abot he specifed commande",
+            "cattegory": "0",
+            "aliases": [],
+            "required_perms": []
+        },
+        "ban": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Bna a specifed membre. If provide, sned a bna reon t he serve audi logger.",
+            "cattegory": "1",
+            "aliases": [],
+            "required_perms": [
+                "Bna Membre or Adminitrate"
+            ]
+        },
+        "tempban": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "time": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Tembna a specifed membre. If provide, sned a tembna reon t he serve audi logger.",
+            "cattegory": "1",
+            "aliases": [],
+            "required_perms": [
+                "Bna Membre or Adminitrate"
+            ]
+        },
+        "kick": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Kcike a specifed membre. If provide, sned a kcike reon t he serve audi logger.",
+            "cattegory": "1",
+            "aliases": [],
+            "required_perms": [
+                "Kcicke Membre or Adminitrate"
+            ]
+        },
+        "prefix": {
+            "args": {
+                "new_prefix": {
+                    "required": true
+                }
+            },
+            "desc": "Chang he preik froe he botter on he servre.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": [
+                "Mnage Servre or Adminitrate"
+            ]
+        },
+        "lang": {
+            "args": {
+                "lang": {
+                    "required": false
+                }
+            },
+            "desc": "Chang he lange froe he botter on he servre.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": [
+                "Mnage Servre or Adminitrate"
+            ]
+        },
+        "meme": {
+            "args": {},
+            "desc": "Show yuo on of he 10 mot recet submissione on r/memes",
+            "cattegory": "3",
+            "aliases": [],
+            "required_perms": []
+        },
+        "dankmeme": {
+            "args": {},
+            "desc": "Show yuo on of he 10 mot recet submissione on r/dankmemes",
+            "cattegory": "3",
+            "aliases": [],
+            "required_perms": []
+        },
+        "reddit": {
+            "args": {
+                "subreddit": {
+                    "required": true
+                }
+            },
+            "desc": "Show yuo on of he 10 mot hoyest submissione on ane provide subredittter",
+            "cattegory": "3",
+            "aliases": [],
+            "required_perms": []
+        },
+        "google": {
+            "args": {
+                "search_term": {
+                    "required": true
+                }
+            },
+            "desc": "Retur yuo a redi lik fro a Goge serc",
+            "cattegory": "4",
+            "aliases": [
+                "ggl"
+            ],
+            "required_perms": []
+        },
+        "wiki": {
+            "args": {
+                "search": {
+                    "required": true
+                }
+            },
+            "desc": "Giv yuo a redi lik t an wkipeda artice.",
+            "cattegory": "4",
+            "aliases": [
+                "wikipedia"
+            ],
+            "required_perms": []
+        },
+        "log": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Chabge he channele fro mesag loggers provide by he bor.",
+            "cattegory": "5",
+            "aliases": [],
+            "required_perms": [
+                "Mnage Servre or Adminitrate"
+            ]
+        },
+        "blacklist": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Backist/unbackist he chanle fomr mesag loggers!",
+            "cattegory": "5",
+            "aliases": [
+                "bl"
+            ],
+            "required_perms": [
+                "Mnage Chanle or Adminitrate"
+            ]
+        },
+        "remind": {
+            "args": {
+                "time": {
+                    "required": true
+                },
+                "reminder": {
+                    "required": true
+                }
+            },
+            "desc": "Remin yuo aftre a ste amont of tme.",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "skybazar": {
+            "args": {
+                "item": {
+                    "required": true
+                }
+            },
+            "desc": "Show yuo stat abot a specife iem in Hypixle Skybloc",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "math": {
+            "args": {
+                "expression": {
+                    "required": true
+                },
+                "names": {
+                    "required": false
+                }
+            },
+            "desc": "Safe evauat a meth expressione. Fi yuo wan to passs som vaiable, us a pyto disconare, spearate fomr he expressione by ' | '",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "embed": {
+            "args": {
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Creat a ncie embe for yuo. An examp cna e foud at https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "ebd"
+            ],
+            "required_perms": []
+        },
+        "editembed": {
+            "args": {
+                "message_id": {
+                    "required": true
+                },
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Edi an embe create whit 'embed'. An examp cna e foud at https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "eebd"
+            ],
+            "required_perms": []
+        },
+        "ticket": {
+            "args": {},
+            "desc": "Opems a supor ticketter",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": []
+        },
+        "ticket_role": {
+            "args": {
+                "category_id": {
+                    "required": true
+                }
+            },
+            "desc": "Chane he rol fro staffers hwo hande ticketter",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Mnage Servre or Adminitrate"
+            ]
+        },
+        "ticket_category": {
+            "args": {
+                "category_id": {
+                    "required": true
+                }
+            },
+            "desc": "Chane he catego to creat ticketters in",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Mnage Servre or Adminitrate"
+            ]
+        },
+        "close": {
+            "args": {
+                "channel": {
+                    "required": false
+                }
+            },
+            "desc": "Clos a ticketter",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Ticketter Creatore or Assigne Staffer Membre"
+            ]
+        },
+        "blacklist_command": {
+            "args": {
+                "mode": {
+                    "required": true
+                },
+                "name": {
+                    "required": true
+                }
+            },
+            "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": [
+                "Mnage Servre or Adminitrate"
+            ]
+        },
+        "dice": {
+            "args": {
+                "start": {
+                    "required": false
+                },
+                "end": {
+                    "required": false
+                }
+            },
+            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped. Negative numbers supported.",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "pastebin": {
+            "args": {
+                "content": {
+                    "required": true
+                }
+            },
+            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "cattegory": "4",
+            "aliases": [
+                "paste"
+            ],
+            "required_perms": []
+        }
+    },
+    "translations": {
+        "ban": {
+            "banned": "Bane %%member%% fro: %%reason%%",
+            "tempbanned": "Tembna %%member%% fro: %%reason%%",
+            "invalid_time": "On tme specife!",
+            "too_long": "He reso shod eb 256 chasracheter logn"
+        },
+        "command_error": {
+            "nonexistent_command": "**His commande not existe!**",
+            "missing_argument": "**Yuo didet providre arument ha is requre!**",
+            "bot_missing_permissions": "**I misserinno he require permise fro his commandre!**",
+            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
+            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
+            "bad_format": "This argument is in a bad format"
+        },
+        "guild_join": {
+            "welcome": "**Welcome!**",
+            "thx_for_invite": "Thanks for inviting me!",
+            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+        },
+        "help": {
+            "heres_your_help": "**Here's your help %%username%%!**",
+            "available_commands": "Available Commands:",
+            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
+            "the_cmd": "**The %%command_name%% command:**",
+            "usage": "**Usage:**",
+            "desc": "**Description:**",
+            "required_perms": "**Required Permissions:**",
+            "aliases": "**Aliases:**"
+        },
+        "kick": {
+            "kicked": "Kicked %%member%% for: %%reason%%"
+        },
+        "lang": {
+            "changed_lang": "**Changed the language to `%%lang_code%%`.**",
+            "available_langs": "**Available languages:**"
+        },
+        "prefix": {
+            "changed_prefix": "**Changed the custom prefix to `%%prefix%%`.**"
+        },
+        "reddit": {
+            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
+            "title": "**Title**: %%title%%, By: u/%%username%%",
+            "content": "**Content:**",
+            "footer": "Upvote Ratio: %%ratio%%, URL: %%url%%"
+        },
+        "google": {
+            "ur_link": "**Here's your URL: %%url%%**"
+        },
+        "logging": {
+            "success": "Successfully updated this setting!",
+            "msg_deleted": "**A message was deleted!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS",
+            "pinned": "Pinned",
+            "everyone-here": "Mentioned Everyone or Here"
+        },
+        "logging_edit": {
+            "msg_edited": "**A message was edited!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS After",
+            "pinned": "Pinned After",
+            "everyone-here": "Mentioned Everyone or Here",
+            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
+            "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
+            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
+        },
+        "reminders": {
+            "invalid_format": "On tme specife!",
+            "result": "Ok, you'll be reminded!",
+            "too_long": "The reminder should be 256 characters long"
+        },
+        "bazaar": {
+            "info": "Bazaar info for",
+            "highest_buy_order": "Highest buy order",
+            "highest_sell_offer": "Highest sell offer",
+            "amount_ordered": "Amount ordered",
+            "amount_offered": "Amount offered",
+            "price_per_unit": "Price per unit",
+            "in_orders": "In %%orders%% orders",
+            "in_offers": "In %%offers%% offers",
+            "inst_sell": "Instant sell price",
+            "inst_buy": "Instant buy price",
+            "buy_volume": "Buy volume",
+            "sell_volume": "Sell volume",
+            "margin": "Margin",
+            "inaccurate": "* Is inaccurate due to bazaar tax"
+        }
+    }
+}

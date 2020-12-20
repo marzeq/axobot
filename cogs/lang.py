@@ -70,6 +70,7 @@ class Lang(commands.Cog):
                 response_embed.add_field(name=f"🇲🇾", value=f"`lang ms_MY`")
                 response_embed.add_field(name=f"🇳🇴", value=f"`lang no_NO`")
                 response_embed.add_field(name=f"🇵🇹", value=f"`lang pt_PT`")
+                response_embed.add_field(name=f"<:ib:790329225608560671>", value=f"`lang ib_IB`")
                 await ctx.send(embed=response_embed)
 
 
