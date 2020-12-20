@@ -1,0 +1,443 @@
+{
+    "help_cattegories": {
+        "0": [
+            "Principal",
+            ""
+        ],
+        "1": [
+            "Gestão de utilizadores",
+            ""
+        ],
+        "2": [
+            "Definições do bot",
+            ""
+        ],
+        "3": [
+            "Diversão",
+            ""
+        ],
+        "4": [
+            "Utilidades",
+            ""
+        ],
+        "5": [
+            "Registo",
+            ""
+        ],
+        "6": [
+            "Tickets de suporte",
+            ""
+        ]
+    },
+    "command_descriptions": {
+        "help": {
+            "args": {
+                "command": {
+                    "required": false
+                }
+            },
+            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
+            "cattegory": "0",
+            "aliases": [],
+            "required_perms": []
+        },
+        "ban": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+            "cattegory": "1",
+            "aliases": [],
+            "required_perms": "Ban Members or Administrator"
+        },
+        "tempban": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "time": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
+            "cattegory": "1",
+            "aliases": [],
+            "required_perms": "Ban Members or Administrator"
+        },
+        "kick": {
+            "args": {
+                "member": {
+                    "required": true
+                },
+                "reason": {
+                    "required": false
+                }
+            },
+            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "cattegory": "1",
+            "aliases": [],
+            "required_perms": "Kick Members or Administrator"
+        },
+        "prefix": {
+            "args": {
+                "new_prefix": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the prefix for the bot on the server.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": "Manage Server or Administrator"
+        },
+        "lang": {
+            "args": {
+                "lang": {
+                    "required": false
+                }
+            },
+            "desc": "Changes the language for the bot on the server.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": "Manage Server or Administrator"
+        },
+        "meme": {
+            "args": {},
+            "desc": "Shows you one of the 10 most recent submissions on r/memes",
+            "cattegory": "3",
+            "aliases": [],
+            "required_perms": []
+        },
+        "dankmeme": {
+            "args": {},
+            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
+            "cattegory": "3",
+            "aliases": [],
+            "required_perms": []
+        },
+        "reddit": {
+            "args": {
+                "subreddit": {
+                    "required": true
+                }
+            },
+            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "cattegory": "3",
+            "aliases": [],
+            "required_perms": []
+        },
+        "google": {
+            "args": {
+                "search_term": {
+                    "required": true
+                }
+            },
+            "desc": "Returns you a ready link for a Google search",
+            "cattegory": "4",
+            "aliases": [
+                "ggl"
+            ],
+            "required_perms": []
+        },
+        "wiki": {
+            "args": {
+                "search": {
+                    "required": true
+                }
+            },
+            "desc": "Gives you n ready link to an wikipedia article.",
+            "cattegory": "4",
+            "aliases": [
+                "wikipedia"
+            ],
+            "required_perms": []
+        },
+        "log": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the channel for message logging provided by the bot.",
+            "cattegory": "5",
+            "aliases": [],
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
+        },
+        "blacklist": {
+            "args": {
+                "channel": {
+                    "required": true
+                }
+            },
+            "desc": "Blacklists/unblackists the channel from message logging!",
+            "cattegory": "5",
+            "aliases": [
+                "bl"
+            ],
+            "required_perms": [
+                "Manage Channels or Administrator"
+            ]
+        },
+        "remind": {
+            "args": {
+                "time": {
+                    "required": true
+                },
+                "reminder": {
+                    "required": true
+                }
+            },
+            "desc": "Reminds you after a set amount of time.",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "skybazar": {
+            "args": {
+                "item": {
+                    "required": true
+                }
+            },
+            "desc": "Shows you stats about a specific item in Hypixel Skyblock",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "math": {
+            "args": {
+                "expression": {
+                    "required": true
+                },
+                "names": {
+                    "required": false
+                }
+            },
+            "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "embed": {
+            "args": {
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "ebd"
+            ],
+            "required_perms": []
+        },
+        "editembed": {
+            "args": {
+                "message_id": {
+                    "required": true
+                },
+                "embed_json": {
+                    "required": true
+                }
+            },
+            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "cattegory": "4",
+            "aliases": [
+                "eebd"
+            ],
+            "required_perms": []
+        },
+        "ticket": {
+            "args": {},
+            "desc": "Opens a support ticket",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": []
+        },
+        "ticket_role": {
+            "args": {
+                "category_id": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the role for staff who handle tickets",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
+        },
+        "ticket_category": {
+            "args": {
+                "category_id": {
+                    "required": true
+                }
+            },
+            "desc": "Changes the category to create tickets in",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
+        },
+        "close": {
+            "args": {
+                "channel": {
+                    "required": false
+                }
+            },
+            "desc": "Fecha um ticket",
+            "cattegory": "6",
+            "aliases": [],
+            "required_perms": [
+                "Ticket Creator or Assigned Staff Member"
+            ]
+        },
+        "blacklist_command": {
+            "args": {
+                "mode": {
+                    "required": true
+                },
+                "name": {
+                    "required": true
+                }
+            },
+            "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "cattegory": "2",
+            "aliases": [],
+            "required_perms": [
+                "Manage Server or Administrator"
+            ]
+        },
+        "dice": {
+            "args": {
+                "start": {
+                    "required": false
+                },
+                "end": {
+                    "required": false
+                }
+            },
+            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped. Negative numbers supported.",
+            "cattegory": "4",
+            "aliases": [],
+            "required_perms": []
+        },
+        "pastebin": {
+            "args": {
+                "content": {
+                    "required": false
+                }
+            },
+            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "cattegory": "4",
+            "aliases": [
+                "paste"
+            ],
+            "required_perms": []
+        }
+    },
+    "translations": {
+        "ban": {
+            "banned": "**{} foi banido por {}**",
+            "tempbanned": "**Tempbanned {} for: {}**",
+            "invalid_time": "No time specified!",
+            "too_long": "The reason should be 256 charachters long"
+        },
+        "command_error": {
+            "nonexistent_command": "**This command does not exist!**",
+            "missing_argument": "**You didn't provide a argument that is required!**",
+            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
+            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`",
+            "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently.",
+            "bad_format": "This argument is in a bad format"
+        },
+        "guild_join": {
+            "welcome": "**Welcome!**",
+            "thx_for_invite": "Thanks for inviting me!",
+            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+        },
+        "help": {
+            "heres_your_help": "**Here's your help {}!**",
+            "available_commands": "Available Commands:",
+            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
+            "the_cmd": "**The {} command:**",
+            "usage": "**Usage:**",
+            "desc": "**Description:**",
+            "required_perms": "**Required Permissions:**",
+            "aliases": "**Aliases:**"
+        },
+        "kick": {
+            "kicked": "**Kicked {} for: {}**"
+        },
+        "lang": {
+            "changed_lang": "**Changed the language to `{}`.**",
+            "available_langs": "**Available languages:**"
+        },
+        "prefix": {
+            "changed_prefix": "**Changed the custom prefix to `{}`.**"
+        },
+        "reddit": {
+            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
+            "title": "**Title**: {}, By: u/{}",
+            "content": "**Content:**",
+            "footer": "Upvote Ratio: {}, Link: {}"
+        },
+        "google": {
+            "ur_link": "**Here's your link: {}**"
+        },
+        "logging": {
+            "success": "Successfully updated this setting!",
+            "msg_deleted": "**A message was deleted!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS",
+            "pinned": "Pinned",
+            "everyone-here": "Mentioned Everyone or Here"
+        },
+        "logging_edit": {
+            "msg_edited": "**A message was edited!**",
+            "channel": "Channel",
+            "content": "Content",
+            "author": "Author",
+            "time": "Time",
+            "tts": "TTS After",
+            "pinned": "Pinned After",
+            "everyone-here": "Mentioned Everyone or Here",
+            "content_value": "**Before**: {}\n**After**: {}",
+            "time_value": "**Created At**: {} GMT\n**Edited At**: {} GMT",
+            "everyone-here_value": "**Before**: {}\n**After**: {}"
+        },
+        "reminders": {
+            "invalid_format": "No time specified!",
+            "result": "Ok, you'll be reminded!",
+            "too_long": "The reminder should be 256 charachters long"
+        },
+        "bazaar": {
+            "info": "Bazaar info for",
+            "highest_buy_order": "Highest buy order",
+            "highest_sell_offer": "Highest sell offer",
+            "amount_ordered": "Amound ordered",
+            "amount_offered": "Amount offered",
+            "price_per_unit": "Price per unit",
+            "in_orders": "In {} orders",
+            "in_offers": "In {} offers",
+            "inst_sell": "Instant sell price",
+            "inst_buy": "Instant buy price",
+            "buy_volume": "Buy volume",
+            "sell_volume": "Sell volume",
+            "margin": "Margin",
+            "inaccurate": "* Is inaccurate due to bazaar tax"
+        }
+    }
+}
