@@ -81,10 +81,10 @@
                     "required": false
                 }
             },
-            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "desc": "Kick a specified scallywag. If provided, sends a kick reason t' th' server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Kick Members or Administrator"
+            "required_perms": "Kick Pirates or Captain"
         },
         "prefix": {
             "args": {
@@ -92,10 +92,10 @@
                     "required": true
                 }
             },
-            "desc": "Changes the prefix for the bot on the server.",
+            "desc": "Changes th' prefix fer th' bot on th' server.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": "Manage Server or Captain"
         },
         "lang": {
             "args": {
@@ -103,10 +103,10 @@
                     "required": false
                 }
             },
-            "desc": "Changes the language for the bot on the server.",
+            "desc": "Changes th' language fer th' bot on th' server.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": "Manage Server or Captain"
         },
         "meme": {
             "args": {},
@@ -169,7 +169,7 @@
             "cattegory": "5",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Manage Server or Captain"
             ]
         },
         "blacklist": {
@@ -272,7 +272,7 @@
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Manage Server or Captain"
             ]
         },
         "ticket_category": {
@@ -285,7 +285,7 @@
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Manage Server or Captain"
             ]
         },
         "close": {
@@ -314,7 +314,7 @@
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
-                "Manage Server or Administrator"
+                "Manage Server or Captain"
             ]
         },
         "dice": {
