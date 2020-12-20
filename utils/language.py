@@ -24,4 +24,4 @@ def get_server_lang_code(guild: discord.Guild) -> str:
     return lang_code
 
 
-valid_langs = ["en_US", "es_ES", "pl_PL", "pt_BR", "ru_RU", "zh_CN", "hi_IN", "fr_FR"]
+valid_langs = ["en_US", "es_ES", "pl_PL", "pt_BR", "ru_RU", "zh_CN", "hi_IN", "fr_FR", "ae_AE", "ar_SA", "cz_CZ", "en_PT", "it_IT", "nl_NL", "uk_UA", "zh_TW"]
