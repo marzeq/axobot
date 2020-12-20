@@ -365,15 +365,15 @@
         "command_error": {
             "nonexistent_command": "**This cömmænd döœs nöt œxist!**",
             "missing_argument": "**Yöu didn't prövidœ æ ærgumœnt thæt is rœquirœd!**",
-            "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
-            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "bot_missing_permissions": "**I'm missing thœ rœquirœd pœrmissiöns för this cömmænd!**",
+            "explain": "Unœxpœctœd œrrör. Rœpört thœ œrrör tö `marzeq_#2137`. Œrrör ID: `%%id%%`",
+            "item_doesnt_exist": "This itœm döœsn't œxist! Mæbœ try phræsing it æ littlœ bit diffœrœntly.",
+            "bad_format": "This ærgumœnt is in æ bæd förmæt"
         },
         "guild_join": {
-            "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
-            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+            "welcome": "**Wœlcöme!**",
+            "thx_for_invite": "Thænks för inviting mœ!",
+            "prefix": "My dœfæult prœfix is `--`. If yöu wish tö chængœ it, typœ `--prefix [nœw_prœfix]`!"
         },
         "help": {
             "heres_your_help": "**Here's your help %%username%%!**",
