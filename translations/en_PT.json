@@ -5,11 +5,11 @@
             ""
         ],
         "1": [
-            "User management",
+            "Pirate management",
             ""
         ],
         "2": [
-            "Bot settings",
+            "Bot settin's",
             ""
         ],
         "3": [
@@ -21,7 +21,7 @@
             ""
         ],
         "5": [
-            "Logging",
+            "Loggin'",
             ""
         ],
         "6": [
@@ -36,7 +36,7 @@
                     "required": false
                 }
             },
-            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
+            "desc": "Shows all commands an' their respective arguments, aliases an' its description. If a command name be passed, it will show help 'bout th' specified command",
             "cattegory": "0",
             "aliases": [],
             "required_perms": []
@@ -50,10 +50,10 @@
                     "required": false
                 }
             },
-            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+            "desc": "Bans a specified scallywag. If provided, sends a ban reason t' th' server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": "Ban Pirates or Captain"
         },
         "tempban": {
             "args": {
@@ -67,10 +67,10 @@
                     "required": false
                 }
             },
-            "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
+            "desc": "Tempbans a specified scallywag. If provided, sends a ban reason t' th' server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": "Ban Pirates or Captain"
         },
         "kick": {
             "args": {
