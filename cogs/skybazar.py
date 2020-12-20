@@ -40,12 +40,12 @@ class SkyBazar(commands.Cog):
         embed.add_field(name=f"*{useful['highest_buy_order']}:*",
                         value=f"""```    {useful['amount_ordered']}: {result['buy_summary'][0]["amount"]}
     {useful['price_per_unit']}: {result['buy_summary'][0]["pricePerUnit"]}
-    {useful['in_orders'].format(result['buy_summary'][0]["orders"])}```""", inline=False)
+    {useful['in_orders'].replace("%%orders%%", str(result['buy_summary'][0]["orders"]))}```""", inline=False)
 
         embed.add_field(name=f"*{useful['highest_sell_offer']}:*",
                         value=f"""```    {useful['amount_offered']}: {result['sell_summary'][0]["amount"]}
     {useful['price_per_unit']}: {result['sell_summary'][0]["pricePerUnit"]}
-    {useful['in_offers'].format(result['sell_summary'][0]["orders"])}```""", inline=False)
+    {useful['in_offers'].replace("%%offers%%", str(result['sell_summary'][0]["orders"]))}```""", inline=False)
 
         embed.add_field(name="*Other stats:*", value=f"""```    {useful['inst_buy']}: {round(result["quick_status"]["sellPrice"], 1)}*
     {useful['inst_sell']}: {round(result["quick_status"]["buyPrice"], 1)}*

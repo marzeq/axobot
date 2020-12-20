@@ -21,7 +21,7 @@ class HelpCommand(commands.Cog):
         # If a command is not provided
         if not command:
             # Make the initial embed
-            response_embed = discord.Embed(title=useful["heres_your_help"].format(ctx.author), color=0x1ced23)
+            response_embed = discord.Embed(title=useful["heres_your_help"].replace("%%username%%", ctx.author.name), color=0x1ced23)
 
             # Loop through all the available commands
             for command in cmds:
@@ -40,7 +40,7 @@ class HelpCommand(commands.Cog):
             # Check if provided command exists
             try:
                 # Basically the same as above
-                response_embed = discord.Embed(title=useful["the_cmd"].format(command), color=0x1ced23)
+                response_embed = discord.Embed(title=useful["the_cmd"].replace("%%command_name%%", command), color=0x1ced23)
                 args_to_put = ""
                 for arg in cmds[command]["args"]:
                     if cmds[command]["args"][arg]["required"]:

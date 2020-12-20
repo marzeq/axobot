@@ -37,8 +37,8 @@ class Reddit(commands.Cog):
             return
 
         # Setting the post title, author, upvote ratio and link in the embed, and giving it a random color
-        response_embed = discord.Embed(title=useful["title"].format(submission.title, submission.author.name), color=random.randint(0, 0xFFFFFF)) # noqa
-        response_embed.set_footer(text=useful["footer"].format(submission.upvote_ratio, submission.shortlink))
+        response_embed = discord.Embed(title=useful["title"].replace("%%title%%", submission.title).replace("%%username%%", submission.author.name), color=random.randint(0, 0xFFFFFF)) # noqa
+        response_embed.set_footer(text=useful["footer"].replace("%%ratio%%", str(submission.upvote_ratio)).replace("%%url%%", submission.shortlink))
 
         # Checking if submission has actual text in it
         if submission.selftext != "":

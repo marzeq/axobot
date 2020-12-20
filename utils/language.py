@@ -1,5 +1,6 @@
 import json
 import discord
+import os
 
 
 def get_server_lang(guild: discord.Guild) -> dict:
@@ -24,4 +25,8 @@ def get_server_lang_code(guild: discord.Guild) -> str:
     return lang_code
 
 
-valid_langs = ["en_US", "es_ES", "pl_PL", "pt_BR", "ru_RU", "zh_CN", "hi_IN", "fr_FR", "ae_AE", "ar_SA", "cz_CZ", "en_PT", "it_IT", "nl_NL", "uk_UA", "zh_TW"]
+valid_langs = []
+
+for lang in os.listdir("translations"):
+    if lang.endswith(".json"):
+        valid_langs.append(lang[:5])

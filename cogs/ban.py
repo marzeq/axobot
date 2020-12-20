@@ -32,7 +32,7 @@ class Ban(commands.Cog):
             await self.safe_ban(member, reason)
 
             # Creates and sends the response embed
-            response_embed = discord.Embed(title=useful["banned"].format(member, reason), color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["banned"].replace("%%member%%", member.display_name).replace("%%reason%%", reason), color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
     @commands.command()
@@ -76,7 +76,9 @@ class Ban(commands.Cog):
             member: discord.Member = ctx.guild.get_member(user.id)
             await self.safe_ban(member, reason)
 
-            await ctx.send(embed=discord.Embed(title=useful["tempbanned"].format(member, reason), color=0x00ff00))
+            response_embed = discord.Embed(title=useful["tempbanned"].replace("%%member%%", member.display_name).replace("%%reason%%", reason), color=0xdb2a2a)
+
+            await ctx.send(embed=response_embed)
 
 
 def setup(client):

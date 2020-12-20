@@ -24,7 +24,7 @@
             "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": ["Ban Members or Administrator"]
         },
         "tempban": {
             "args": {
@@ -41,7 +41,7 @@
             "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Ban Members or Administrator"
+            "required_perms": ["Ban Members or Administrator"]
         },
         "kick": {
             "args": {
@@ -55,7 +55,7 @@
             "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
-            "required_perms": "Kick Members or Administrator"
+            "required_perms": ["Kick Members or Administrator"]
         },
         "prefix": {
             "args": {
@@ -66,7 +66,7 @@
             "desc": "Changes the prefix for the bot on the server.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": ["Manage Server or Administrator"]
         },
         "lang": {
             "args": {
@@ -77,7 +77,7 @@
             "desc": "Changes the language for the bot on the server.",
             "cattegory": "2",
             "aliases": [],
-            "required_perms": "Manage Server or Administrator"
+            "required_perms": ["Manage Server or Administrator"]
         },
         "meme": {
             "args": {},
@@ -184,7 +184,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evalueates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "desc": "Safely evaluates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -286,7 +286,7 @@
         "pastebin": {
             "args": {
                 "content": {
-                    "required": false
+                    "required": true
                 }
             },
             "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
@@ -297,8 +297,8 @@
     },
     "translations": {
         "ban": {
-            "banned": "**Banned {} for: {}**",
-            "tempbanned": "**Tempbanned {} for: {}**",
+            "banned": "Banned %%member%% for: %%reason%%",
+            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
             "invalid_time": "No time specified!",
             "too_long": "The reason should be 256 charachters long"
         },
@@ -306,8 +306,8 @@
             "nonexistent_command": "**This command does not exist!**",
             "missing_argument": "**You didn't provide a argument that is required!**",
             "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `{}`",
-            "item_doesnt_exist": "This item doen't exist! Maybe try phrasing it a little bit differently.",
+            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
+            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
             "bad_format": "This argument is in a bad format"
         },
         "guild_join": {
@@ -316,33 +316,33 @@
             "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
         },
         "help": {
-            "heres_your_help": "**Here's your help {}!**",
+            "heres_your_help": "**Here's your help %%username%%!**",
             "available_commands": "Available Commands:",
             "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
-            "the_cmd": "**The {} command:**",
+            "the_cmd": "**The %%command_name%% command:**",
             "usage": "**Usage:**",
             "desc": "**Description:**",
             "required_perms": "**Required Permissions:**",
             "aliases": "**Aliases:**"
         },
         "kick": {
-            "kicked": "**Kicked {} for: {}**"
+            "kicked": "Kicked %%member%% for: %%reason%%"
         },
         "lang": {
-            "changed_lang": "**Changed the language to `{}`.**",
+            "changed_lang": "**Changed the language to `%%lang_code%%`.**",
             "available_langs": "**Available languages:**"
         },
         "prefix": {
-            "changed_prefix": "**Changed the custom prefix to `{}`.**"
+            "changed_prefix": "**Changed the custom prefix to `%%prefix%%`.**"
         },
         "reddit": {
             "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
-            "title": "**Title**: {}, By: u/{}",
+            "title": "**Title**: %%title%%, By: u/%%username%%",
             "content": "**Content:**",
-            "footer": "Upvote Ratio: {}, Link: {}"
+            "footer": "Upvote Ratio: %%ratio%%, URL: %%url%%"
         },
         "google": {
-            "ur_link": "**Here's your link: {}**"
+            "ur_link": "**Here's your URL: %%url%%**"
         },
         "logging": {
             "success": "Successfully updated this setting!",
@@ -364,24 +364,24 @@
             "tts": "TTS After",
             "pinned": "Pinned After",
             "everyone-here": "Mentioned Everyone or Here",
-            "content_value": "**Before**: {}\n**After**: {}",
-            "time_value": "**Created At**: {} GMT\n**Edited At**: {} GMT",
-            "everyone-here_value": "**Before**: {}\n**After**: {}"
+            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
+            "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
+            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
         },
         "reminders": {
             "invalid_format": "No time specified!",
             "result": "Ok, you'll be reminded!",
-            "too_long": "The reminder should be 256 charachters long"
+            "too_long": "The reminder should be 256 characters long"
         },
         "bazaar": {
             "info": "Bazaar info for",
             "highest_buy_order": "Highest buy order",
             "highest_sell_offer": "Highest sell offer",
-            "amount_ordered": "Amound ordered",
+            "amount_ordered": "Amount ordered",
             "amount_offered": "Amount offered",
             "price_per_unit": "Price per unit",
-            "in_orders": "In {} orders",
-            "in_offers": "In {} offers",
+            "in_orders": "In %%orders%% orders",
+            "in_offers": "In %%offers%% offers",
             "inst_sell": "Instant sell price",
             "inst_buy": "Instant buy price",
             "buy_volume": "Buy volume",

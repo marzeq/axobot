@@ -30,7 +30,7 @@ class Kick(commands.Cog):
             await self.safe_kick(member, reason)
 
             # Creates and sends the response embed
-            response_embed = discord.Embed(title=useful["kicked"].format(member, reason), color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["kicked"].format("%%member%%", member).replace("%%reason%%", reason), color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
 

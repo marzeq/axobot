@@ -43,7 +43,7 @@ class Lang(commands.Cog):
                     json.dump(config, f, indent=4)
 
                 # Creates and sends the response embed
-                embed = discord.Embed(title=useful["changed_lang"].format(lang), color=0x00ff00)
+                embed = discord.Embed(title=useful["changed_lang"].replace("%%lang_code%%", lang), color=0x00ff00)
                 await ctx.send(embed=embed)
 
             # If a lang is still none
@@ -67,6 +67,9 @@ class Lang(commands.Cog):
                 response_embed.add_field(name=f"🇹🇼", value=f"`lang zh_TW`")
                 response_embed.add_field(name=f"🇺🇦", value=f"`lang uk_UA`")
                 response_embed.add_field(name=f"AE", value=f"`lang ae_AE`")
+                response_embed.add_field(name=f"🇲🇾", value=f"`lang ms_MY`")
+                response_embed.add_field(name=f"🇳🇴", value=f"`lang no_NO`")
+                response_embed.add_field(name=f"🇵🇹", value=f"`lang pt_PT`")
                 await ctx.send(embed=response_embed)
 
 

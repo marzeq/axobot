@@ -27,7 +27,7 @@ class Google(commands.Cog):
         link = self.ggl + valid_url(search_term, safe='=?')
 
         # Creates and sends the response embed
-        response_embed = discord.Embed(title=useful["ur_link"].format(link), color=random.randint(0, 0xFFFFFF))
+        response_embed = discord.Embed(title=useful["ur_link"].replace("%%url%%", link), color=random.randint(0, 0xFFFFFF))
         await ctx.send(embed=response_embed)
 
 

@@ -81,12 +81,12 @@ class LoggingEvents(commands.Cog):
             return
         embed = discord.Embed(title=useful["msg_edited"], color=0xff0000)
         embed.add_field(name=useful["channel"], value=f"<#{after.channel.id}>", inline=False)
-        embed.add_field(name=useful["content"], value=useful["content_value"].format(before.content, after.content), inline=False)
+        embed.add_field(name=useful["content"], value=useful["content_value"].replace("%%before%%", before.content).replace("%%after%%", after.content), inline=False)
         embed.add_field(name=useful["author"], value=f"<@{after.author.id}>", inline=False)
-        embed.add_field(name=useful["time"], value=useful["time_value"].format(before.created_at, after.edited_at), inline=False)
+        embed.add_field(name=useful["time"], value=useful["time_value"].replace("%%created%%", str(before.created_at)).replace("%%edited%%", str(after.edited_at)), inline=False)
         embed.add_field(name=useful["tts"], value=f"{after.tts}", inline=False)
         embed.add_field(name=useful["pinned"], value=f"{after.pinned}", inline=False)
-        embed.add_field(name=useful["everyone-here"], value=useful["everyone-here_value"].format(before.mention_everyone, after.mention_everyone), inline=False)
+        embed.add_field(name=useful["everyone-here"], value=useful["everyone-here_value"].replace("%%before%%", str(before.mention_everyone)).replace("%%after%%", str(after.mention_everyone)), inline=False)
         await logging_channel.send(embed=embed)
 
 

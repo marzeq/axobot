@@ -78,7 +78,7 @@ class CommandError(commands.Cog):
         # Raise the error so I can see it
         else:
             errorid = round(time())
-            explain_embed = discord.Embed(title=useful["explain"].format(errorid))
+            explain_embed = discord.Embed(title=useful["explain"].replace("%%id%%", str(errorid)))
             await ctx.send(embed=explain_embed)
             raise error
             # Rest of the command handler in /code/main.py/on_error
