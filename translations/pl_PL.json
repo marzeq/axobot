@@ -25,7 +25,7 @@
             ""
         ],
         "6": [
-            "Support Tickets",
+            "Kanały pomocy",
             ""
         ]
     },
@@ -54,7 +54,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Banowanie Użytkowników lub Administrator"
             ]
         },
         "tempban": {
@@ -73,7 +73,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Banowanie Użytkowników lub Administrator"
             ]
         },
         "kick": {
@@ -89,7 +89,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Kick Members or Administrator"
+                "Wyrzucanie Użytkowników lub Administrator"
             ]
         },
         "prefix": {
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evaluates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "desc": "Bezpiecznie rozwiązuje równanie matematyczne. Jeśli chcesz zdefiniować zmienne, użyj słownika pythonowego, oddzielonego od równania znakiem `|`",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -267,7 +267,7 @@
         },
         "ticket": {
             "args": {},
-            "desc": "Opens a support ticket",
+            "desc": "Otwiera kanał pomocy",
             "cattegory": "6",
             "aliases": [],
             "required_perms": []
@@ -278,7 +278,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the role for staff who handle tickets",
+            "desc": "Zmienia rolę dla administracji, która obsługuje kanały pomocy",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -291,7 +291,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the category to create tickets in",
+            "desc": "Zmienia kategorię do tworzenia kanałów pomocy",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -304,11 +304,11 @@
                     "required": false
                 }
             },
-            "desc": "Closes a ticket",
+            "desc": "Zamyka kanał pomocy",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Ticket Creator or Assigned Staff Member"
+                "Osoba która otworzyła kanał pomocy albo przypisany administrator"
             ]
         },
         "blacklist_command": {
@@ -357,8 +357,8 @@
     },
     "translations": {
         "ban": {
-            "banned": "Banned %%member%% for: %%reason%%",
-            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
+            "banned": "Zbanowano %%member%% za: %%reason%%",
+            "tempbanned": "Zbanowano tymczasowo %%member%% za: %%reason%%",
             "invalid_time": "Nie podano czasu!",
             "too_long": "Powód powinien zawierać maksymalnie 256 znaków"
         },
@@ -366,8 +366,8 @@
             "nonexistent_command": "**Ta komenda nie istnieje!**",
             "missing_argument": "**Nie podałeś wymaganego argumentu!**",
             "bot_missing_permissions": "**Brakuje mi wymaganych permisji aby wykonać tą komendę!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
-            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
+            "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `%%id%%`",
+            "item_doesnt_exist": "Ten przedmiot nie istnieje! Może spróbuj sformułować go nieco inaczej.",
             "bad_format": "Ten argument jest w złym formacie"
         },
         "guild_join": {
@@ -376,33 +376,33 @@
             "prefix": "Mój domyślny prefix to `--`. Jeśli chcesz go zmienić, wpisz komendę `--prefix [new_prefix]`!"
         },
         "help": {
-            "heres_your_help": "**Here's your help %%username%%!**",
+            "heres_your_help": "**Oto twoja pomoc %%username%%!**",
             "available_commands": "Dostępne komendy:",
             "required_notrequired_args": "[] to wymagane argumenty, () to opcjonalne argumenty",
-            "the_cmd": "**The %%command_name%% command:**",
+            "the_cmd": "**Komenda %%command_name%%:**",
             "usage": "**Użycie:**",
             "desc": "**Opis:**",
             "required_perms": "**Wymagane permisje:**",
             "aliases": "**Skróty:**"
         },
         "kick": {
-            "kicked": "Kicked %%member%% for: %%reason%%"
+            "kicked": "Wyrzucono %%member%% za: %%reason%%"
         },
         "lang": {
-            "changed_lang": "**Changed the language to `%%lang_code%%`.**",
+            "changed_lang": "**Zmieniono język bota na `%%lang_code%%`.**",
             "available_langs": "**Dostępne języki:**"
         },
         "prefix": {
-            "changed_prefix": "**Changed the custom prefix to `%%prefix%%`.**"
+            "changed_prefix": "**Zmieniono niestandardowy prefiks na `%%prefix%%`.**"
         },
         "reddit": {
             "submission_nsfw": "Ten post jest oznaczony jako +18. Włącz tryb NSFW na tym kanale alby zobaczyć ten post!",
-            "title": "**Title**: %%title%%, By: u/%%username%%",
+            "title": "**Tytuł**: %%title%%, Autor: u/%%username%%",
             "content": "**Zawartość posta:**",
-            "footer": "Upvote Ratio: %%ratio%%, URL: %%url%%"
+            "footer": "Współczynnik głosów: %%ratio%%, Link: %%url%%"
         },
         "google": {
-            "ur_link": "**Here's your URL: %%url%%**"
+            "ur_link": "**Oto twój link: %%url%%**"
         },
         "logging": {
             "success": "Pomyślnie zaktualizowano to ustawienie!",
@@ -424,24 +424,24 @@
             "tts": "Tekst na mowę po edycji",
             "pinned": "Przypięta po edycji",
             "everyone-here": "@everyone albo @here",
-            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
-            "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
-            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
+            "content_value": "**Przed**: %%before%%\n**Po**: %%after%%",
+            "time_value": "**Utworzona**: %%created%% GMT\n**Edytowana**: %%edited%% GMT",
+            "everyone-here_value": "**Przed**: %%before%%\n**Po**: %%after%%"
         },
         "reminders": {
             "invalid_format": "Nie podano czasu!",
             "result": "Ok, dostaniesz przypomnienie!",
-            "too_long": "The reminder should be 256 characters long"
+            "too_long": "Przypomnienie powinno zawierać maksymalnie 256 znaków"
         },
         "bazaar": {
             "info": "Informacja z bazaru dla",
             "highest_buy_order": "Najwyższe zamówienie",
             "highest_sell_offer": "Najwyższa oferta",
-            "amount_ordered": "Amount ordered",
+            "amount_ordered": "Ilość zamówiona",
             "amount_offered": "Ilość oferowana",
             "price_per_unit": "Cena za jeden",
-            "in_orders": "In %%orders%% orders",
-            "in_offers": "In %%offers%% offers",
+            "in_orders": "W %%orders%% zamówieniach",
+            "in_offers": "W %%offers%% ofertach",
             "inst_sell": "Cena natychmiastowej sprzedaży",
             "inst_buy": "Cena natychmiastowego kupna",
             "buy_volume": "Ilość zamówień",
