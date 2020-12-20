@@ -54,7 +54,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Bæn Mœmbœrs ör Ædministrætör"
             ]
         },
         "tempban": {
@@ -73,7 +73,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Bæn Mœmbœrs ör Ædministrætör"
             ]
         },
         "kick": {
@@ -89,7 +89,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Kick Members or Administrator"
+                "Kick Mœmbœrs ör Ædministrætör"
             ]
         },
         "prefix": {
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evaluates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "desc": "Sæfœly œvæluætœs æ mæth œxprœssiön. If yöu wænt tö pæss sömœ væriæblœs, usœ æ pythön dictiönæry, sœpærætœd fröm thœ œxprœssiön by ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -304,11 +304,11 @@
                     "required": false
                 }
             },
-            "desc": "Closes a ticket",
+            "desc": "Clösœs æ tickœt",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
-                "Ticket Creator or Assigned Staff Member"
+                "Tickœt Crœætör ör Æssignœd Stæff Mœmbœr"
             ]
         },
         "blacklist_command": {
@@ -320,7 +320,7 @@
                     "required": true
                 }
             },
-            "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "desc": "Disæblœs/œnæblœs æ cömmænd ön thœ sœrvœr.\n\nIf `mödœ` is sœt tö `add` thœ cömmænd will bœ æddœd tö thœ blæcklist ænd thœrœförœ disæblœd\n\nIf `mödœ` is sœt tö `remove` thœ cömmænd will bœ rœmövœd fröm thœ blæcklist ænd thœrœförœ œnæblœd.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -336,7 +336,7 @@
                     "required": false
                 }
             },
-            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped. Negative numbers supported.",
+            "desc": "Rölls thœ dicœ för yöu. If thœ initiæl væluœs ærœn't prövidœd, thœ stært will dœfæult tö 1 ænd œnd will dœfæult tö 6.\n\nPlœæsœ tækœ intö æccöunt thæt if thœ stært is biggœr thæn thœ œnd, thœy'll bœ swæppœd. Nœgætivœ numbœrs suppörtœd.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
