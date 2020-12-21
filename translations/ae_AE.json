@@ -85,7 +85,7 @@
                     "required": false
                 }
             },
-            "desc": "Kick æ spœcifiœd mœmbœr. If prövidœd, sœnds æ kick rœæsön tö thœ sœrvœr æudit lög.",
+            "desc": "Kicks a specified member. If provided, sends a kick reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -149,7 +149,7 @@
                     "required": true
                 }
             },
-            "desc": "Rœturns yöu æ rœædy link för æ Gööglœ sœærch",
+            "desc": "Gives you a ready link for a Google search",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -162,7 +162,7 @@
                     "required": true
                 }
             },
-            "desc": "Givœs yöu æ rœædy link tö æn wikipœdiæ ærticlœ.",
+            "desc": "Gives you a ready link to an Wikipedia article.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Sæfœly œvæluætœs æ mæth œxprœssiön. If yöu wænt tö pæss sömœ væriæblœs, usœ æ pythön dictiönæry, sœpærætœd fröm thœ œxprœssiön by ' | '",
+            "desc": "Safely evaluates a math expression. If you want to pass in some variables, use a Python dictionary, separated from the expression by a ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -242,7 +242,7 @@
                     "required": true
                 }
             },
-            "desc": "Crœætœs æ nicœ œmbœd för yöu. Æn œxæmplœ cæn bœ föund æt https://pastebin.com/vX9PVLqf",
+            "desc": "Creates a embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -258,7 +258,7 @@
                     "required": true
                 }
             },
-            "desc": "Œdits æn œmbœd crœætœd with 'œmbœd'. Æn œxæmplœ cæn bœ föund æt https://pastebin.com/vX9PVLqf",
+            "desc": "Edits an embed created with the command 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -274,11 +274,11 @@
         },
         "ticket_role": {
             "args": {
-                "category_id": {
+                "role_id": {
                     "required": true
                 }
             },
-            "desc": "Chængœs thœ rölœ för stæff whö hændlœ tickœts",
+            "desc": "Changes the staff role that handles tickets",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -320,7 +320,7 @@
                     "required": true
                 }
             },
-            "desc": "Disæblœs/œnæblœs æ cömmænd ön thœ sœrvœr.\n\nIf `mödœ` is sœt tö `add` thœ cömmænd will bœ æddœd tö thœ blæcklist ænd thœrœförœ disæblœd\n\nIf `mödœ` is sœt tö `remove` thœ cömmænd will bœ rœmövœd fröm thœ blæcklist ænd thœrœförœ œnæblœd.",
+            "desc": "Toggles a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled.\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -336,7 +336,7 @@
                     "required": false
                 }
             },
-            "desc": "Rölls thœ dicœ för yöu. If thœ initiæl væluœs ærœn't prövidœd, thœ stært will dœfæult tö 1 ænd œnd will dœfæult tö 6.\n\nPlœæsœ tækœ intö æccöunt thæt if thœ stært is biggœr thæn thœ œnd, thœy'll bœ swæppœd. Nœgætivœ numbœrs suppörtœd.",
+            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped around. Negative numbers are supported.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -360,7 +360,7 @@
             "banned": "Bænnœd %%member%% för: %%reason%%",
             "tempbanned": "Tœmpænnœd %%member%% för: %%reason%%",
             "invalid_time": "Nö timœ spœcifiœd!",
-            "too_long": "Thœ rœæsön shöuld bœ 256 chæræchtœrs löng"
+            "too_long": "The reason should be 256 chars long"
         },
         "command_error": {
             "nonexistent_command": "**This cömmænd döœs nöt œxist!**",
@@ -369,7 +369,7 @@
             "explain": "Unœxpœctœd œrrör. Rœpört thœ œrrör tö `marzeq_#2137`. Œrrör ID: `%%id%%`",
             "item_doesnt_exist": "This itœm döœsn't œxist! Mæbœ try phræsing it æ littlœ bit diffœrœntly.",
             "bad_format": "This ærgumœnt is in æ bæd förmæt",
-            "number_too_high": "This numbœr is tö high ænd might frœœzœ mœ!",
+            "number_too_high": "This number is too high and might freeze me!",
             "var_not_defined": "This væriæblœ is nöt dœfinœd!",
             "division_by_zero": "Yöu ærœ dividing by zœrö!",
             "invalid_syntax": "Invælid syntæx!"
@@ -378,7 +378,7 @@
             "output": "**Öutput:**"
         },
         "embed": {
-            "invalid": "This œmbœds` cödœ is invælid. Try using thœ œxæmplœ önœ hœrœ: https://pastebin.com/vX9PVLqf !",
+            "invalid": "This embeds' code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
             "no_title": "Mækœ surœ thæt this œmbœd hæs æt lœæst æ titlœ! Try chœcking with thœ œxæmplœ hœrœ: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
@@ -454,7 +454,7 @@
         "reminders": {
             "invalid_format": "Nö timœ spœcifiœd!",
             "result": "Ök, yöu'll bœ rœmindœd!",
-            "too_long": "Thœ rœmindœr shöuld bœ 256 chæræctœrs löng"
+            "too_long": "The reminder should be 256 chars long"
         },
         "bazaar": {
             "info": "Bæzæær infö för",
