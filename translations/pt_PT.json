@@ -54,7 +54,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Banir membros ou administrador"
             ]
         },
         "tempban": {
@@ -73,7 +73,7 @@
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
-                "Ban Members or Administrator"
+                "Banir membros ou administrador"
             ]
         },
         "kick": {
@@ -370,12 +370,12 @@
             "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
             "bad_format": "This argument is in a bad format",
             "number_too_high": "This number is to high and might freeze me!",
-            "var_not_defined": "This variable is not defined!",
-            "division_by_zero": "You are dividing by zero!",
-            "invalid_syntax": "Invalid syntax!"
+            "var_not_defined": "Esta variável não está definida!",
+            "division_by_zero": "Estás a dividir por zero!",
+            "invalid_syntax": "Sintaxe inválida!"
         },
         "math": {
-            "output": "**Output:**"
+            "output": "**Saída:**"
         },
         "embed": {
             "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
