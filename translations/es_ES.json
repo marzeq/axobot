@@ -17,7 +17,7 @@
             ""
         ],
         "4": [
-            "Utilities",
+            "Utilidades",
             ""
         ],
         "5": [
@@ -368,11 +368,34 @@
             "bot_missing_permissions": "**I'm missing the required permissions for this command!**",
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
             "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "bad_format": "This argument is in a bad format",
+            "number_too_high": "This number is to high and might freeze me!",
+            "var_not_defined": "This variable is not defined!",
+            "division_by_zero": "You are dividing by zero!",
+            "invalid_syntax": "Invalid syntax!"
+        },
+        "math": {
+            "output": "**Output:**"
+        },
+        "embed": {
+            "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
+            "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
+        },
+        "pastebin": {
+            "api_error": "Something went wrong here! Contact the developer to resolve this issue!"
+        },
+        "blacklist_command": {
+            "enabled": "Enabled the command `%%command_name%%` on the server!",
+            "disabled": "Disabled the command `%%command_name%%` on the server!"
+        },
+        "dice": {
+            "number_too_big": "This number is too big!",
+            "rolling": "%%emoji%% Rolling the dice...",
+            "ur_number": "Your number:"
         },
         "guild_join": {
             "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
+            "thx_for_invite": "¡Gracias por la invitación!",
             "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
         },
         "help": {
@@ -380,9 +403,9 @@
             "available_commands": "Available Commands:",
             "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
             "the_cmd": "**The %%command_name%% command:**",
-            "usage": "**Usage:**",
-            "desc": "**Description:**",
-            "required_perms": "**Required Permissions:**",
+            "usage": "**Uso:**",
+            "desc": "**Descripción:**",
+            "required_perms": "**Permisos necesarios:**",
             "aliases": "**Aliases:**"
         },
         "kick": {
@@ -409,24 +432,24 @@
             "msg_deleted": "**A message was deleted!**",
             "channel": "Channel",
             "content": "Content",
-            "author": "Author",
+            "author": "Autor",
             "time": "Time",
             "tts": "TTS",
             "pinned": "Pinned",
-            "everyone-here": "Mentioned Everyone or Here"
+            "everyone-here": "Se ha mencionado @everyone o @here"
         },
         "logging_edit": {
             "msg_edited": "**A message was edited!**",
             "channel": "Channel",
             "content": "Content",
-            "author": "Author",
+            "author": "Autor",
             "time": "Time",
             "tts": "TTS After",
             "pinned": "Pinned After",
-            "everyone-here": "Mentioned Everyone or Here",
-            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
+            "everyone-here": "Se ha mencionado @everyone o @here",
+            "content_value": "**Antes**: %%before%%\n**Después**: %%after%%",
             "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
-            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
+            "everyone-here_value": "**Antes**: %%before%%\n**Después**: %%after%%"
         },
         "reminders": {
             "invalid_format": "No time specified!",
@@ -434,7 +457,7 @@
             "too_long": "The reminder should be 256 characters long"
         },
         "bazaar": {
-            "info": "Bazaar info for",
+            "info": "Información de Bazar para",
             "highest_buy_order": "Highest buy order",
             "highest_sell_offer": "Highest sell offer",
             "amount_ordered": "Amount ordered",
