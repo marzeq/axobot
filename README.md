@@ -1,4 +1,4 @@
-# AllBot ![Logo.Png](https://cdn.discordapp.com/avatars/767075315595345930/36e1ceb553ca5c940e329902cc992fb2.png?size=64 "Logo")
+# AxoBot ![Logo.Png](https://cdn.discordapp.com/avatars/767075315595345930/36e1ceb553ca5c940e329902cc992fb2.png?size=64 "Logo")
 
 ### This is a multipurpose Discord bot, but mostly containing fun and utility commands
 
