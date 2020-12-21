@@ -5,6 +5,8 @@ import random
 from utils import commands as command
 
 
+# todo: translate this whole cog
+
 class Tickets(commands.Cog):
 
     def __init__(self, client):

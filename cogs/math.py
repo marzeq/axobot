@@ -18,6 +18,10 @@ class Math(commands.Cog):
     async def math(self, ctx: commands.Context, *, expr: str):
         if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
+        # Getting all translations
+        lang = language.get_server_lang(ctx.guild)
+        useful = lang["translations"]["command_error"]
+
         # Make a list of expressions [expression to be evaluated | variables (optional)]
         expr = expr.split(" | ")
 
@@ -41,8 +45,7 @@ class Math(commands.Cog):
         res = str(simpleeval.simple_eval(expr[0], functions=funcs, names=names))
         if len(res) > 1028:
             res = res[:1013] + "[...]"
-        # TODO: Translate this
-        await ctx.send(embed=discord.Embed().add_field(name="**Output:**", value="```" + res + "```"))
+        await ctx.send(embed=discord.Embed().add_field(name=useful["output"], value="```" + res + "```"))
 
 
 def setup(client):

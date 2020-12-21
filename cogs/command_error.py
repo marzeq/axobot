@@ -49,20 +49,19 @@ class CommandError(commands.Cog):
             response_embed = discord.Embed(title=useful["bad_format"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
-        # TODO: Translate this
         elif type(error.original) == simpleeval.NumberTooHigh:
             await ctx.message.add_reaction(emoji)
-            response_embed = discord.Embed(title="This number is to high and might freeze me!", color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["number_too_high"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
         elif type(error.original) == simpleeval.NameNotDefined:
             await ctx.message.add_reaction(emoji)
-            response_embed = discord.Embed(title="This variable is not defined!", color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["var_not_defined"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
         elif type(error.original) == ZeroDivisionError:
             await ctx.message.add_reaction(emoji)
-            response_embed = discord.Embed(title="You are dividing by zero!", color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["division_by_zero"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
         elif type(error.original) == skyblock.NoItemFound:
@@ -72,7 +71,7 @@ class CommandError(commands.Cog):
 
         elif type(error.original) == SyntaxError:
             await ctx.message.add_reaction(emoji)
-            response_embed = discord.Embed(title="Invalid syntax!", color=0xdb2a2a)
+            response_embed = discord.Embed(title=useful["invalid_syntax"], color=0xdb2a2a)
             await ctx.send(embed=response_embed)
 
         # Raise the error so I can see it

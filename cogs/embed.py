@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 import json
 from utils import commands as command
+from utils import language
 
 
 class Embed(commands.Cog):
@@ -14,9 +15,10 @@ class Embed(commands.Cog):
     async def embed(self, ctx, *, jsonstr: str):
         if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
-        # # Getting all translations
-        # lang = utils.language.get_server_lang(ctx.guild)
-        # useful = lang["translations"]["embed"]
+
+        # Getting all translations
+        lang = language.get_server_lang(ctx.guild)
+        useful = lang["translations"]["embed"]
 
         # Clear the string from code block indicators
         if jsonstr.startswith("```json"):
@@ -37,7 +39,7 @@ class Embed(commands.Cog):
 
         except:
             await ctx.send(embed=discord.Embed(
-                title="This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !", color=0xdb2a2a
+                title=useful["invalid"], color=0xdb2a2a
             ))
             return
 
@@ -47,7 +49,7 @@ class Embed(commands.Cog):
             await ctx.send(embed=response_embed)
         except:
             await ctx.send(embed=discord.Embed(
-                title="Something went wrong here! Make sure that this embed is valid! Try checking with the example here: https://pastebin.com/vX9PVLqf !",
+                title=useful["no_title"],
                 color=0xdb2a2a
             ))
             return
@@ -56,9 +58,9 @@ class Embed(commands.Cog):
     async def editembed(self, ctx: commands.Context, id: str, chid: str, *, jsonstr: str):
         if command.if_command_disabled(ctx.command.name, ctx.guild):
             return
-        # # Getting all translations
-        # lang = self.client.get_server_lang(ctx.guild)
-        # useful = lang["translations"]["embed"]
+        # Getting all translations
+        lang = language.get_server_lang(ctx.guild)
+        useful = lang["translations"]["embed"]
 
         # If channel id is a valid int
         try:
@@ -109,7 +111,7 @@ class Embed(commands.Cog):
 
         except:
             await ctx.send(embed=discord.Embed(
-                title="This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !", color=0xdb2a2a
+                title=useful["invalid"], color=0xdb2a2a
             ))
             return
 
@@ -119,7 +121,7 @@ class Embed(commands.Cog):
             await msg.edit(embed=response_embed)
         except:
             await ctx.send(embed=discord.Embed(
-                title="Something went wrong here! Make sure that this embed is valid! Try checking with the example here!",
+                title=useful["no_title"],
                 color=0xdb2a2a
             ))
             return

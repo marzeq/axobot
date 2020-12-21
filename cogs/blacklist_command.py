@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+from utils import language
 
 
 class BlacklistCommand(commands.Cog):
@@ -11,6 +12,9 @@ class BlacklistCommand(commands.Cog):
     @commands.command()
     async def blacklist_command(self, ctx: commands.Context, mode: str, name: str):
         if ctx.author.guild_permissions.manage_guild or ctx.author.guild_permissions.administrator:
+            # Getting all translations
+            lang = language.get_server_lang(ctx.guild)
+            useful = lang["translations"]["blacklist_command"]
             with open("config/config.json", "r+") as f:
                 config = json.load(f)
                 try:
@@ -22,11 +26,11 @@ class BlacklistCommand(commands.Cog):
                     disabled = []
             if mode == "rem" or mode == "remove":
                 disabled.remove(name)
-                response_embed = discord.Embed(title=f"Enabled the command `{name}` on the server!", color=0x00ff00)
+                response_embed = discord.Embed(title=useful["enabled"].replace("%%command_name%%", name), color=0x00ff00)
                 await ctx.send(embed=response_embed)
             elif mode == "add":
                 disabled.append(name) if name not in disabled else lambda: None
-                response_embed = discord.Embed(title=f"Disabled the command `{name}` on the server!", color=0xdb2a2a)
+                response_embed = discord.Embed(title=useful["disabled"].replace("%%command_name%%", name), color=0xdb2a2a)
                 await ctx.send(embed=response_embed)
             config[str(ctx.guild.id)]["disabled_commands"] = disabled
             with open("config/config.json", "r+") as f:

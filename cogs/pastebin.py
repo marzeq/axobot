@@ -3,6 +3,8 @@ from discord.ext import commands
 import aiohttp
 import requests
 import json
+from utils import language
+from utils import commands as command
 
 
 class Pastebin(commands.Cog):
@@ -27,6 +29,11 @@ class Pastebin(commands.Cog):
 
     @commands.command(aliases=["paste"])
     async def pastebin(self, ctx: commands.Context, *, content: str):
+        if command.if_command_disabled(ctx.command.name, ctx.guild):
+            return
+        # Getting all translations
+        lang = language.get_server_lang(ctx.guild)
+        useful = lang["translations"]["pastebin"]
         async with aiohttp.ClientSession() as session:
             data = {
                 'api_option': 'paste',
@@ -42,7 +49,7 @@ class Pastebin(commands.Cog):
                 if r.status == 200:
                     resp = await r.text()
                 else:
-                    resp = "Something went wrong here! Contact the developer to resolve this issue!"
+                    resp = useful["api_error"]
         await ctx.send(embed=discord.Embed(title=resp))
 
 
