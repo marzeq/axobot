@@ -369,29 +369,29 @@
             "explain": "Unœxpœctœd œrrör. Rœpört thœ œrrör tö `marzeq_#2137`. Œrrör ID: `%%id%%`",
             "item_doesnt_exist": "This itœm döœsn't œxist! Mæbœ try phræsing it æ littlœ bit diffœrœntly.",
             "bad_format": "This ærgumœnt is in æ bæd förmæt",
-            "number_too_high": "This number is to high and might freeze me!",
-            "var_not_defined": "This variable is not defined!",
-            "division_by_zero": "You are dividing by zero!",
-            "invalid_syntax": "Invalid syntax!"
+            "number_too_high": "This numbœr is tö high ænd might frœœzœ mœ!",
+            "var_not_defined": "This væriæblœ is nöt dœfinœd!",
+            "division_by_zero": "Yöu ærœ dividing by zœrö!",
+            "invalid_syntax": "Invælid syntæx!"
         },
         "math": {
-            "output": "**Output:**"
+            "output": "**Öutput:**"
         },
         "embed": {
-            "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
-            "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
+            "invalid": "This œmbœds` cödœ is invælid. Try using thœ œxæmplœ önœ hœrœ: https://pastebin.com/vX9PVLqf !",
+            "no_title": "Mækœ surœ thæt this œmbœd hæs æt lœæst æ titlœ! Try chœcking with thœ œxæmplœ hœrœ: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
-            "api_error": "Something went wrong here! Contact the developer to resolve this issue!"
+            "api_error": "Sömœthing wœnt wröng hœrœ! Cöntæct thœ dœvœlöpœr tö rœsölvœ this issuœ!"
         },
         "blacklist_command": {
-            "enabled": "Enabled the command `%%command_name%%` on the server!",
-            "disabled": "Disabled the command `%%command_name%%` on the server!"
+            "enabled": "Œnæblœd thœ cömmænd `%%command_name%%` ön thœ sœrvœr!",
+            "disabled": "Disæblœd thœ cömmænd `%%command_name%%` ön thœ sœrvœr!"
         },
         "dice": {
-            "number_too_big": "This number is too big!",
-            "rolling": "%%emoji%% Rolling the dice...",
-            "ur_number": "Your number:"
+            "number_too_big": "This numbœr is töö big!",
+            "rolling": "%%emoji%% Rölling thœ dicœ...",
+            "ur_number": "Yöur numbœr:"
         },
         "guild_join": {
             "welcome": "**Wœlcöme!**",
