@@ -368,7 +368,30 @@
             "bot_missing_permissions": "**I misserinno he require permise fro his commandre!**",
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
             "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format"
+            "bad_format": "This argument is in a bad format",
+            "number_too_high": "This number is to high and might freeze me!",
+            "var_not_defined": "This variable is not defined!",
+            "division_by_zero": "You are dividing by zero!",
+            "invalid_syntax": "Invalid syntax!"
+        },
+        "math": {
+            "output": "**Output:**"
+        },
+        "embed": {
+            "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
+            "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
+        },
+        "pastebin": {
+            "api_error": "Something went wrong here! Contact the developer to resolve this issue!"
+        },
+        "blacklist_command": {
+            "enabled": "Enabled the command `%%command_name%%` on the server!",
+            "disabled": "Disabled the command `%%command_name%%` on the server!"
+        },
+        "dice": {
+            "number_too_big": "This number is too big!",
+            "rolling": "%%emoji%% Rolling the dice...",
+            "ur_number": "Your number:"
         },
         "guild_join": {
             "welcome": "**Welcome!**",

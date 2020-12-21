@@ -368,7 +368,30 @@
             "bot_missing_permissions": "**I'm missing thœ rœquirœd pœrmissiöns för this cömmænd!**",
             "explain": "Unœxpœctœd œrrör. Rœpört thœ œrrör tö `marzeq_#2137`. Œrrör ID: `%%id%%`",
             "item_doesnt_exist": "This itœm döœsn't œxist! Mæbœ try phræsing it æ littlœ bit diffœrœntly.",
-            "bad_format": "This ærgumœnt is in æ bæd förmæt"
+            "bad_format": "This ærgumœnt is in æ bæd förmæt",
+            "number_too_high": "This number is to high and might freeze me!",
+            "var_not_defined": "This variable is not defined!",
+            "division_by_zero": "You are dividing by zero!",
+            "invalid_syntax": "Invalid syntax!"
+        },
+        "math": {
+            "output": "**Output:**"
+        },
+        "embed": {
+            "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
+            "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
+        },
+        "pastebin": {
+            "api_error": "Something went wrong here! Contact the developer to resolve this issue!"
+        },
+        "blacklist_command": {
+            "enabled": "Enabled the command `%%command_name%%` on the server!",
+            "disabled": "Disabled the command `%%command_name%%` on the server!"
+        },
+        "dice": {
+            "number_too_big": "This number is too big!",
+            "rolling": "%%emoji%% Rolling the dice...",
+            "ur_number": "Your number:"
         },
         "guild_join": {
             "welcome": "**Wœlcöme!**",
