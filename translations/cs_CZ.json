@@ -357,8 +357,8 @@
     },
     "translations": {
         "ban": {
-            "banned": "Banned %%member%% for: %%reason%%",
-            "tempbanned": "Tempbanned %%member%% for: %%reason%%",
+            "banned": "Zabanováno %%member%% pro: %%reason%%",
+            "tempbanned": "Dočasně zabanováno %%member%% pro: %%reason%%",
             "invalid_time": "No time specified!",
             "too_long": "The reason should be 256 charachters long"
         },
