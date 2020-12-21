@@ -85,7 +85,7 @@
                     "required": false
                 }
             },
-            "desc": "Kick a specified member. If provided, sends a kick reason to the server audit log.",
+            "desc": "Kicks a specified member. If provided, sends a kick reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -149,7 +149,7 @@
                     "required": true
                 }
             },
-            "desc": "Returns you a ready link for a Google search",
+            "desc": "Gives you a ready link for a Google search",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -162,7 +162,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you n ready link to an wikipedia article.",
+            "desc": "Gives you a ready link to an Wikipedia article.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evaluates a math expression. If you want to pass some variables, use a python dictionary, separated from the expression by ' | '",
+            "desc": "Safely evaluates a math expression. If you want to pass in some variables, use a Python dictionary, separated from the expression by a ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -242,7 +242,7 @@
                     "required": true
                 }
             },
-            "desc": "Creates a nice embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Creates a embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -258,7 +258,7 @@
                     "required": true
                 }
             },
-            "desc": "Edits an embed created with 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Edits an embed created with the command 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -274,11 +274,11 @@
         },
         "ticket_role": {
             "args": {
-                "category_id": {
+                "role_id": {
                     "required": true
                 }
             },
-            "desc": "Changes the role for staff who handle tickets",
+            "desc": "Changes the staff role that handles tickets",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -320,7 +320,7 @@
                     "required": true
                 }
             },
-            "desc": "Disables/enables a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "desc": "Toggles a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled.\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -336,7 +336,7 @@
                     "required": false
                 }
             },
-            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped. Negative numbers supported.",
+            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped around. Negative numbers are supported.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -360,7 +360,7 @@
             "banned": "Zabanováno %%member%% pro: %%reason%%",
             "tempbanned": "Dočasně zabanováno %%member%% pro: %%reason%%",
             "invalid_time": "No time specified!",
-            "too_long": "The reason should be 256 charachters long"
+            "too_long": "The reason should be 256 chars long"
         },
         "command_error": {
             "nonexistent_command": "**This command does not exist!**",
@@ -369,7 +369,7 @@
             "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
             "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
             "bad_format": "This argument is in a bad format",
-            "number_too_high": "This number is to high and might freeze me!",
+            "number_too_high": "This number is too high and might freeze me!",
             "var_not_defined": "This variable is not defined!",
             "division_by_zero": "You are dividing by zero!",
             "invalid_syntax": "Invalid syntax!"
@@ -378,7 +378,7 @@
             "output": "**Output:**"
         },
         "embed": {
-            "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
+            "invalid": "This embeds' code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
             "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
@@ -454,7 +454,7 @@
         "reminders": {
             "invalid_format": "No time specified!",
             "result": "Ok, you'll be reminded!",
-            "too_long": "The reminder should be 256 characters long"
+            "too_long": "The reminder should be 256 chars long"
         },
         "bazaar": {
             "info": "Bazaar info for",
