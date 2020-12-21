@@ -85,7 +85,7 @@
                     "required": false
                 }
             },
-            "desc": "Wyrzuca podanego członka. Jeśli podany, wyśle również powód do dziennika serwerowego.",
+            "desc": "Kicks a specified member. If provided, sends a kick reason to the server audit log.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -149,7 +149,7 @@
                     "required": true
                 }
             },
-            "desc": "Zwraca ci gotowy link w Google",
+            "desc": "Gives you a ready link for a Google search",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -162,7 +162,7 @@
                     "required": true
                 }
             },
-            "desc": "Daje ci gotowy link do artykułu z Wikipedii.",
+            "desc": "Gives you a ready link to an Wikipedia article.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Bezpiecznie rozwiązuje równanie matematyczne. Jeśli chcesz zdefiniować zmienne, użyj słownika pythonowego, oddzielonego od równania znakiem `|`",
+            "desc": "Safely evaluates a math expression. If you want to pass in some variables, use a Python dictionary, separated from the expression by a ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -242,7 +242,7 @@
                     "required": true
                 }
             },
-            "desc": "Tworzy dla ciebie embed. Przykładowy embed możesz znaleźć na https://pastebin.com/vX9PVLqf",
+            "desc": "Creates a embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -258,7 +258,7 @@
                     "required": true
                 }
             },
-            "desc": "Edytuje embed stworzony komendą `embed`. Przykładowy embed możesz znaleźć na https://pastebin.com/vX9PVLqf",
+            "desc": "Edits an embed created with the command 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -274,11 +274,11 @@
         },
         "ticket_role": {
             "args": {
-                "category_id": {
+                "role_id": {
                     "required": true
                 }
             },
-            "desc": "Zmienia rolę dla administracji, która obsługuje kanały pomocy",
+            "desc": "Changes the staff role that handles tickets",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -320,7 +320,7 @@
                     "required": true
                 }
             },
-            "desc": "Włącza wyłącza komendę na serwerze.\n\nJeśli `mode` jest ustawione na `add`, podana komenda zostanie dodana do czarnej listy i zostanie wyłączona\n\nJeśli `mode` jest ustawione na `remove`, podana komenda zostanie usunięta z czarnej listy i zostanie włączona spowrotem.",
+            "desc": "Toggles a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled.\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -336,7 +336,7 @@
                     "required": false
                 }
             },
-            "desc": "Rzuca kostką dla ciebie. Jeśli wartości graniczne nie zostaną podane, będą one równe 1 i 6.\n\nProszę pamiętać że jeśli wartość startowa jest większa niż końcowa, zostaną one zamienione miejscami. Wartości na minusie są wspierane.",
+            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped around. Negative numbers are supported.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -360,7 +360,7 @@
             "banned": "Zbanowano %%member%% za: %%reason%%",
             "tempbanned": "Zbanowano tymczasowo %%member%% za: %%reason%%",
             "invalid_time": "Nie podano czasu!",
-            "too_long": "Powód powinien zawierać maksymalnie 256 znaków"
+            "too_long": "The reason should be 256 chars long"
         },
         "command_error": {
             "nonexistent_command": "**Ta komenda nie istnieje!**",
@@ -369,7 +369,7 @@
             "explain": "Nieoczekiwany błąd. Zgłoś go do: `marzeq_#2137`. ID błędu: `%%id%%`",
             "item_doesnt_exist": "Ten przedmiot nie istnieje! Może spróbuj sformułować go nieco inaczej.",
             "bad_format": "Ten argument jest w złym formacie",
-            "number_too_high": "This number is to high and might freeze me!",
+            "number_too_high": "This number is too high and might freeze me!",
             "var_not_defined": "This variable is not defined!",
             "division_by_zero": "You are dividing by zero!",
             "invalid_syntax": "Invalid syntax!"
@@ -378,7 +378,7 @@
             "output": "**Output:**"
         },
         "embed": {
-            "invalid": "This embeds` code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
+            "invalid": "This embeds' code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
             "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
@@ -454,7 +454,7 @@
         "reminders": {
             "invalid_format": "Nie podano czasu!",
             "result": "Ok, dostaniesz przypomnienie!",
-            "too_long": "Przypomnienie powinno zawierać maksymalnie 256 znaków"
+            "too_long": "The reminder should be 256 chars long"
         },
         "bazaar": {
             "info": "Informacja z bazaru dla",
