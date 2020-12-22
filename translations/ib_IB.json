@@ -85,7 +85,7 @@
                     "required": false
                 }
             },
-            "desc": "Kicks a specified member. If provided, sends a kick reason to the server audit log.",
+            "desc": "Kcike a specifed membre. If provide, sned a kcike reon t he serve audi logger.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -149,7 +149,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you a ready link for a Google search",
+            "desc": "Giv yuo a redi lik fro a Goge serc",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -162,7 +162,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you a ready link to an Wikipedia article.",
+            "desc": "Giv yuo a redi lik t an Wkipedia artice.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evaluates a math expression. If you want to pass in some variables, use a Python dictionary, separated from the expression by a ' | '",
+            "desc": "Safe evauat a meth expressione. Fi yuo wan to passs ni som vaiable, us a Pyto disconare, spearate fomr he expressione by ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -242,7 +242,7 @@
                     "required": true
                 }
             },
-            "desc": "Creates a embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Creat a embe for yuo. An examp cna e foud at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -258,7 +258,7 @@
                     "required": true
                 }
             },
-            "desc": "Edits an embed created with the command 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Edi an embe create whit commande 'embed'. An examp cna e foud at https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -278,7 +278,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the staff role that handles tickets",
+            "desc": "Chang staff rol that ahnde ticke",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -360,22 +360,22 @@
             "banned": "Bane %%member%% fro: %%reason%%",
             "tempbanned": "Tembna %%member%% fro: %%reason%%",
             "invalid_time": "On tme specife!",
-            "too_long": "The reason should be 256 chars long"
+            "too_long": "He reso shod eb 256 chasracheter logn"
         },
         "command_error": {
             "nonexistent_command": "**His commande not existe!**",
             "missing_argument": "**Yuo didet providre arument ha is requre!**",
             "bot_missing_permissions": "**I misserinno he require permise fro his commandre!**",
-            "explain": "Unexpected error. Report the error to: `marzeq_#2137`. Error id: `%%id%%`",
+            "explain": "Panic!!111! Unxpecte error! Reporte to `marzeq_#2137`. Erro ID: `%%id%%`",
             "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "This argument is in a bad format",
-            "number_too_high": "This number is too high and might freeze me!",
+            "bad_format": "Argumnte! Bad forma",
+            "number_too_high": "Numbre to highe, crash?//?",
             "var_not_defined": "This variable is not defined!",
             "division_by_zero": "You are dividing by zero!",
             "invalid_syntax": "Invalid syntax!"
         },
         "math": {
-            "output": "**Output:**"
+            "output": "**Oput:**"
         },
         "embed": {
             "invalid": "This embeds' code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
@@ -390,18 +390,18 @@
         },
         "dice": {
             "number_too_big": "This number is too big!",
-            "rolling": "%%emoji%% Rolling the dice...",
-            "ur_number": "Your number:"
+            "rolling": "%%emoji%% Rol dic ahaha :D...",
+            "ur_number": "Yuor nuimbre:"
         },
         "guild_join": {
-            "welcome": "**Welcome!**",
-            "thx_for_invite": "Thanks for inviting me!",
-            "prefix": "My default prefix is `--`. If you wish to change it, type `--prefix [new_prefix]`!"
+            "welcome": "**Welcom!**",
+            "thx_for_invite": "Thank fopr invitt!",
+            "prefix": "Mi deful prefi s `--`. If want chang, typ `--prefix [new_prefixo]`!"
         },
         "help": {
-            "heres_your_help": "**Here's your help %%username%%!**",
-            "available_commands": "Available Commands:",
-            "required_notrequired_args": "[] are required command arguments, () are optional command arguments",
+            "heres_your_help": "**Here help %%username%%!**",
+            "available_commands": "Avalib Commandre:",
+            "required_notrequired_args": "[] require commanre argum, () opshone commanre argum",
             "the_cmd": "**The %%command_name%% command:**",
             "usage": "**Usage:**",
             "desc": "**Description:**",
@@ -428,49 +428,49 @@
             "ur_link": "**Here's your URL: %%url%%**"
         },
         "logging": {
-            "success": "Successfully updated this setting!",
-            "msg_deleted": "**A message was deleted!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS",
-            "pinned": "Pinned",
-            "everyone-here": "Mentioned Everyone or Here"
+            "success": "Succse updat hois setin!",
+            "msg_deleted": "**Messag delet!!11!!1**",
+            "channel": "Chanle",
+            "content": "Konte",
+            "author": "Autre",
+            "time": "Tims",
+            "tts": "Teks tu Spich",
+            "pinned": "Pine",
+            "everyone-here": "@evrion or @hir"
         },
         "logging_edit": {
-            "msg_edited": "**A message was edited!**",
-            "channel": "Channel",
-            "content": "Content",
-            "author": "Author",
-            "time": "Time",
-            "tts": "TTS After",
-            "pinned": "Pinned After",
-            "everyone-here": "Mentioned Everyone or Here",
-            "content_value": "**Before**: %%before%%\n**After**: %%after%%",
-            "time_value": "**Created At**: %%created%% GMT\n**Edited At**: %%edited%% GMT",
-            "everyone-here_value": "**Before**: %%before%%\n**After**: %%after%%"
+            "msg_edited": "**Messag edit!!11!!1**",
+            "channel": "Chanle",
+            "content": "Konte",
+            "author": "Autre",
+            "time": "Tims",
+            "tts": "Teks tu Spich Afte",
+            "pinned": "Pine Afte",
+            "everyone-here": "@evrion or @hir",
+            "content_value": "**Bifor**: %%before%%\n**Afte**: %%after%%",
+            "time_value": "**Creat At**: %%created%% GMT\n**Edid At**: %%edited%% GMT",
+            "everyone-here_value": "**Bifor**: %%before%%\n**Afte**: %%after%%"
         },
         "reminders": {
             "invalid_format": "On tme specife!",
-            "result": "Ok, you'll be reminded!",
-            "too_long": "The reminder should be 256 chars long"
+            "result": "Yos, yuo wil be remindrede!",
+            "too_long": "He remindre shod eb 256 chasracheter logn"
         },
         "bazaar": {
-            "info": "Bazaar info for",
-            "highest_buy_order": "Highest buy order",
-            "highest_sell_offer": "Highest sell offer",
-            "amount_ordered": "Amount ordered",
-            "amount_offered": "Amount offered",
-            "price_per_unit": "Price per unit",
-            "in_orders": "In %%orders%% orders",
-            "in_offers": "In %%offers%% offers",
-            "inst_sell": "Instant sell price",
-            "inst_buy": "Instant buy price",
-            "buy_volume": "Buy volume",
-            "sell_volume": "Sell volume",
-            "margin": "Margin",
-            "inaccurate": "* Is inaccurate due to bazaar tax"
+            "info": "Bazr ifo po",
+            "highest_buy_order": "Hihes by ordi",
+            "highest_sell_offer": "Hihes sel ofri",
+            "amount_ordered": "Amont orderi",
+            "amount_offered": "Amont oferi",
+            "price_per_unit": "Pric pe uninte",
+            "in_orders": "In %%orders%% ordre",
+            "in_offers": "In %%offers%% ofris",
+            "inst_sell": "Insat sel pric",
+            "inst_buy": "Insat by pric",
+            "buy_volume": "By voume",
+            "sell_volume": "Sel voume",
+            "margin": "Mrain",
+            "inaccurate": "* Si inacura du tu bazra taks"
         }
     }
 }
