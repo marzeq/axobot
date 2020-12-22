@@ -391,7 +391,7 @@
         "dice": {
             "number_too_big": "This number is too big!",
             "rolling": "%%emoji%% Rolling the dice...",
-            "ur_number": "Your number:"
+            "ur_number": "Twoja liczba:"
         },
         "guild_join": {
             "welcome": "**Witaj!**",
@@ -454,7 +454,7 @@
         "reminders": {
             "invalid_format": "Nie podano czasu!",
             "result": "Ok, dostaniesz przypomnienie!",
-            "too_long": "The reminder should be 256 chars long"
+            "too_long": "Przypomnienie powinno zawierać maksymalnie 256 znaków"
         },
         "bazaar": {
             "info": "Informacja z bazaru dla",
