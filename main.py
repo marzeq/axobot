@@ -1,14 +1,6 @@
-import json
-import os
-import sys
-import time
-import traceback
+import json, os, sys, time, traceback, discord, praw, pathlib, utils
 from logging import Logger
-import discord
-import praw
 from discord.ext import commands
-import pathlib
-import utils
 from utils import main
 os.chdir(f"{pathlib.Path(__file__).parent.absolute()}")
 
@@ -34,7 +26,10 @@ client.reddit = praw.Reddit(client_id=reddit["id"],
                             client_secret=reddit["secret"],
                             user_agent='MarzeqsUtilities by u/Marzeq_')
 
-client.__version__ = "0.2b"
+client.__version__ = "0.3b"
+
+
+print(f"Using bot version {client.__version__} and discord.py version {discord.__version__}")
 
 
 # Shows that the bot is working

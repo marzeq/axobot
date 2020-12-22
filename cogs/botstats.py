@@ -12,17 +12,12 @@ class BotStats(commands.Cog):
     @commands.command()
     async def botstats(self, ctx):
         files = 1  # Remember about the main file
-        lines = 0
         for file in os.listdir(f"./cogs"):
-            files += 1
             if file == "__pycache__":  # ignore pycache folder
                 continue
-            with open(f"cogs/{file}") as f:
-                lines += len(f.readlines())
-        with open("main.py") as f:
-            lines += len(f.readlines())
+            files += 1
         response_embed = discord.Embed(
-            title=f"Current bot version: `{self.client.__version__}`\nNumber of files with code in them: `{files}`\nNumber of lines of code: `{lines}`")
+            title=f"Current bot version: `{self.client.__version__}`\nNumber of files with code in them: `{files}`")
         await ctx.send(embed=response_embed)
 
 
