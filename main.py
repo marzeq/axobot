@@ -147,22 +147,6 @@ async def hardreload(ctx):
     await ctx.send(embed=discord.Embed(title="🟡  Restarting..", color=0xdaed2d))
     os.system(f"{sys.executable} {os.path.dirname(os.path.realpath(__file__))}/main.py {ctx.channel.id}")
 
-
-@client.command(aliases=["udpy"])
-async def up_discordpy(ctx: commands.Context):
-    if not await client.is_owner(ctx.author):
-        return
-    await ctx.send(embed=discord.Embed(title="🟡  Cloning from discord.pys' remote repo..", color=0xdaed2d))
-    os.system(f"git clone https://github.com/Rapptz/discord.py")
-    await ctx.send(embed=discord.Embed(title="🟡  Updating discord.py to the newest dev version..", color=0xdaed2d))
-    os.chdir("discord.py")
-    os.system(f"{sys.executable} -m pip install -U .[voice]")
-    os.chdir("..")
-    os.system(f"{sys.executable} -m pip install -U yarl==1.4.2")
-    await ctx.send(embed=discord.Embed(title="🟡  Restarting..", color=0xdaed2d))
-    os.system(f"{sys.executable} {os.path.dirname(os.path.realpath(__file__))}/main.py {ctx.channel.id}")
-
-
 client.logger = Logger("log")
 
 
