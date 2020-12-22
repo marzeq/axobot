@@ -13,7 +13,7 @@
             ""
         ],
         "3": [
-            "Fun",
+            "Fün",
             ""
         ],
         "4": [
@@ -267,7 +267,7 @@
         },
         "ticket": {
             "args": {},
-            "desc": "Opems a supor ticketter",
+            "desc": "Opems sport tiket",
             "cattegory": "6",
             "aliases": [],
             "required_perms": []
@@ -304,7 +304,7 @@
                     "required": false
                 }
             },
-            "desc": "Clos a ticketter",
+            "desc": "Clos tiket",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -320,7 +320,7 @@
                     "required": true
                 }
             },
-            "desc": "Toggles a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled.\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "desc": "Togel commane on thi servre.\n\nIf mod is `add` ad to blacklis and disabl.\n\nIf mod is `remove` remov frmo blacklis and enabl.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -336,7 +336,7 @@
                     "required": false
                 }
             },
-            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped around. Negative numbers are supported.",
+            "desc": "Rol dic! If inite value not provide, deult 1 nd 6.\n\nPles tak accoun hat fi start bigre than ent, magic swap! Negativ numbre suport.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -347,7 +347,7 @@
                     "required": true
                 }
             },
-            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "desc": "Uplod uor teks too pastbin\n\nSynta highli fro programer support latr.",
             "cattegory": "4",
             "aliases": [
                 "paste"
@@ -359,20 +359,20 @@
         "ban": {
             "banned": "Bane %%member%% fro: %%reason%%",
             "tempbanned": "Tembna %%member%% fro: %%reason%%",
-            "invalid_time": "On tme specife!",
+            "invalid_time": "No tme specife!",
             "too_long": "He reso shod eb 256 chasracheter logn"
         },
         "command_error": {
-            "nonexistent_command": "**His commande not existe!**",
-            "missing_argument": "**Yuo didet providre arument ha is requre!**",
-            "bot_missing_permissions": "**I misserinno he require permise fro his commandre!**",
-            "explain": "Panic!!111! Unxpecte error! Reporte to `marzeq_#2137`. Erro ID: `%%id%%`",
-            "item_doesnt_exist": "This item doesn't exist! Maybe try phrasing it a little bit differently.",
-            "bad_format": "Argumnte! Bad forma",
-            "number_too_high": "Numbre to highe, crash?//?",
-            "var_not_defined": "This variable is not defined!",
-            "division_by_zero": "You are dividing by zero!",
-            "invalid_syntax": "Invalid syntax!"
+            "nonexistent_command": "**Dis acomand not exist, idot!**",
+            "missing_argument": "**Argume nnot provide, idot!**",
+            "bot_missing_permissions": "**I mis le require permise fro de commandre, idot!**",
+            "explain": "Panic!!111! Unxpecte error! Repot too `marzeq_#2137`. Erro ID: `%%id%%`",
+            "item_doesnt_exist": "Item no exis, idot! Try nam different.",
+            "bad_format": "Argumnte! Bad forma, idot!",
+            "number_too_high": "Numbre to hig, crash?//?",
+            "var_not_defined": "Varable not defind, idot!",
+            "division_by_zero": "U divid bai 0, idot!",
+            "invalid_syntax": "Syntx not gud, idot!"
         },
         "math": {
             "output": "**Oput:**"
@@ -382,50 +382,50 @@
             "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
-            "api_error": "Something went wrong here! Contact the developer to resolve this issue!"
+            "api_error": "Someding wrong! Panic!11!!11 Contacc developre to resolvw!"
         },
         "blacklist_command": {
-            "enabled": "Enabled the command `%%command_name%%` on the server!",
-            "disabled": "Disabled the command `%%command_name%%` on the server!"
+            "enabled": "Enabl he comman `%%command_name%%` on server!",
+            "disabled": "Disabl he comman `%%command_name%%` on server!"
         },
         "dice": {
-            "number_too_big": "This number is too big!",
+            "number_too_big": "Number too bige, idot!",
             "rolling": "%%emoji%% Rol dic ahaha :D...",
             "ur_number": "Yuor nuimbre:"
         },
         "guild_join": {
             "welcome": "**Welcom!**",
             "thx_for_invite": "Thank fopr invitt!",
-            "prefix": "Mi deful prefi s `--`. If want chang, typ `--prefix [new_prefixo]`!"
+            "prefix": "Mi deful prefi s `--`. If want chang, typ `--prefix [new_prefi]`!"
         },
         "help": {
             "heres_your_help": "**Here help %%username%%!**",
             "available_commands": "Avalib Commandre:",
             "required_notrequired_args": "[] require commanre argum, () opshone commanre argum",
-            "the_cmd": "**The %%command_name%% command:**",
-            "usage": "**Usage:**",
-            "desc": "**Description:**",
-            "required_perms": "**Required Permissions:**",
-            "aliases": "**Aliases:**"
+            "the_cmd": "**Le %%command_name%% acomand:**",
+            "usage": "**Usag:**",
+            "desc": "**Dskripton:**",
+            "required_perms": "**Require Permissione:**",
+            "aliases": "**Alases:**"
         },
         "kick": {
-            "kicked": "Kicked %%member%% for: %%reason%%"
+            "kicked": "Kicke %%member%% fro: %%reason%%"
         },
         "lang": {
-            "changed_lang": "**Changed the language to `%%lang_code%%`.**",
-            "available_langs": "**Available languages:**"
+            "changed_lang": "**Chaned langag too `%%lang_code%%`.**",
+            "available_langs": "**Avalable langages:**"
         },
         "prefix": {
-            "changed_prefix": "**Changed the custom prefix to `%%prefix%%`.**"
+            "changed_prefix": "**Chaned csutom prefucks too `%%prefix%%`.**"
         },
         "reddit": {
-            "submission_nsfw": "This submission is marked as NSFW. Please enable NSFW mode on this channel to see this submission!",
-            "title": "**Title**: %%title%%, By: u/%%username%%",
-            "content": "**Content:**",
-            "footer": "Upvote Ratio: %%ratio%%, URL: %%url%%"
+            "submission_nsfw": "Sumbisio NSfW. Chanle not NsFW! Panic!11!1 Chnag chanel to nsFw to se tge sumbisio!",
+            "title": "**Tietel**: %%title%%, Bai u/%%username%%",
+            "content": "**Cotent:**",
+            "footer": "Upvot Rato: %%ratio%%, URLE: %%url%%"
         },
         "google": {
-            "ur_link": "**Here's your URL: %%url%%**"
+            "ur_link": "**Here URLE %%url%%**"
         },
         "logging": {
             "success": "Succse updat hois setin!",
@@ -452,12 +452,12 @@
             "everyone-here_value": "**Bifor**: %%before%%\n**Afte**: %%after%%"
         },
         "reminders": {
-            "invalid_format": "On tme specife!",
+            "invalid_format": "No tme specife!",
             "result": "Yos, yuo wil be remindrede!",
             "too_long": "He remindre shod eb 256 chasracheter logn"
         },
         "bazaar": {
-            "info": "Bazr ifo po",
+            "info": "Bazr ifo för",
             "highest_buy_order": "Hihes by ordi",
             "highest_sell_offer": "Hihes sel ofri",
             "amount_ordered": "Amont orderi",
