@@ -36,7 +36,7 @@
                     "required": false
                 }
             },
-            "desc": "Shows all commands and their respective arguments, aliases and its description. If a command name is passed, it will show help about the specified command",
+            "desc": "Toont alle commando's met hun bijbehorende argumenten, aliassen en beschrijving. Als een commandonaam wordt opgegeven, zie je hulp over dat specifieke commando",
             "cattegory": "0",
             "aliases": [],
             "required_perms": []
@@ -50,7 +50,7 @@
                     "required": false
                 }
             },
-            "desc": "Bans a specified member. If provided, sends a ban reason to the server audit log.",
+            "desc": "Verbant het opgegeven lid. Indien opgegeven wordt de reden verzonden naar het auditlogboek.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -69,7 +69,7 @@
                     "required": false
                 }
             },
-            "desc": "Tempbans a specified member. If provided, sends a ban reason to the server audit log.",
+            "desc": "Verbant het opgegeven lid tijdelijk. Indien opgegeven wordt de reden verzonden naar het auditlogboek.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -85,7 +85,7 @@
                     "required": false
                 }
             },
-            "desc": "Kicks a specified member. If provided, sends a kick reason to the server audit log.",
+            "desc": "Kickt het opgegeven lid. Indien opgegeven wordt de reden verzonden naar het auditlogboek.",
             "cattegory": "1",
             "aliases": [],
             "required_perms": [
@@ -98,7 +98,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the prefix for the bot on the server.",
+            "desc": "Verandert het voorvoegsel voor de bot op deze server.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -111,7 +111,7 @@
                     "required": false
                 }
             },
-            "desc": "Changes the language for the bot on the server.",
+            "desc": "Verandert de taal voor de bot op deze server.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -120,14 +120,14 @@
         },
         "meme": {
             "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/memes",
+            "desc": "Toont je één van de 10 meest recente inzendingen op r/memes",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
         },
         "dankmeme": {
             "args": {},
-            "desc": "Shows you one of the 10 most recent submissions on r/dankmemes",
+            "desc": "Toont je één van de 10 meest recente inzendingen op r/dankmemes",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
@@ -138,7 +138,7 @@
                     "required": true
                 }
             },
-            "desc": "Shows you one of the 10 hottest submissions on any provided subreddit",
+            "desc": "Toont je één van de 10 hotste inzendingen van de opgegeven subreddit",
             "cattegory": "3",
             "aliases": [],
             "required_perms": []
@@ -149,7 +149,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you a ready link for a Google search",
+            "desc": "Geeft je een eenvoudige link voor een Google-zoekopdracht",
             "cattegory": "4",
             "aliases": [
                 "ggl"
@@ -162,7 +162,7 @@
                     "required": true
                 }
             },
-            "desc": "Gives you a ready link to an Wikipedia article.",
+            "desc": "Geeft je een eenvoudige link naar een Wikipedia-artikel.",
             "cattegory": "4",
             "aliases": [
                 "wikipedia"
@@ -175,7 +175,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the channel for message logging provided by the bot.",
+            "desc": "Verandert het kanaal voor logboeken van de bot.",
             "cattegory": "5",
             "aliases": [],
             "required_perms": [
@@ -188,7 +188,7 @@
                     "required": true
                 }
             },
-            "desc": "Blacklists/unblackists the channel from message logging!",
+            "desc": "Voegt het kanaal toe/verwijdert het van de zwarte lijst voor logboeken!",
             "cattegory": "5",
             "aliases": [
                 "bl"
@@ -206,7 +206,7 @@
                     "required": true
                 }
             },
-            "desc": "Reminds you after a set amount of time.",
+            "desc": "Herinnert je na de opgegeven tijd.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -217,7 +217,7 @@
                     "required": true
                 }
             },
-            "desc": "Shows you stats about a specific item in Hypixel Skyblock",
+            "desc": "Toont je statistieken over een specifiek item in Hypixel Skyblock",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -231,7 +231,7 @@
                     "required": false
                 }
             },
-            "desc": "Safely evaluates a math expression. If you want to pass in some variables, use a Python dictionary, separated from the expression by a ' | '",
+            "desc": "Evalueert veilig een wiskundige uitdrukking. Als je variabelen wilt doorgeven, gebruik dan een Python dictionary, gescheiden van de uitdrukking door een ' | '",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -242,7 +242,7 @@
                     "required": true
                 }
             },
-            "desc": "Creates a embed for you. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Maakt een embed aan. Een voorbeeld kan worden gevonden op https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "ebd"
@@ -258,7 +258,7 @@
                     "required": true
                 }
             },
-            "desc": "Edits an embed created with the command 'embed'. An example can be found at https://pastebin.com/vX9PVLqf",
+            "desc": "Bewerkt een embed dat met het commando 'embed' aangemaakt is. Een voorbeeld kan worden gevonden op https://pastebin.com/vX9PVLqf",
             "cattegory": "4",
             "aliases": [
                 "eebd"
@@ -278,7 +278,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the staff role that handles tickets",
+            "desc": "Verandert de medewerkersrol voor het afhandelen van tickets",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -291,7 +291,7 @@
                     "required": true
                 }
             },
-            "desc": "Changes the category to create tickets in",
+            "desc": "Verandert de categorie waarin tickets aangemaakt worden",
             "cattegory": "6",
             "aliases": [],
             "required_perms": [
@@ -320,7 +320,7 @@
                     "required": true
                 }
             },
-            "desc": "Toggles a command on the server.\n\nIf `mode` is set to `add` the command will be added to the blacklist and therefore disabled.\n\nIf `mode` is set to `remove` the command will be removed from the blacklist and therefore enabled.",
+            "desc": "Schakelt een commando op deze server.\n\nAls `mode` `add` is, wordt het commando toegevoegd aan de zwarte lijst en dus uitgeschakeld.\n\nAls `mode` `remove` is, wordt het commando verwijderd van de zwarte lijst en dus ingeschakeld.",
             "cattegory": "2",
             "aliases": [],
             "required_perms": [
@@ -336,7 +336,7 @@
                     "required": false
                 }
             },
-            "desc": "Rolls the dice for you. If the initial values aren't provided, the start will default to 1 and end will default to 6.\n\nPlease take into account that if the start is bigger than the end, they'll be swapped around. Negative numbers are supported.",
+            "desc": "Gooit een dobbelsteen voor je. Als geen waarden opgegeven worden, zal de dobbelsteen 1 tot 6 ogen hebben.\n\nHoud er rekening mee dat als het minimum aantal ogen groter is dan het maximum, ze dan omgewisseld worden. Negatieve getallen worden ondersteund.",
             "cattegory": "4",
             "aliases": [],
             "required_perms": []
@@ -347,7 +347,7 @@
                     "required": true
                 }
             },
-            "desc": "Uploads your desired text to pastebin\n\nSyntax highlighting for programming will be supported later.",
+            "desc": "Uploadt de opgegeven tekst naar pastebin\n\nSyntaxismarkering voor programmeertalen wordt later ondersteund.",
             "cattegory": "4",
             "aliases": [
                 "paste"
@@ -360,7 +360,7 @@
             "banned": "%%member%% verbannen wegens: %%reason%%",
             "tempbanned": "%%member%% tijdelijk verbannen wegens: %%reason%%",
             "invalid_time": "Geen tijd opgegeven!",
-            "too_long": "The reason should be 256 chars long"
+            "too_long": "De reden mag 256 tekens lang zijn"
         },
         "command_error": {
             "nonexistent_command": "**Dit commando bestaat niet!**",
@@ -369,29 +369,29 @@
             "explain": "Onbekende fout. Meld dit bij: `marzeq_#2137`. Foutcode: `%%id%%`",
             "item_doesnt_exist": "Dit item bestaat niet! Probeer het anders te formuleren.",
             "bad_format": "Dit argument heeft een onjuiste indeling",
-            "number_too_high": "This number is too high and might freeze me!",
-            "var_not_defined": "This variable is not defined!",
-            "division_by_zero": "You are dividing by zero!",
-            "invalid_syntax": "Invalid syntax!"
+            "number_too_high": "Dit getal is te groot en kan ervoor zorgen dat ik vastloop!",
+            "var_not_defined": "Deze variabele is niet gedefinieerd!",
+            "division_by_zero": "Je deelt door nul!",
+            "invalid_syntax": "Ongeldige syntaxis!"
         },
         "math": {
-            "output": "**Output:**"
+            "output": "**Uitvoer:**"
         },
         "embed": {
-            "invalid": "This embeds' code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
-            "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
+            "invalid": "De code van het embed is ongeldig. Probeer het voorbeeld hier te gebruiken: https://pastebin.com/vX9PVLqf !",
+            "no_title": "Zorg ervoor dat het embed tenminste een titel heeft! Probeer het voorbeeld hier te gebruiken: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
-            "api_error": "Something went wrong here! Contact the developer to resolve this issue!"
+            "api_error": "Er is hier iets misgegaan! Neem contact op met de ontwikkelaar om dit op te lossen!"
         },
         "blacklist_command": {
-            "enabled": "Enabled the command `%%command_name%%` on the server!",
-            "disabled": "Disabled the command `%%command_name%%` on the server!"
+            "enabled": "Commando `%%command_name%%` ingeschakeld op deze server!",
+            "disabled": "Commando `%%command_name%%` uitgeschakeld op deze server!"
         },
         "dice": {
-            "number_too_big": "This number is too big!",
-            "rolling": "%%emoji%% Rolling the dice...",
-            "ur_number": "Your number:"
+            "number_too_big": "Dit getal is te groot!",
+            "rolling": "%%emoji%% Dobbelsteen rollen...",
+            "ur_number": "Je getal:"
         },
         "guild_join": {
             "welcome": "**Welkom!**",
@@ -454,7 +454,7 @@
         "reminders": {
             "invalid_format": "Geen tijd opgegeven!",
             "result": "Oké, ik help je te herinneren!",
-            "too_long": "The reminder should be 256 chars long"
+            "too_long": "De herinnering mag 256 tekens lang zijn"
         },
         "bazaar": {
             "info": "Bazaarinfo voor",
