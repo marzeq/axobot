@@ -378,8 +378,8 @@
             "output": "**Oput:**"
         },
         "embed": {
-            "invalid": "This embeds' code is invalid. Try using the example one here: https://pastebin.com/vX9PVLqf !",
-            "no_title": "Make sure that this embed has at least a title! Try checking with the example here: https://pastebin.com/vX9PVLqf !"
+            "invalid": "Embde code invali, idot! Try exampl her: https://pastebin.com/vX9PVLqf !",
+            "no_title": "Mak sur embed has at list titel! Try exampl her: https://pastebin.com/vX9PVLqf !"
         },
         "pastebin": {
             "api_error": "Someding wrong! Panic!11!!11 Contacc developre to resolvw!"
