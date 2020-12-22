@@ -436,7 +436,7 @@
             "time": "Tijd",
             "tts": "Spraaksynthese",
             "pinned": "Vastgezet",
-            "everyone-here": "Everyone of here vermeld"
+            "everyone-here": "@everyone of @here"
         },
         "logging_edit": {
             "msg_edited": "**Er is een bericht bewerkt!**",
@@ -446,7 +446,7 @@
             "time": "Tijd",
             "tts": "Spraaksynthese na",
             "pinned": "Vastgezet na",
-            "everyone-here": "Everyone of here vermeld",
+            "everyone-here": "@everyone of @here",
             "content_value": "**Voor**: %%before%%\n**Na**: %%after%%",
             "time_value": "**Aangemaakt op**: %%created%% GMT\n**Bewerkt op**: %%edited%% GMT",
             "everyone-here_value": "**Voor**: %%before%%\n**Na**: %%after%%"
@@ -458,8 +458,8 @@
         },
         "bazaar": {
             "info": "Bazaarinfo voor",
-            "highest_buy_order": "Volg. hoogste aankoop",
-            "highest_sell_offer": "Volg. hoogste verkoop",
+            "highest_buy_order": "Hoogste bod",
+            "highest_sell_offer": "Hoogste verkoopprijs",
             "amount_ordered": "Aantal gevraagd",
             "amount_offered": "Aantal aangeboden",
             "price_per_unit": "Prijs per stuk",
