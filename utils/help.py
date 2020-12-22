@@ -51,6 +51,11 @@ admin_command_descriptions = \
             "desc": "Pulls from the Github repo and reloads all extensions",
             "aliases": ["prl"]
         },
+        "up_discordpy": {
+            "args": {},
+            "desc": "Pulls from the Github repo for discord.py and updates it.",
+            "aliases": ["udpy"]
+        },
         "presence": {
             "args": {
                 "type": {"required": True},
